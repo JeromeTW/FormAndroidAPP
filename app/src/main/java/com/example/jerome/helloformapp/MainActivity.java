@@ -32,8 +32,6 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-import static android.R.attr.key;
-import static android.R.attr.value;
 
 
 public class MainActivity extends AppCompatActivity {

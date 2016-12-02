@@ -9,7 +9,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.jerome.helloformapp.MainActivity">
-
+<!--Main LinearLayout-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -191,6 +191,7 @@
                 android:id="@+id/textView6"
                 android:textAppearance="@style/sectionText"
                 android:layout_marginTop="@dimen/section_vertical_margin"/>
+            <!--1-1-1-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -212,6 +213,7 @@
                     android:id="@+id/editText"
                     android:hint="請輸入觀察結果" />
             </LinearLayout>
+            <!--1-1-2-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -273,6 +275,7 @@
                         android:textAppearance="@style/checkBoxText"/>
                 </LinearLayout>
             </LinearLayout>
+            <!--1-1-3-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -340,6 +343,7 @@
                         android:textAppearance="@style/checkBoxText"/>
                 </LinearLayout>
             </LinearLayout>
+            <!--1-1-4-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -372,9 +376,226 @@
                         android:id="@+id/checkBox1_1_4_2"
                         android:textAppearance="@style/checkBoxText"/>
                 </LinearLayout>
+        </LinearLayout>
+            <!--1-1-5-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:text="刷牙"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView1_1_5"
+                    android:textAppearance="@style/questionTitleText" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:showDividers="middle"
+                    android:divider="@drawable/empty_radio_buttun_tall_divider"
+                    >
+                    <RadioButton
+                        android:text="可以自己刷牙"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/RadioBtn1_1_5_1"
+                        android:textAppearance="@style/radioButtonText"/>
+
+                    <RadioButton
+                        android:text="由照顧者刷牙，不排斥口腔被碰觸。"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/RadioBtn1_1_5_2"
+                        android:textAppearance="@style/radioButtonText"/>
+
+                    <RadioButton
+                        android:text="由照顧者刷牙，排斥口腔被碰觸。"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/RadioBtn1_1_5_3"
+                        android:textAppearance="@style/radioButtonText"/>
+                </LinearLayout>
             </LinearLayout>
+            <!--1-1-6-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:text="口腔感覺"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView1_1_6"
+                    android:textAppearance="@style/questionTitleText" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:showDividers="middle"
+                    android:divider="@drawable/empty_check_box_tall_divider"
+                    >
+                    <CheckBox
+                        android:text="不排斥他人碰觸，口腔感覺無明顯異常。"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBox1_1_6_1"
+                        android:textAppearance="@style/checkBoxText"/>
 
+                    <CheckBox
+                        android:text="排斥他人碰觸，口腔感覺較為敏感。"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBox1_1_6_2"
+                        android:textAppearance="@style/checkBoxText"/>
+                    <CheckBox
+                        android:text="口腔感覺過度鈍感。"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBox1_1_6_3"
+                        android:textAppearance="@style/checkBoxText"/>
 
+                    <CheckBox
+                        android:text="張力過高"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBox1_1_6_4"
+                        android:textAppearance="@style/checkBoxText"/>
+                    <CheckBox
+                        android:text="張力過低"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBox1_1_6_5"
+                        android:textAppearance="@style/checkBoxText"/>
+
+                    <CheckBox
+                        android:text="流口水"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBox1_1_6_6"
+                        android:textAppearance="@style/checkBoxText"/>
+                </LinearLayout>
+            </LinearLayout>
+            <!--1-1-7-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:text="餵食技巧評估"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView1_1_7"
+                    android:textAppearance="@style/questionTitleText" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:showDividers="middle"
+                    android:divider="@drawable/empty_check_box_tall_divider"
+                    >
+                    <CheckBox
+                        android:text="奶瓶吸吮"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBox1_1_7_1"
+                        android:textAppearance="@style/checkBoxText"/>
+
+                    <CheckBox
+                        android:text="湯匙進食(7-9m)"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBox1_1_7_2"
+                        android:textAppearance="@style/checkBoxText"/>
+                    <CheckBox
+                        android:text="有咀嚼動作，可咀嚼軟質食物(10-12m)"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBox1_1_7_3"
+                        android:textAppearance="@style/checkBoxText"/>
+
+                    <CheckBox
+                        android:text="舌頭有旋轉動作，食物放一邊時，舌頭會超越中線拿取食物(10-12m)"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBox1_1_7_4"
+                        android:textAppearance="@style/checkBoxText"/>
+                    <CheckBox
+                        android:text="鴨嘴杯喝水(13-15m)"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBox1_1_7_5"
+                        android:textAppearance="@style/checkBoxText"/>
+                    <CheckBox
+                        android:text="可咬斷和咀嚼較硬的餅乾(13-15m)"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBox1_1_7_6"
+                        android:textAppearance="@style/checkBoxText"/>
+                    <CheckBox
+                        android:text="開放性杯子喝水(16-18m)"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBox1_1_7_7"
+                        android:textAppearance="@style/checkBoxText"/>
+                    <CheckBox
+                        android:text="嘴唇含著吸管喝水(19-24m)"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBox1_1_7_8"
+                        android:textAppearance="@style/checkBoxText"/>
+                    <CheckBox
+                        android:text="可開始咀嚼和吞嚥肉類食物(19-24m)"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBox1_1_7_9"
+                        android:textAppearance="@style/checkBoxText"/>
+                </LinearLayout>
+            </LinearLayout>
+            <!--1-1-8-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:text="口腔動作"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView1_1_8"
+                    android:textAppearance="@style/questionTitleText" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:showDividers="middle"
+                    android:divider="@drawable/empty_radio_buttun_tall_divider"
+                    >
+                    <RadioButton
+                        android:text="無異常"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/RadioBtn1_1_8_1"
+                        android:textAppearance="@style/radioButtonText"/>
+
+                    <RadioButton
+                        android:text="臨界"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/RadioBtn1_1_8_2"
+                        android:textAppearance="@style/radioButtonText"/>
+
+                    <RadioButton
+                        android:text="異常"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/RadioBtn1_1_8_3"
+                        android:textAppearance="@style/radioButtonText"/>
+                </LinearLayout>
+            </LinearLayout>
         </LinearLayout>
         <Button
             android:text="提交"
