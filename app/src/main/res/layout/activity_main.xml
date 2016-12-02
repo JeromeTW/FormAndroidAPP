@@ -14,199 +14,273 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="@dimen/activity_vertical_margin">
-
-        <TextView
-            android:text="個案基本資料"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView"
-            android:textAppearance="@style/TextAppearance.AppCompat.Display2" />
-
+        android:showDividers="middle"
+        android:divider="@drawable/empty_tall_section_divider"
+        >
+        <!--android:showDividers="middle"  添加分割線，不過要將內部成員成組隊才可以-->
+        <!--android:divider="@drawable/empty_tall_divider"-->
+        <!--個案基本資料 -->
         <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:showDividers="middle"
+        android:divider="@drawable/empty_question_tall_divider"
+        >
             <TextView
-                android:text="姓名"
-                android:layout_width="wrap_content"
+                android:text="個案基本資料"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView2"
-                android:layout_weight="1"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                android:textSize="18sp" />
+                android:id="@+id/textView"
+                android:textAppearance="@style/sectionText" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:text="姓名"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView2"
+                    android:layout_weight="1"
+                    android:textAppearance="@style/textPlainText"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/nameEditText"
+                    android:layout_weight="1"
+                    android:hint="請輸入個案姓名"
+                    android:textAppearance="@style/textPlainText"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+                <RadioButton
+                    android:text="男"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/maleRadioBtn"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:textAppearance="@style/radioButtonText"/>
+
+                <RadioButton
+                    android:text="女"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/femaleRadioBtn"
+                    android:layout_weight="1"
+                    android:textAppearance="@style/radioButtonText"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:text="出生日期"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView3"
+                    android:textAppearance="@style/questionTitleText" />
+
+                <DatePicker
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/birthDatePicker" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:text="收案日期"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView4"
+                    android:textAppearance="@style/questionTitleText" />
+
+                <DatePicker
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/startDatePicker" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:text="配合度"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView5"
+                    android:textAppearance="@style/questionTitleText" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:showDividers="middle"
+                    android:divider="@drawable/empty_radio_buttun_tall_divider"
+                    >
+                    <RadioButton
+                        android:text="佳，不須增強即可全程安坐配合評估。"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/goodRadioBtn"
+                        android:textAppearance="@style/radioButtonText"/>
+
+                    <RadioButton
+                        android:text="尚可，需玩具／口語增強方可配合評估。"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/normalRadioBtn"
+                        android:textAppearance="@style/radioButtonText"/>
+
+                    <RadioButton
+                        android:text="待加強，需頻繁予以增強方可短暫配合評估活動。"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/badRadioBtn"
+                        android:textAppearance="@style/radioButtonText"/>
+                </LinearLayout>
+            </LinearLayout>
 
             <EditText
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPersonName"
+                android:inputType="textMultiLine"
+                android:minLines="6"
+                android:gravity="top|left"
+                android:scrollbars="vertical"
                 android:ems="10"
-                android:id="@+id/nameEditText"
-                android:layout_weight="1"
-                android:hint="請輸入個案姓名" />
-
+                android:id="@+id/descriptionEditText"
+                android:hint="注記"
+                android:background="@drawable/edit_text_style"
+                android:padding="8dp"
+                android:textAppearance="@style/textPlainText"/>
         </LinearLayout>
-
+        <!--1-1口腔動作 -->
         <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginBottom="@dimen/activity_vertical_margin"
-            android:layout_marginTop="@dimen/activity_vertical_margin">
-
-            <RadioButton
-                android:text="男"
-                android:layout_width="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:showDividers="middle"
+        android:divider="@drawable/empty_question_tall_divider"
+        >
+            <TextView
+                android:text="1-1 口腔動作"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/maleRadioBtn"
-                android:layout_weight="1"
-                android:checked="true" />
-
-            <RadioButton
-                android:text="女"
-                android:layout_width="wrap_content"
+                android:id="@+id/textView6"
+                android:textAppearance="@style/sectionText"
+                android:layout_marginTop="@dimen/section_vertical_margin"/>
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/femaleRadioBtn"
-                android:layout_weight="1" />
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:text="口腔構造與穩定度、靜止雙唇閉合"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView7"
+                    android:textAppearance="@style/questionTitleText"
+                    android:textSize="34sp" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/editText"
+                    android:hint="請輸入觀察結果" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:text="口腔動作：唇"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView8"
+                    android:textAppearance="@style/questionTitleText" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:showDividers="middle"
+                    android:divider="@drawable/empty_check_box_tall_divider"
+                    >
+                    <CheckBox
+                        android:text="拉開嘴巴說/ㄧ/"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBox"
+                        android:textAppearance="@style/checkBoxText"/>
+
+                    <CheckBox
+                        android:text="噘起嘴唇做吹口哨的形狀說/ㄨ/"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBox2"
+                        android:textAppearance="@style/checkBoxText"/>
+
+                    <CheckBox
+                        android:text="不停交換說∕ㄧㄨ、一ㄨ、一ㄨ∕"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBox3"
+                        android:textAppearance="@style/checkBoxText"/>
+
+                    <CheckBox
+                        android:text="上下唇內縮後發「吧」"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBox4"
+                        android:textAppearance="@style/checkBoxText"/>
+
+                    <CheckBox
+                        android:text="鼓脹兩頰"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBox5"
+                        android:textAppearance="@style/checkBoxText"/>
+
+                    <CheckBox
+                        android:text="鼓起兩頰做漱口狀"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBox6"
+                        android:textAppearance="@style/checkBoxText"/>
+                </LinearLayout>
+            </LinearLayout>
 
         </LinearLayout>
-
-        <TextView
-            android:text="出生日期"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView3"
-            android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
-
-        <DatePicker
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/birthDatePicker" />
-
-        <TextView
-            android:text="收案日期"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView4"
-            android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
-
-        <DatePicker
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/startDatePicker" />
-
-        <TextView
-            android:text="配合度"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView5"
-            android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
-
-        <RadioButton
-            android:text="佳，不須增強即可全程安坐配合評估。"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/goodRadioBtn" />
-
-        <RadioButton
-            android:text="尚可，需玩具／口語增強方可配合評估。"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/normalRadioBtn" />
-
-        <RadioButton
-            android:text="待加強，需頻繁予以增強方可短暫配合評估活動。"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/badRadioBtn" />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textMultiLine"
-            android:minLines="6"
-            android:gravity="top|left"
-            android:scrollbars="vertical"
-            android:ems="10"
-            android:id="@+id/descriptionEditText"
-            android:hint="注記"
-            android:background="@drawable/edit_text_style"
-            android:padding="8dp"
-            android:layout_margin="@dimen/activity_vertical_margin" />
-
-        <TextView
-            android:text="1-1 口腔動作"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView6"
-            android:textAppearance="@style/TextAppearance.AppCompat.Display2" />
-
-        <TextView
-            android:text="口腔構造與穩定度、靜止雙唇閉合"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView7"
-            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-            android:textSize="34sp" />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textPersonName"
-            android:ems="10"
-            android:id="@+id/editText"
-            android:hint="請輸入觀察結果" />
-
-        <TextView
-            android:text="口腔動作：唇"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView8"
-            android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
-
-        <CheckBox
-            android:text="拉開嘴巴說/ㄧ/"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/checkBox" />
-
-        <CheckBox
-            android:text="噘起嘴唇做吹口哨的形狀說/ㄨ/"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/checkBox2" />
-
-        <CheckBox
-            android:text="不停交換說∕ㄧㄨ、一ㄨ、一ㄨ∕"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/checkBox3" />
-
-        <CheckBox
-            android:text="上下唇內縮後發「吧」"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/checkBox4" />
-
-        <CheckBox
-            android:text="鼓脹兩頰"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/checkBox5" />
-
-        <CheckBox
-            android:text="鼓起兩頰做漱口狀"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/checkBox6" />
-
         <Button
             android:text="提交"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/submitBtn" />
-
+            android:id="@+id/submitBtn"
+            android:textAppearance="@style/checkBoxText"/>
     </LinearLayout>
 
 </ScrollView>
