@@ -221,7 +221,7 @@
                     android:text="口腔動作：唇"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/textView8"
+                    android:id="@+id/textView1_1_2"
                     android:textAppearance="@style/questionTitleText" />
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -234,45 +234,146 @@
                         android:text="拉開嘴巴說/ㄧ/"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/checkBox"
+                        android:id="@+id/checkBox1_1_2_1"
                         android:textAppearance="@style/checkBoxText"/>
 
                     <CheckBox
                         android:text="噘起嘴唇做吹口哨的形狀說/ㄨ/"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/checkBox2"
+                        android:id="@+id/checkBox1_1_2_2"
                         android:textAppearance="@style/checkBoxText"/>
 
                     <CheckBox
                         android:text="不停交換說∕ㄧㄨ、一ㄨ、一ㄨ∕"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/checkBox3"
+                        android:id="@+id/checkBox1_1_2_3"
                         android:textAppearance="@style/checkBoxText"/>
 
                     <CheckBox
                         android:text="上下唇內縮後發「吧」"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/checkBox4"
+                        android:id="@+id/checkBox1_1_2_4"
                         android:textAppearance="@style/checkBoxText"/>
 
                     <CheckBox
                         android:text="鼓脹兩頰"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/checkBox5"
+                        android:id="@+id/checkBox1_1_2_5"
                         android:textAppearance="@style/checkBoxText"/>
 
                     <CheckBox
                         android:text="鼓起兩頰做漱口狀"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/checkBox6"
+                        android:id="@+id/checkBox1_1_2_6"
                         android:textAppearance="@style/checkBoxText"/>
                 </LinearLayout>
             </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:text="口腔動作：唇"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView1_1_3"
+                    android:textAppearance="@style/questionTitleText" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:showDividers="middle"
+                    android:divider="@drawable/empty_check_box_tall_divider"
+                    >
+                    <CheckBox
+                        android:text="舌頭伸出伸入"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBox1_1_3_1"
+                        android:textAppearance="@style/checkBoxText"/>
+
+                    <CheckBox
+                        android:text="舌頭往左右嘴角移動"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBox1_1_3_2"
+                        android:textAppearance="@style/checkBoxText"/>
+
+                    <CheckBox
+                        android:text="舌頭在口內輪流推頂兩頰內側"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBox1_1_3_3"
+                        android:textAppearance="@style/checkBoxText"/>
+
+                    <CheckBox
+                        android:text="用舌尖舔上下唇"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBox1_1_3_4"
+                        android:textAppearance="@style/checkBoxText"/>
+
+                    <CheckBox
+                        android:text="舌頭在牙齒外側轉動，做清潔牙齒狀"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBox1_1_3_5"
+                        android:textAppearance="@style/checkBoxText"/>
+
+                    <CheckBox
+                        android:text="舌頭捲起，由齒槽後掃至軟腭再掃回來"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBox1_1_3_6"
+                        android:textAppearance="@style/checkBoxText"/>
+                    <CheckBox
+                        android:text="捲舌學馬蹄聲"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBox1_1_3_7"
+                        android:textAppearance="@style/checkBoxText"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:text="口腔動作：顎"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView1_1_4"
+                    android:textAppearance="@style/questionTitleText" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:showDividers="middle"
+                    android:divider="@drawable/empty_check_box_tall_divider"
+                    >
+                    <CheckBox
+                        android:text="張大嘴巴輪流說/ㄚ ㄧ ㄨ/"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBox1_1_4_1"
+                        android:textAppearance="@style/checkBoxText"/>
+
+                    <CheckBox
+                        android:text="上下牙齒互相碰出聲"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBox1_1_4_2"
+                        android:textAppearance="@style/checkBoxText"/>
+                </LinearLayout>
+            </LinearLayout>
+
 
         </LinearLayout>
         <Button
