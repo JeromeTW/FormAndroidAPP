@@ -243,7 +243,7 @@
                         android:text="噘起嘴唇做吹口哨的形狀說/ㄨ/"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/checkBox1_1_2_2"
+                        android:id="@+id/checkBox1_1_2_3"
                         android:textAppearance="@style/checkBoxText"/>
 
                     <CheckBox
@@ -1081,13 +1081,14 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 >
+                <!--2-1-1-1-->
                 <TextView
                     android:text="口語理解"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/textView2_1_1_1"
                     android:textAppearance="@style/questionTitleText" />
-            <LinearLayout
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
@@ -1113,164 +1114,491 @@
                         android:id="@+id/RadioBtn2_1_1_3"
                         android:textAppearance="@style/radioButtonText"/>
                 </LinearLayout>
-            <!--2-1-2-->
+                <!--2-1-1-2-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+                    <!--2-1-1-2-1評估日期-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        >
+                        <TextView
+                            android:text="評估日期"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView2_1_1_2_1"
+                            android:textAppearance="@style/questionTitleText" />
+
+                        <DatePicker
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/DatePicker2_1_1_2_2" />
+                    </LinearLayout>
+                    <!--2-1-1-2-2-->
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:text="目前能力約幾歲"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView2_1_1_2_2"
+                            android:layout_weight="1"
+                            android:textAppearance="@style/textPlainText"
+                            android:textSize="18sp" />
+
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:inputType="textPersonName"
+                            android:ems="10"
+                            android:id="@+id/EditText2_1_1_2_2"
+                            android:layout_weight="1"
+                            android:hint="請輸入"
+                            android:textAppearance="@style/textPlainText"/>
+
+                    </LinearLayout>
+                    <!--2-1-1-2-3-->
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:text="幾個月？"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView2_1_1_2_3"
+                            android:layout_weight="1"
+                            android:textAppearance="@style/textPlainText"
+                            android:textSize="18sp" />
+
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:inputType="textPersonName"
+                            android:ems="10"
+                            android:id="@+id/EditText2_1_1_2_3"
+                            android:layout_weight="1"
+                            android:hint="請輸入"
+                            android:textAppearance="@style/textPlainText"/>
+
+                    </LinearLayout>
+                    <!--2-1-1-2-4-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        >
+                        <TextView
+                            android:text="評估工具"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView2_1_1_2_4"
+                            android:textAppearance="@style/questionTitleText" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:showDividers="middle"
+                            android:divider="@drawable/empty_radio_buttun_tall_divider"
+                            >
+                            <RadioButton
+                                android:text="臨床觀察"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/RadioBtn2_1_1_2_4_1"
+                                android:textAppearance="@style/radioButtonText"/>
+                            <RadioButton
+                                android:text="臨床晤談"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/RadioBtn2_1_1_2_4_2"
+                                android:textAppearance="@style/radioButtonText"/>
+                            <RadioButton
+                                android:text="修訂畢保德圖畫詞彙測驗 (PPVT-R)"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/RadioBtn2_1_1_2_4_3"
+                                android:textAppearance="@style/radioButtonText"/>
+                            <RadioButton
+                                android:text="修訂學前兒童語言障礙評量表"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/RadioBtn2_1_1_2_4_4"
+                                android:textAppearance="@style/radioButtonText"/>
+                            <RadioButton
+                                android:text="修訂學齡兒童語言障礙評量表"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/RadioBtn2_1_1_2_4_5"
+                                android:textAppearance="@style/radioButtonText"/>
+                            <RadioButton
+                                android:text="嬰幼兒綜合發展測驗 (CDIIT)"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/RadioBtn2_1_1_2_4_6"
+                                android:textAppearance="@style/radioButtonText"/>
+                            <RadioButton
+                                android:text="零至三歲華語嬰幼兒溝通及語言診斷測驗 (0-3CLST)"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/RadioBtn2_1_1_2_4_7"
+                                android:textAppearance="@style/radioButtonText"/>
+                            <RadioButton
+                                android:text="華語兒童理解與表達詞彙測驗 (REVT)"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/RadioBtn2_1_1_2_4_8"
+                                android:textAppearance="@style/radioButtonText"/>
+                            <RadioButton
+                                android:text="學前幼兒與國小低年級兒童口語語法診斷測驗"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/RadioBtn2_1_1_2_4_9"
+                                android:textAppearance="@style/radioButtonText"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+        </LinearLayout>
+
+
+        </LinearLayout>
+        <!--2-2 理解訓練-->
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:showDividers="middle"
+        android:divider="@drawable/empty_question_tall_divider"
+        >
+            <TextView
+                android:text="2-2 理解訓練"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView2_2_1"
+                android:textAppearance="@style/questionTitleText" />
+            <!--2-2-1-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 >
-                <!--2-1-2-1評估日期-->
+                <TextView
+                    android:text="理解訓練"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView2_2_1_1"
+                    android:textAppearance="@style/questionTitleText" />
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
+                    android:showDividers="middle"
+                    android:divider="@drawable/empty_radio_buttun_tall_divider"
                     >
-                    <TextView
-                        android:text="評估日期"
+                    <RadioButton
+                        android:text="不需要"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/textView2_1_2_1"
-                        android:textAppearance="@style/questionTitleText" />
-
-                    <DatePicker
+                        android:id="@+id/RadioBtn2_2_1_1_1"
+                        android:textAppearance="@style/radioButtonText"/>
+                    <RadioButton
+                        android:text="需要追蹤及咨詢"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/DatePicker2_1_2_2" />
+                        android:id="@+id/RadioBtn2_2_1_1_2"
+                        android:textAppearance="@style/radioButtonText"/>
+                    <RadioButton
+                        android:text="需要訓練"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/RadioBtn2_2_1_1_3"
+                        android:textAppearance="@style/radioButtonText"/>
                 </LinearLayout>
-                <!--2-1-2-2-->
-                <LinearLayout
-                    android:orientation="horizontal"
+            </LinearLayout>
+            <!--2-2-2 訓練方向-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:text="訓練方向"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <TextView
-                        android:text="目前能力約幾歲"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/textView2_1_2_2"
-                        android:layout_weight="1"
-                        android:textAppearance="@style/textPlainText"
-                        android:textSize="18sp" />
-
-                    <EditText
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:inputType="textPersonName"
-                        android:ems="10"
-                        android:id="@+id/EditText2_1_2_2"
-                        android:layout_weight="1"
-                        android:hint="請輸入"
-                        android:textAppearance="@style/textPlainText"/>
-
-                </LinearLayout>
-                <!--2-1-2-3-->
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <TextView
-                        android:text="幾個月？"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/textView2_1_2_3"
-                        android:layout_weight="1"
-                        android:textAppearance="@style/textPlainText"
-                        android:textSize="18sp" />
-
-                    <EditText
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:inputType="textPersonName"
-                        android:ems="10"
-                        android:id="@+id/EditText2_1_2_3"
-                        android:layout_weight="1"
-                        android:hint="請輸入"
-                        android:textAppearance="@style/textPlainText"/>
-
-                </LinearLayout>
-                <!--2-1-2-4-->
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView2_2_2_1"
+                    android:textAppearance="@style/questionTitleText" />
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
+                    android:showDividers="middle"
+                    android:divider="@drawable/empty_check_box_tall_divider"
                     >
-                    <TextView
-                        android:text="評估工具"
+                    <CheckBox
+                        android:text="聽能訓練"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/textView2_1_2_4"
-                        android:textAppearance="@style/questionTitleText" />
-                    <LinearLayout
+                        android:id="@+id/checkBox2_2_2_1_1"
+                        android:textAppearance="@style/checkBoxText"/>
+                    <CheckBox
+                        android:text="鼓勵兒童對話時能注視說話者"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:showDividers="middle"
-                        android:divider="@drawable/empty_radio_buttun_tall_divider"
-                        >
-                        <RadioButton
-                            android:text="臨床觀察"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/RadioBtn2_1_2_4_1"
-                            android:textAppearance="@style/radioButtonText"/>
-                        <RadioButton
-                            android:text="臨床晤談"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/RadioBtn2_1_2_4_2"
-                            android:textAppearance="@style/radioButtonText"/>
-                        <RadioButton
-                            android:text="修訂畢保德圖畫詞彙測驗 (PPVT-R)"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/RadioBtn2_1_2_4_3"
-                            android:textAppearance="@style/radioButtonText"/>
-                        <RadioButton
-                            android:text="修訂學前兒童語言障礙評量表"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/RadioBtn2_1_2_4_4"
-                            android:textAppearance="@style/radioButtonText"/>
-                        <RadioButton
-                            android:text="修訂學齡兒童語言障礙評量表"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/RadioBtn2_1_2_4_5"
-                            android:textAppearance="@style/radioButtonText"/>
-                        <RadioButton
-                            android:text="嬰幼兒綜合發展測驗 (CDIIT)"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/RadioBtn2_1_2_4_6"
-                            android:textAppearance="@style/radioButtonText"/>
-                        <RadioButton
-                            android:text="零至三歲華語嬰幼兒溝通及語言診斷測驗 (0-3CLST)"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/RadioBtn2_1_2_4_7"
-                            android:textAppearance="@style/radioButtonText"/>
-                        <RadioButton
-                            android:text="華語兒童理解與表達詞彙測驗 (REVT)"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/RadioBtn2_1_2_4_8"
-                            android:textAppearance="@style/radioButtonText"/>
-                        <RadioButton
-                            android:text="學前幼兒與國小低年級兒童口語語法診斷測驗"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/RadioBtn2_1_2_4_9"
-                            android:textAppearance="@style/radioButtonText"/>
-                    </LinearLayout>
+                        android:id="@+id/checkBox2_2_2_1_2"
+                        android:textAppearance="@style/checkBoxText"/>
+                    <CheckBox
+                        android:text="理解手勢及肢體動作的意思（如：搖頭／搖手表示”不可以”）"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBox2_2_2_1_3"
+                        android:textAppearance="@style/checkBoxText"/>
+                    <CheckBox
+                        android:text="聽懂無手勢動作提示的單一口語指令（如：拿積木給我）"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBox2_2_2_1_4"
+                        android:textAppearance="@style/checkBoxText"/>
+                    <CheckBox
+                        android:text="能指認一般日常生活等熟悉物品或圖片(如：杯子／蘋果)"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBox2_2_2_1_5"
+                        android:textAppearance="@style/checkBoxText"/>
+                    <CheckBox
+                        android:text="理解形容詞、感覺、表情等抽象詞彙"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBox2_2_2_1_6"
+                        android:textAppearance="@style/checkBoxText"/>
+                    <CheckBox
+                        android:text="理解兩個或以上連續動作指令"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBox2_2_2_1_7"
+                        android:textAppearance="@style/checkBoxText"/>
+                    <CheckBox
+                        android:text="理解複雜句型"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBox2_2_2_1_8"
+                        android:textAppearance="@style/checkBoxText"/>
+                    <CheckBox
+                        android:text="理解經歷過的事件內容"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBox2_2_2_1_9"
+                        android:textAppearance="@style/checkBoxText"/>
+                    <CheckBox
+                        android:text="理解故事內容"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBox2_2_2_1_10"
+                        android:textAppearance="@style/checkBoxText"/>
                 </LinearLayout>
-
-
+            </LinearLayout>
+        </LinearLayout>
+        <!--2-3 表達訓練-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:showDividers="middle"
+            android:divider="@drawable/empty_question_tall_divider"
+            >
+            <TextView
+                android:text="2-3 表達訓練"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView2_3_1"
+                android:textAppearance="@style/questionTitleText" />
+            <!--2-3-1-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:text="表達訓練"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView2_3_1_1"
+                    android:textAppearance="@style/questionTitleText" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:showDividers="middle"
+                    android:divider="@drawable/empty_radio_buttun_tall_divider"
+                    >
+                    <RadioButton
+                        android:text="不需要"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/RadioBtn2_3_1_1_1"
+                        android:textAppearance="@style/radioButtonText"/>
+                    <RadioButton
+                        android:text="需要追蹤及咨詢"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/RadioBtn2_3_1_1_2"
+                        android:textAppearance="@style/radioButtonText"/>
+                    <RadioButton
+                        android:text="需要訓練"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/RadioBtn2_3_1_1_3"
+                        android:textAppearance="@style/radioButtonText"/>
+                </LinearLayout>
+            </LinearLayout>
+            <!--2-3-2 口語訓練方向-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:text="口語訓練方向"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView2_3_2_1"
+                    android:textAppearance="@style/questionTitleText" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:showDividers="middle"
+                    android:divider="@drawable/empty_check_box_tall_divider"
+                    >
+                    <CheckBox
+                        android:text="使用溝通輔具／手勢／手語輔助溝通"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBox2_3_2_1_1"
+                        android:textAppearance="@style/checkBoxText"/>
+                    <CheckBox
+                        android:text="提升語用溝通技巧"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBox2_3_2_1_2"
+                        android:textAppearance="@style/checkBoxText"/>
+                    <CheckBox
+                        android:text="增加主動表達的意願和機會"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBox2_3_2_1_3"
+                        android:textAppearance="@style/checkBoxText"/>
+                    <CheckBox
+                        android:text="模仿發聲或模仿語音（發聲遊戲）"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBox2_3_2_1_4"
+                        android:textAppearance="@style/checkBoxText"/>
+                    <CheckBox
+                        android:text="以單字加上手勢動作表達，如：我要"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBox2_3_2_1_5"
+                        android:textAppearance="@style/checkBoxText"/>
+                    <CheckBox
+                        android:text="加強詞彙使用，如：常見物品名稱、功能性詞彙"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBox2_3_2_1_6"
+                        android:textAppearance="@style/checkBoxText"/>
+                    <CheckBox
+                        android:text="加強完整句的表達，如：我要喝水"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBox2_3_2_1_7"
+                        android:textAppearance="@style/checkBoxText"/>
+                    <CheckBox
+                        android:text="加強抽象詞彙的表達，如：好大的車子"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBox2_3_2_1_8"
+                        android:textAppearance="@style/checkBoxText"/>
+                    <CheckBox
+                        android:text="增長語句長度"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBox2_3_2_1_9"
+                        android:textAppearance="@style/checkBoxText"/>
+                    <CheckBox
+                        android:text="練習使用複雜句表達（如：因為…就…）"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBox2_3_2_1_10"
+                        android:textAppearance="@style/checkBoxText"/>
+                    <CheckBox
+                        android:text="練習描述經歷過的事件或說故事"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBox2_3_2_1_11"
+                        android:textAppearance="@style/checkBoxText"/>
+                    <CheckBox
+                        android:text="建立良好的發聲模式及嗓音保健"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBox2_3_2_1_12"
+                        android:textAppearance="@style/checkBoxText"/>
+                </LinearLayout>
+            </LinearLayout>
+            <!--2-3-3 說話訓練方向-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:text="說話訓練方向"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView2_3_3_1"
+                    android:textAppearance="@style/questionTitleText" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:showDividers="middle"
+                    android:divider="@drawable/empty_radio_buttun_tall_divider"
+                    >
+                    <RadioButton
+                        android:text="構音矯正"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/RadioBtn2_3_3_1_1"
+                        android:textAppearance="@style/radioButtonText"/>
+                    <RadioButton
+                        android:text="語暢訓練"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/RadioBtn2_3_3_1_2"
+                        android:textAppearance="@style/radioButtonText"/>
+                    <RadioButton
+                        android:text="嗓音復健"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/RadioBtn2_3_3_1_3"
+                        android:textAppearance="@style/radioButtonText"/>
+                    <RadioButton
+                        android:text="嗓音保健"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/RadioBtn2_3_3_1_4"
+                        android:textAppearance="@style/radioButtonText"/>
+                </LinearLayout>
             </LinearLayout>
         </LinearLayout>
 
-
-        </LinearLayout>
         <Button
             android:text="提交"
             android:layout_width="match_parent"
