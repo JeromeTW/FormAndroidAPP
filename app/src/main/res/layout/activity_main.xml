@@ -66,29 +66,22 @@
                 android:layout_height="match_parent"
                 >
 
-                <RadioGroup
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                <RadioButton
+                    android:text="男"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/maleRadioBtn"
                     android:layout_weight="1"
-                    android:checkedButton="@+id/genderRadioGroup">
+                    android:checked="true"
+                    android:textAppearance="@style/radioButtonText"/>
 
-                    <RadioButton
-                        android:text="男"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/maleRadioBtn"
-                        android:layout_weight="1"
-                        android:checked="true"
-                        android:textAppearance="@style/radioButtonText"/>
-
-                    <RadioButton
-                        android:text="女"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/femaleRadioBtn"
-                        android:layout_weight="1"
-                        android:textAppearance="@style/radioButtonText"/>
-                </RadioGroup>
+                <RadioButton
+                    android:text="女"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/femaleRadioBtn"
+                    android:layout_weight="1"
+                    android:textAppearance="@style/radioButtonText"/>
 
             </LinearLayout>
 
@@ -146,37 +139,26 @@
                     android:showDividers="middle"
                     android:divider="@drawable/empty_radio_buttun_tall_divider"
                     >
-
-                    <RadioGroup
+                    <RadioButton
+                        android:text="佳，不須增強即可全程安坐配合評估。"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:checkedButton="@+id/performaceRadioGroup">
+                        android:layout_height="wrap_content"
+                        android:id="@+id/goodRadioBtn"
+                        android:textAppearance="@style/radioButtonText"/>
 
-                        <RadioButton
-                            android:text="佳，不須增強即可全程安坐配合評估。"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/goodRadioBtn"
-                            android:textAppearance="@style/radioButtonText"
-                            android:layout_weight="1"/>
+                    <RadioButton
+                        android:text="尚可，需玩具／口語增強方可配合評估。"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/normalRadioBtn"
+                        android:textAppearance="@style/radioButtonText"/>
 
-                        <RadioButton
-                            android:text="尚可，需玩具／口語增強方可配合評估。"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/normalRadioBtn"
-                            android:textAppearance="@style/radioButtonText"
-                            android:layout_weight="1"/>
-
-                        <RadioButton
-                            android:text="待加強，需頻繁予以增強方可短暫配合評估活動。"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/badRadioBtn"
-                            android:textAppearance="@style/radioButtonText"
-                            android:layout_weight="1"/>
-                    </RadioGroup>
-
+                    <RadioButton
+                        android:text="待加強，需頻繁予以增強方可短暫配合評估活動。"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/badRadioBtn"
+                        android:textAppearance="@style/radioButtonText"/>
                 </LinearLayout>
             </LinearLayout>
 
@@ -414,37 +396,26 @@
                     android:showDividers="middle"
                     android:divider="@drawable/empty_radio_buttun_tall_divider"
                     >
-
-                    <RadioGroup
+                    <RadioButton
+                        android:text="可以自己刷牙"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:checkedButton="@+id/1_1_5_1RadioGroup">
+                        android:layout_height="wrap_content"
+                        android:id="@+id/RadioBtn1_1_5_1"
+                        android:textAppearance="@style/radioButtonText"/>
 
-                        <RadioButton
-                            android:text="可以自己刷牙"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/RadioBtn1_1_5_1"
-                            android:textAppearance="@style/radioButtonText"
-                            android:layout_weight="1"/>
+                    <RadioButton
+                        android:text="由照顧者刷牙，不排斥口腔被碰觸。"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/RadioBtn1_1_5_2"
+                        android:textAppearance="@style/radioButtonText"/>
 
-                        <RadioButton
-                            android:text="由照顧者刷牙，不排斥口腔被碰觸。"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/RadioBtn1_1_5_2"
-                            android:textAppearance="@style/radioButtonText"
-                            android:layout_weight="1"/>
-
-                        <RadioButton
-                            android:text="由照顧者刷牙，排斥口腔被碰觸。"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/RadioBtn1_1_5_3"
-                            android:textAppearance="@style/radioButtonText"
-                            android:layout_weight="1"/>
-                    </RadioGroup>
-
+                    <RadioButton
+                        android:text="由照顧者刷牙，排斥口腔被碰觸。"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/RadioBtn1_1_5_3"
+                        android:textAppearance="@style/radioButtonText"/>
                 </LinearLayout>
             </LinearLayout>
             <!--1-1-6-->
@@ -603,37 +574,26 @@
                     android:showDividers="middle"
                     android:divider="@drawable/empty_radio_buttun_tall_divider"
                     >
-
-                    <RadioGroup
+                    <RadioButton
+                        android:text="無異常"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:checkedButton="@+id/1_1_8_1RadioGroup">
+                        android:layout_height="wrap_content"
+                        android:id="@+id/RadioBtn1_1_8_1"
+                        android:textAppearance="@style/radioButtonText"/>
 
-                        <RadioButton
-                            android:text="無異常"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/RadioBtn1_1_8_1"
-                            android:textAppearance="@style/radioButtonText"
-                            android:layout_weight="1"/>
+                    <RadioButton
+                        android:text="臨界"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/RadioBtn1_1_8_2"
+                        android:textAppearance="@style/radioButtonText"/>
 
-                        <RadioButton
-                            android:text="臨界"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/RadioBtn1_1_8_2"
-                            android:textAppearance="@style/radioButtonText"
-                            android:layout_weight="1"/>
-
-                        <RadioButton
-                            android:text="異常"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/RadioBtn1_1_8_3"
-                            android:textAppearance="@style/radioButtonText"
-                            android:layout_weight="1"/>
-                    </RadioGroup>
-
+                    <RadioButton
+                        android:text="異常"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/RadioBtn1_1_8_3"
+                        android:textAppearance="@style/radioButtonText"/>
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
@@ -664,37 +624,24 @@
                     android:showDividers="middle"
                     android:divider="@drawable/empty_radio_buttun_tall_divider"
                     >
-
-                    <RadioGroup
+                    <RadioButton
+                        android:text="不需要"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:checkedButton="@+id/1_2_1_1RadioGroup">
-
-                        <RadioButton
-                            android:text="不需要"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/RadioBtn1_2_1_1"
-                            android:textAppearance="@style/radioButtonText"
-                            android:layout_weight="1"/>
-
-                        <RadioButton
-                            android:text="需要追蹤及咨詢"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/RadioBtn1_2_1_2"
-                            android:textAppearance="@style/radioButtonText"
-                            android:layout_weight="1"/>
-
-                        <RadioButton
-                            android:text="需要訓練"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/RadioBtn1_2_1_3"
-                            android:textAppearance="@style/radioButtonText"
-                            android:layout_weight="1"/>
-                    </RadioGroup>
-
+                        android:layout_height="wrap_content"
+                        android:id="@+id/RadioBtn1_2_1_1"
+                        android:textAppearance="@style/radioButtonText"/>
+                    <RadioButton
+                        android:text="需要追蹤及咨詢"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/RadioBtn1_2_1_2"
+                        android:textAppearance="@style/radioButtonText"/>
+                    <RadioButton
+                        android:text="需要訓練"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/RadioBtn1_2_1_3"
+                        android:textAppearance="@style/radioButtonText"/>
                 </LinearLayout>
             </LinearLayout>
             <!--1-2-2-->
@@ -815,29 +762,18 @@
                     android:showDividers="middle"
                     android:divider="@drawable/empty_radio_buttun_tall_divider"
                     >
-
-                    <RadioGroup
+                    <RadioButton
+                        android:text="無異常"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:checkedButton="@+id/1_3_1_1RadioGroup">
-
-                        <RadioButton
-                            android:text="無異常"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/RadioBtn1_3_1_1"
-                            android:textAppearance="@style/radioButtonText"
-                            android:layout_weight="1"/>
-
-                        <RadioButton
-                            android:text="有異常"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/RadioBtn1_3_1_2"
-                            android:textAppearance="@style/radioButtonText"
-                            android:layout_weight="1"/>
-                    </RadioGroup>
-
+                        android:layout_height="wrap_content"
+                        android:id="@+id/RadioBtn1_3_1_1"
+                        android:textAppearance="@style/radioButtonText"/>
+                    <RadioButton
+                        android:text="有異常"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/RadioBtn1_3_1_2"
+                        android:textAppearance="@style/radioButtonText"/>
                 </LinearLayout>
             </LinearLayout>
 
@@ -875,37 +811,24 @@
                     android:showDividers="middle"
                     android:divider="@drawable/empty_radio_buttun_tall_divider"
                     >
-
-                    <RadioGroup
+                    <RadioButton
+                        android:text="無異常"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:checkedButton="@+id/1_4_1_1RadioGroup">
-
-                        <RadioButton
-                            android:text="無異常"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/RadioBtn1_4_1_1"
-                            android:textAppearance="@style/radioButtonText"
-                            android:layout_weight="1"/>
-
-                        <RadioButton
-                            android:text="臨界"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/RadioBtn1_4_1_2"
-                            android:textAppearance="@style/radioButtonText"
-                            android:layout_weight="1"/>
-
-                        <RadioButton
-                            android:text="有異常"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/RadioBtn1_4_1_3"
-                            android:textAppearance="@style/radioButtonText"
-                            android:layout_weight="1"/>
-                    </RadioGroup>
-
+                        android:layout_height="wrap_content"
+                        android:id="@+id/RadioBtn1_4_1_1"
+                        android:textAppearance="@style/radioButtonText"/>
+                    <RadioButton
+                        android:text="臨界"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/RadioBtn1_4_1_2"
+                        android:textAppearance="@style/radioButtonText"/>
+                    <RadioButton
+                        android:text="有異常"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/RadioBtn1_4_1_3"
+                        android:textAppearance="@style/radioButtonText"/>
                 </LinearLayout>
             </LinearLayout>
             <!--1-4-2 -->
@@ -927,37 +850,24 @@
                     android:showDividers="middle"
                     android:divider="@drawable/empty_radio_buttun_tall_divider"
                     >
-
-                    <RadioGroup
+                    <RadioButton
+                        android:text="液體"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:checkedButton="@+id/1_4_2_1RadioGroup">
-
-                        <RadioButton
-                            android:text="液體"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/RadioBtn1_4_2_1"
-                            android:textAppearance="@style/radioButtonText"
-                            android:layout_weight="1"/>
-
-                        <RadioButton
-                            android:text="半固體"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/RadioBtn1_4_2_2"
-                            android:textAppearance="@style/radioButtonText"
-                            android:layout_weight="1"/>
-
-                        <RadioButton
-                            android:text="固體"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/RadioBtn1_4_2_3"
-                            android:textAppearance="@style/radioButtonText"
-                            android:layout_weight="1"/>
-                    </RadioGroup>
-
+                        android:layout_height="wrap_content"
+                        android:id="@+id/RadioBtn1_4_2_1"
+                        android:textAppearance="@style/radioButtonText"/>
+                    <RadioButton
+                        android:text="半固體"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/RadioBtn1_4_2_2"
+                        android:textAppearance="@style/radioButtonText"/>
+                    <RadioButton
+                        android:text="固體"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/RadioBtn1_4_2_3"
+                        android:textAppearance="@style/radioButtonText"/>
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
@@ -994,37 +904,24 @@
                     android:showDividers="middle"
                     android:divider="@drawable/empty_radio_buttun_tall_divider"
                     >
-
-                    <RadioGroup
+                    <RadioButton
+                        android:text="不需要"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:checkedButton="@+id/1_5_1_1RadioGroup">
-
-                        <RadioButton
-                            android:text="不需要"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/RadioBtn1_5_1_1"
-                            android:textAppearance="@style/radioButtonText"
-                            android:layout_weight="1"/>
-
-                        <RadioButton
-                            android:text="需要追蹤及咨詢"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/RadioBtn1_5_1_2"
-                            android:textAppearance="@style/radioButtonText"
-                            android:layout_weight="1"/>
-
-                        <RadioButton
-                            android:text="需要訓練"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/RadioBtn1_5_1_3"
-                            android:textAppearance="@style/radioButtonText"
-                            android:layout_weight="1"/>
-                    </RadioGroup>
-
+                        android:layout_height="wrap_content"
+                        android:id="@+id/RadioBtn1_5_1_1"
+                        android:textAppearance="@style/radioButtonText"/>
+                    <RadioButton
+                        android:text="需要追蹤及咨詢"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/RadioBtn1_5_1_2"
+                        android:textAppearance="@style/radioButtonText"/>
+                    <RadioButton
+                        android:text="需要訓練"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/RadioBtn1_5_1_3"
+                        android:textAppearance="@style/radioButtonText"/>
                 </LinearLayout>
             </LinearLayout>
             <!--1-5-2-->
@@ -1046,45 +943,30 @@
                     android:showDividers="middle"
                     android:divider="@drawable/empty_radio_buttun_tall_divider"
                     >
-
-                    <RadioGroup
+                    <RadioButton
+                        android:text="改變姿勢"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:checkedButton="@+id/1_5_2_1RadioGroup">
-
-                        <RadioButton
-                            android:text="改變姿勢"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/RadioBtn1_5_2_1"
-                            android:textAppearance="@style/radioButtonText"
-                            android:layout_weight="1"/>
-
-                        <RadioButton
-                            android:text="控制量"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/RadioBtn1_5_2_2"
-                            android:textAppearance="@style/radioButtonText"
-                            android:layout_weight="1"/>
-
-                        <RadioButton
-                            android:text="食物材質的選擇"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/RadioBtn1_5_2_3"
-                            android:textAppearance="@style/radioButtonText"
-                            android:layout_weight="1"/>
-
-                        <RadioButton
-                            android:text="食器的選擇"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/RadioBtn1_5_2_4"
-                            android:textAppearance="@style/radioButtonText"
-                            android:layout_weight="1"/>
-                    </RadioGroup>
-
+                        android:layout_height="wrap_content"
+                        android:id="@+id/RadioBtn1_5_2_1"
+                        android:textAppearance="@style/radioButtonText"/>
+                    <RadioButton
+                        android:text="控制量"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/RadioBtn1_5_2_2"
+                        android:textAppearance="@style/radioButtonText"/>
+                    <RadioButton
+                        android:text="食物材質的選擇"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/RadioBtn1_5_2_3"
+                        android:textAppearance="@style/radioButtonText"/>
+                    <RadioButton
+                        android:text="食器的選擇"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/RadioBtn1_5_2_4"
+                        android:textAppearance="@style/radioButtonText"/>
                 </LinearLayout>
             </LinearLayout>
             <!--1-5-3-->
@@ -1106,45 +988,30 @@
                     android:showDividers="middle"
                     android:divider="@drawable/empty_radio_buttun_tall_divider"
                     >
-
-                    <RadioGroup
+                    <RadioButton
+                        android:text="流質"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:checkedButton="@+id/1_5_3_1RadioGroup">
-
-                        <RadioButton
-                            android:text="流質"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/RadioBtn1_5_3_1"
-                            android:textAppearance="@style/radioButtonText"
-                            android:layout_weight="1"/>
-
-                        <RadioButton
-                            android:text="糊狀"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/RadioBtn1_5_3_2"
-                            android:textAppearance="@style/radioButtonText"
-                            android:layout_weight="1"/>
-
-                        <RadioButton
-                            android:text="軟質"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/RadioBtn1_5_3_3"
-                            android:textAppearance="@style/radioButtonText"
-                            android:layout_weight="1"/>
-
-                        <RadioButton
-                            android:text="固體"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/RadioBtn1_5_3_4"
-                            android:textAppearance="@style/radioButtonText"
-                            android:layout_weight="1"/>
-                    </RadioGroup>
-
+                        android:layout_height="wrap_content"
+                        android:id="@+id/RadioBtn1_5_3_1"
+                        android:textAppearance="@style/radioButtonText"/>
+                    <RadioButton
+                        android:text="糊狀"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/RadioBtn1_5_3_2"
+                        android:textAppearance="@style/radioButtonText"/>
+                    <RadioButton
+                        android:text="軟質"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/RadioBtn1_5_3_3"
+                        android:textAppearance="@style/radioButtonText"/>
+                    <RadioButton
+                        android:text="固體"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/RadioBtn1_5_3_4"
+                        android:textAppearance="@style/radioButtonText"/>
                 </LinearLayout>
             </LinearLayout>
             <!--1-5-4-->
@@ -1166,47 +1033,31 @@
                     android:showDividers="middle"
                     android:divider="@drawable/empty_radio_buttun_tall_divider"
                     >
-
-                    <RadioGroup
+                    <RadioButton
+                        android:text="奶瓶"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:checkedButton="@+id/1_5_4_1RadioGroup">
-
-                        <RadioButton
-                            android:text="奶瓶"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/RadioBtn1_5_4_1"
-                            android:textAppearance="@style/radioButtonText"
-                            android:layout_weight="1"/>
-
-                        <RadioButton
-                            android:text="杯子"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/RadioBtn1_5_4_2"
-                            android:textAppearance="@style/radioButtonText"
-                            android:layout_weight="1"/>
-
-                        <RadioButton
-                            android:text="湯匙"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/RadioBtn1_5_4_3"
-                            android:textAppearance="@style/radioButtonText"
-                            android:layout_weight="1"/>
-
-                        <RadioButton
-                            android:text="筷子"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/RadioBtn1_5_4_4"
-                            android:textAppearance="@style/radioButtonText"
-                            android:layout_weight="1"/>
-                    </RadioGroup>
-
+                        android:layout_height="wrap_content"
+                        android:id="@+id/RadioBtn1_5_4_1"
+                        android:textAppearance="@style/radioButtonText"/>
+                    <RadioButton
+                        android:text="杯子"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/RadioBtn1_5_4_2"
+                        android:textAppearance="@style/radioButtonText"/>
+                    <RadioButton
+                        android:text="湯匙"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/RadioBtn1_5_4_3"
+                        android:textAppearance="@style/radioButtonText"/>
+                    <RadioButton
+                        android:text="筷子"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/RadioBtn1_5_4_4"
+                        android:textAppearance="@style/radioButtonText"/>
                 </LinearLayout>
-
             </LinearLayout>
 
         </LinearLayout>
@@ -1244,37 +1095,24 @@
                     android:showDividers="middle"
                     android:divider="@drawable/empty_radio_buttun_tall_divider"
                     >
-
-                    <RadioGroup
+                    <RadioButton
+                        android:text="無異常"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:checkedButton="@+id/2_1_1_1RadioGroup">
-
-                        <RadioButton
-                            android:text="無異常"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/RadioBtn2_1_1_1"
-                            android:textAppearance="@style/radioButtonText"
-                            android:layout_weight="1"/>
-
-                        <RadioButton
-                            android:text="臨界/疑似發展遲緩"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/RadioBtn2_1_1_2"
-                            android:textAppearance="@style/radioButtonText"
-                            android:layout_weight="1"/>
-
-                        <RadioButton
-                            android:text="發展遲緩"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/RadioBtn2_1_1_3"
-                            android:textAppearance="@style/radioButtonText"
-                            android:layout_weight="1"/>
-                    </RadioGroup>
-
+                        android:layout_height="wrap_content"
+                        android:id="@+id/RadioBtn2_1_1_1"
+                        android:textAppearance="@style/radioButtonText"/>
+                    <RadioButton
+                        android:text="臨界/疑似發展遲緩"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/RadioBtn2_1_1_2"
+                        android:textAppearance="@style/radioButtonText"/>
+                    <RadioButton
+                        android:text="發展遲緩"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/RadioBtn2_1_1_3"
+                        android:textAppearance="@style/radioButtonText"/>
                 </LinearLayout>
                 <!--2-1-1-2-->
                 <LinearLayout
@@ -1371,85 +1209,60 @@
                             android:showDividers="middle"
                             android:divider="@drawable/empty_radio_buttun_tall_divider"
                             >
-
-                            <RadioGroup
+                            <RadioButton
+                                android:text="臨床觀察"
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:checkedButton="@+id/2_1_1_2_4_1RadioGroup">
-
-                                <RadioButton
-                                    android:text="臨床觀察"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:id="@+id/RadioBtn2_1_1_2_4_1"
-                                    android:textAppearance="@style/radioButtonText"
-                                    android:layout_weight="1"/>
-
-                                <RadioButton
-                                    android:text="臨床晤談"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:id="@+id/RadioBtn2_1_1_2_4_2"
-                                    android:textAppearance="@style/radioButtonText"
-                                    android:layout_weight="1"/>
-
-                                <RadioButton
-                                    android:text="修訂畢保德圖畫詞彙測驗 (PPVT-R)"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:id="@+id/RadioBtn2_1_1_2_4_3"
-                                    android:textAppearance="@style/radioButtonText"
-                                    android:layout_weight="1"/>
-
-                                <RadioButton
-                                    android:text="修訂學前兒童語言障礙評量表"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:id="@+id/RadioBtn2_1_1_2_4_4"
-                                    android:textAppearance="@style/radioButtonText"
-                                    android:layout_weight="1"/>
-
-                                <RadioButton
-                                    android:text="修訂學齡兒童語言障礙評量表"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:id="@+id/RadioBtn2_1_1_2_4_5"
-                                    android:textAppearance="@style/radioButtonText"
-                                    android:layout_weight="1"/>
-
-                                <RadioButton
-                                    android:text="嬰幼兒綜合發展測驗 (CDIIT)"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:id="@+id/RadioBtn2_1_1_2_4_6"
-                                    android:textAppearance="@style/radioButtonText"
-                                    android:layout_weight="1"/>
-
-                                <RadioButton
-                                    android:text="零至三歲華語嬰幼兒溝通及語言診斷測驗 (0-3CLST)"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:id="@+id/RadioBtn2_1_1_2_4_7"
-                                    android:textAppearance="@style/radioButtonText"
-                                    android:layout_weight="1"/>
-
-                                <RadioButton
-                                    android:text="華語兒童理解與表達詞彙測驗 (REVT)"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:id="@+id/RadioBtn2_1_1_2_4_8"
-                                    android:textAppearance="@style/radioButtonText"
-                                    android:layout_weight="1"/>
-
-                                <RadioButton
-                                    android:text="學前幼兒與國小低年級兒童口語語法診斷測驗"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:id="@+id/RadioBtn2_1_1_2_4_9"
-                                    android:textAppearance="@style/radioButtonText"
-                                    android:layout_weight="1"/>
-                            </RadioGroup>
-
+                                android:layout_height="wrap_content"
+                                android:id="@+id/RadioBtn2_1_1_2_4_1"
+                                android:textAppearance="@style/radioButtonText"/>
+                            <RadioButton
+                                android:text="臨床晤談"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/RadioBtn2_1_1_2_4_2"
+                                android:textAppearance="@style/radioButtonText"/>
+                            <RadioButton
+                                android:text="修訂畢保德圖畫詞彙測驗 (PPVT-R)"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/RadioBtn2_1_1_2_4_3"
+                                android:textAppearance="@style/radioButtonText"/>
+                            <RadioButton
+                                android:text="修訂學前兒童語言障礙評量表"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/RadioBtn2_1_1_2_4_4"
+                                android:textAppearance="@style/radioButtonText"/>
+                            <RadioButton
+                                android:text="修訂學齡兒童語言障礙評量表"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/RadioBtn2_1_1_2_4_5"
+                                android:textAppearance="@style/radioButtonText"/>
+                            <RadioButton
+                                android:text="嬰幼兒綜合發展測驗 (CDIIT)"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/RadioBtn2_1_1_2_4_6"
+                                android:textAppearance="@style/radioButtonText"/>
+                            <RadioButton
+                                android:text="零至三歲華語嬰幼兒溝通及語言診斷測驗 (0-3CLST)"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/RadioBtn2_1_1_2_4_7"
+                                android:textAppearance="@style/radioButtonText"/>
+                            <RadioButton
+                                android:text="華語兒童理解與表達詞彙測驗 (REVT)"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/RadioBtn2_1_1_2_4_8"
+                                android:textAppearance="@style/radioButtonText"/>
+                            <RadioButton
+                                android:text="學前幼兒與國小低年級兒童口語語法診斷測驗"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/RadioBtn2_1_1_2_4_9"
+                                android:textAppearance="@style/radioButtonText"/>
                         </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
@@ -1491,37 +1304,24 @@
                     android:showDividers="middle"
                     android:divider="@drawable/empty_radio_buttun_tall_divider"
                     >
-
-                    <RadioGroup
+                    <RadioButton
+                        android:text="不需要"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:checkedButton="@+id/2_2_1_1_1RadioGroup">
-
-                        <RadioButton
-                            android:text="不需要"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/RadioBtn2_2_1_1_1"
-                            android:textAppearance="@style/radioButtonText"
-                            android:layout_weight="1"/>
-
-                        <RadioButton
-                            android:text="需要追蹤及咨詢"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/RadioBtn2_2_1_1_2"
-                            android:textAppearance="@style/radioButtonText"
-                            android:layout_weight="1"/>
-
-                        <RadioButton
-                            android:text="需要訓練"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/RadioBtn2_2_1_1_3"
-                            android:textAppearance="@style/radioButtonText"
-                            android:layout_weight="1"/>
-                    </RadioGroup>
-
+                        android:layout_height="wrap_content"
+                        android:id="@+id/RadioBtn2_2_1_1_1"
+                        android:textAppearance="@style/radioButtonText"/>
+                    <RadioButton
+                        android:text="需要追蹤及咨詢"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/RadioBtn2_2_1_1_2"
+                        android:textAppearance="@style/radioButtonText"/>
+                    <RadioButton
+                        android:text="需要訓練"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/RadioBtn2_2_1_1_3"
+                        android:textAppearance="@style/radioButtonText"/>
                 </LinearLayout>
             </LinearLayout>
             <!--2-2-2 訓練方向-->
@@ -1639,37 +1439,24 @@
                     android:showDividers="middle"
                     android:divider="@drawable/empty_radio_buttun_tall_divider"
                     >
-
-                    <RadioGroup
+                    <RadioButton
+                        android:text="不需要"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:checkedButton="@+id/2_3_1_1_1RadioGroup">
-
-                        <RadioButton
-                            android:text="不需要"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/RadioBtn2_3_1_1_1"
-                            android:textAppearance="@style/radioButtonText"
-                            android:layout_weight="1"/>
-
-                        <RadioButton
-                            android:text="需要追蹤及咨詢"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/RadioBtn2_3_1_1_2"
-                            android:textAppearance="@style/radioButtonText"
-                            android:layout_weight="1"/>
-
-                        <RadioButton
-                            android:text="需要訓練"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/RadioBtn2_3_1_1_3"
-                            android:textAppearance="@style/radioButtonText"
-                            android:layout_weight="1"/>
-                    </RadioGroup>
-
+                        android:layout_height="wrap_content"
+                        android:id="@+id/RadioBtn2_3_1_1_1"
+                        android:textAppearance="@style/radioButtonText"/>
+                    <RadioButton
+                        android:text="需要追蹤及咨詢"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/RadioBtn2_3_1_1_2"
+                        android:textAppearance="@style/radioButtonText"/>
+                    <RadioButton
+                        android:text="需要訓練"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/RadioBtn2_3_1_1_3"
+                        android:textAppearance="@style/radioButtonText"/>
                 </LinearLayout>
             </LinearLayout>
             <!--2-3-2 口語訓練方向-->
@@ -1784,45 +1571,30 @@
                     android:showDividers="middle"
                     android:divider="@drawable/empty_radio_buttun_tall_divider"
                     >
-
-                    <RadioGroup
+                    <RadioButton
+                        android:text="構音矯正"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:checkedButton="@+id/2_3_3_1_1RadioGroup">
-
-                        <RadioButton
-                            android:text="構音矯正"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/RadioBtn2_3_3_1_1"
-                            android:textAppearance="@style/radioButtonText"
-                            android:layout_weight="1"/>
-
-                        <RadioButton
-                            android:text="語暢訓練"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/RadioBtn2_3_3_1_2"
-                            android:textAppearance="@style/radioButtonText"
-                            android:layout_weight="1"/>
-
-                        <RadioButton
-                            android:text="嗓音復健"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/RadioBtn2_3_3_1_3"
-                            android:textAppearance="@style/radioButtonText"
-                            android:layout_weight="1"/>
-
-                        <RadioButton
-                            android:text="嗓音保健"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/RadioBtn2_3_3_1_4"
-                            android:textAppearance="@style/radioButtonText"
-                            android:layout_weight="1"/>
-                    </RadioGroup>
-
+                        android:layout_height="wrap_content"
+                        android:id="@+id/RadioBtn2_3_3_1_1"
+                        android:textAppearance="@style/radioButtonText"/>
+                    <RadioButton
+                        android:text="語暢訓練"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/RadioBtn2_3_3_1_2"
+                        android:textAppearance="@style/radioButtonText"/>
+                    <RadioButton
+                        android:text="嗓音復健"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/RadioBtn2_3_3_1_3"
+                        android:textAppearance="@style/radioButtonText"/>
+                    <RadioButton
+                        android:text="嗓音保健"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/RadioBtn2_3_3_1_4"
+                        android:textAppearance="@style/radioButtonText"/>
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
