@@ -5,8 +5,8 @@ package Modal;
  */
 
 public class DataItem {
-    private String key;
-    private String value;
+    String key;
+    String value;
     public static final String BREAK_LINE = "\n";
 
     public DataItem(String key, String value) {
