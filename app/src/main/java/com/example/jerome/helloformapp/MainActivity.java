@@ -25,6 +25,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import Modal.DataItem;
+import Modal.JeCheckBoxGroup;
 import Modal.JeRadioGroup;
 import Modal.Section;
 import Modal.TextPrinter;
@@ -68,14 +69,6 @@ public class MainActivity extends AppCompatActivity {
     Button submitBtn;
 
     public static final String TAG = "MyActivity";
-    /*
-    public static final String NAME = "姓名";
-    public static final String BIRTHDAY = "出生日期";
-    public static final String GENDER = "型別";
-    public static final String ACCEPTION_DAY = "收案日期";
-    public static final String DESCRIPTION = "注記";
-    public static final String SECTION_NAME_1TH = "個案基本資料";
-*/
 
     @BindView(R.id.textView6)
     TextView textView6;
@@ -400,6 +393,14 @@ public class MainActivity extends AppCompatActivity {
     private JeRadioGroup radioGroup23111;
     private JeRadioGroup radioGroup23311;
 
+    private JeCheckBoxGroup checkBoxGroup1121;
+    private JeCheckBoxGroup checkBoxGroup1131;
+    private JeCheckBoxGroup checkBoxGroup1141;
+    private JeCheckBoxGroup checkBoxGroup1171;
+    private JeCheckBoxGroup checkBoxGroup1221;
+    private JeCheckBoxGroup checkBoxGroup1231;
+    private JeCheckBoxGroup checkBoxGroup22211;
+    private JeCheckBoxGroup checkBoxGroup23211;
 
 
     //region Events
@@ -472,6 +473,7 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
         ButterKnife.setDebug(true);
         setupRadioGroups();
+        setupCheckBoxGroups();
         List<Section> sectionArray = new ArrayList<Section>();
         textPrinter = new TextPrinter(sectionArray);
     }
@@ -531,6 +533,29 @@ public class MainActivity extends AppCompatActivity {
                 RadioBtn23112, RadioBtn23113);
         radioGroup23311 = new JeRadioGroup(getString(R.string.je_textView2331), RadioBtn23311,
                 RadioBtn23312, RadioBtn23313, RadioBtn23314);
+    }
+    private void setupCheckBoxGroups() {
+        checkBoxGroup1121 = new JeCheckBoxGroup(getString(R.string.je_textView121), checkBox1121,
+                checkBox1122, checkBox1123, checkBox1124, checkBox1125, checkBox1126);
+        checkBoxGroup1131 = new JeCheckBoxGroup(getString(R.string.je_textView113), checkBox1131,
+                checkBox1132, checkBox1133, checkBox1134, checkBox1135, checkBox1136,
+                checkBox1137);
+        checkBoxGroup1141 = new JeCheckBoxGroup(getString(R.string.je_textView114), checkBox1141,
+                checkBox1142);
+        checkBoxGroup1171 = new JeCheckBoxGroup(getString(R.string.je_textView117), checkBox1171,
+                checkBox1172, checkBox1173, checkBox1174, checkBox1175, checkBox1176,
+                checkBox1177, checkBox1178, checkBox1179);
+        checkBoxGroup1221 = new JeCheckBoxGroup(getString(R.string.je_textView122), checkBox1221,
+                checkBox1222, checkBox1223);
+        checkBoxGroup1231 = new JeCheckBoxGroup(getString(R.string.je_textView123), checkBox1231,
+                checkBox1232, checkBox1233, checkBox1234);
+        checkBoxGroup22211 = new JeCheckBoxGroup(getString(R.string.je_textView2221), checkBox22211,
+                checkBox22212, checkBox22213, checkBox22214, checkBox22215, checkBox22216,
+                checkBox22217, checkBox22218, checkBox22219, checkBox222110);
+        checkBoxGroup23211 = new JeCheckBoxGroup(getString(R.string.je_textView2321), checkBox23211,
+                checkBox23212, checkBox23213, checkBox23214, checkBox23215, checkBox23216,
+                checkBox23217, checkBox23218, checkBox23219, checkBox232110, checkBox232111,
+                checkBox232112);
     }
     // endregion
 
