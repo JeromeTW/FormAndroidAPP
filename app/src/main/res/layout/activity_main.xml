@@ -604,6 +604,7 @@
             android:orientation="vertical"
             android:showDividers="middle"
             android:divider="@drawable/empty_question_tall_divider"
+            android:id="@+id/subSection1_2"
             >
             <!--1-2-1-->
             <LinearLayout
@@ -624,12 +625,13 @@
                     android:showDividers="middle"
                     android:divider="@drawable/empty_radio_buttun_tall_divider"
                     >
-                    <RadioButton
-                        android:text="@string/je_radioBtn1211"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/RadioBtn1_2_1_1"
-                        android:textAppearance="@style/radioButtonText"/>
+                    <!--進到這個subSection就不存在"不需要"的選項-->
+                    <!--<RadioButton-->
+                        <!--android:text="@string/je_radioBtn1211"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:id="@+id/RadioBtn1_2_1_1"-->
+                        <!--android:textAppearance="@style/radioButtonText"/>-->
                     <RadioButton
                         android:text="@string/je_radioBtn1212"
                         android:layout_width="match_parent"
@@ -836,6 +838,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
+                android:id="@+id/subSection1_4_2"
                 >
                 <TextView
                     android:text="@string/je_textView1421"
@@ -929,6 +932,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
+                android:id="@+id/subSection1_5_2"
                 >
                 <TextView
                     android:text="@string/je_textView152"
@@ -942,6 +946,7 @@
                     android:orientation="vertical"
                     android:showDividers="middle"
                     android:divider="@drawable/empty_radio_buttun_tall_divider"
+                    android:id="@+id/subSection1_5_2_1"
                     >
                     <RadioButton
                         android:text="@string/je_radioBtn1521"
@@ -974,6 +979,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
+                android:id="@+id/subSection1_5_1_3"
                 >
                 <TextView
                     android:text="@string/je_textView153"
@@ -1019,6 +1025,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
+                android:id="@+id/subSection1_5_1_4"
                 >
                 <TextView
                     android:text="@string/je_textView154"
@@ -1119,6 +1126,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
+                    android:id="@+id/subSection2_1_1_2"
                     >
                     <!--2-1-1-2-1評估日期-->
                     <LinearLayout
@@ -1329,6 +1337,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
+                android:id="@+id/subSection2_2_2_1"
                 >
                 <TextView
                     android:text="@string/je_textView2221"
@@ -1477,6 +1486,7 @@
                     android:orientation="vertical"
                     android:showDividers="middle"
                     android:divider="@drawable/empty_check_box_tall_divider"
+                    android:id="@+id/subSection2_3_2_1_1"
                     >
                     <CheckBox
                         android:text="@string/je_checkBox23211"
@@ -1557,6 +1567,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
+                android:id="@+id/subSection2_3_3_1"
                 >
                 <TextView
                     android:text="@string/je_textView2331"

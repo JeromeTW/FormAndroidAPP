@@ -6,10 +6,12 @@ import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
 import android.text.format.Time;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.ScrollView;
 import android.widget.TextView;
@@ -164,8 +166,8 @@ public class MainActivity extends AppCompatActivity {
     RadioButton RadioBtn1183;
     @BindView(R.id.textView1_2_1)
     TextView textView121;
-    @BindView(R.id.RadioBtn1_2_1_1)
-    RadioButton RadioBtn1211;
+//    @BindView(R.id.RadioBtn1_2_1_1)
+//    RadioButton RadioBtn1211;   // 沒用到
     @BindView(R.id.RadioBtn1_2_1_2)
     RadioButton RadioBtn1212;
     @BindView(R.id.RadioBtn1_2_1_3)
@@ -374,6 +376,26 @@ public class MainActivity extends AppCompatActivity {
     RadioButton RadioBtn23313;
     @BindView(R.id.RadioBtn2_3_3_1_4)
     RadioButton RadioBtn23314;
+    @BindView(R.id.subSection1_2)
+    LinearLayout subSection12;
+    @BindView(R.id.subSection1_4_2)
+    LinearLayout subSection142;
+    @BindView(R.id.subSection1_5_2_1)
+    LinearLayout subSection1521;
+    @BindView(R.id.subSection1_5_2)
+    LinearLayout subSection152;
+    @BindView(R.id.subSection1_5_1_3)
+    LinearLayout subSection1513;
+    @BindView(R.id.subSection1_5_1_4)
+    LinearLayout subSection1514;
+    @BindView(R.id.subSection2_1_1_2)
+    LinearLayout subSection2112;
+    @BindView(R.id.subSection2_2_2_1)
+    LinearLayout subSection2221;
+    @BindView(R.id.subSection2_3_2_1_1)
+    LinearLayout subSection23211;
+    @BindView(R.id.subSection2_3_3_1)
+    LinearLayout subSection2331;
     private TextPrinter textPrinter;
     private JeRadioGroup performanceGroup;
     private JeRadioGroup genderGroup;   // 暫時不用
@@ -422,9 +444,25 @@ public class MainActivity extends AppCompatActivity {
     @OnClick({R.id.RadioBtn1_1_8_1, R.id.RadioBtn1_1_8_2, R.id.RadioBtn1_1_8_3})
     public void setDiffEvents3(RadioButton button) {
         radioGroup1181.didSelectRadio(button);
+        switch (button.getId()) {
+            case R.id.RadioBtn1_1_8_1:
+                subSection12.setVisibility(View.GONE);
+                radioGroup1211.setIsGone();
+                checkBoxGroup1121.setIsGone();
+                checkBoxGroup1221.setIsGone();
+                checkBoxGroup1231.setIsGone();
+                break;
+            default:
+                subSection12.setVisibility(View.VISIBLE);
+                radioGroup1211.setNotGone();
+                checkBoxGroup1121.setNotGone();
+                checkBoxGroup1221.setNotGone();
+                checkBoxGroup1231.setNotGone();
+                break;
+        }
     }
 
-    @OnClick({R.id.RadioBtn1_2_1_1, R.id.RadioBtn1_2_1_2, R.id.RadioBtn1_2_1_3})
+    @OnClick({ R.id.RadioBtn1_2_1_2, R.id.RadioBtn1_2_1_3})
     public void setDiffEvents4(RadioButton button) {
         radioGroup1211.didSelectRadio(button);
     }
@@ -437,6 +475,16 @@ public class MainActivity extends AppCompatActivity {
     @OnClick({R.id.RadioBtn1_4_1_1, R.id.RadioBtn1_4_1_2, R.id.RadioBtn1_4_1_3})
     public void setDiffEvents6(RadioButton button) {
         radioGroup1411.didSelectRadio(button);
+        switch (button.getId()) {
+            case R.id.RadioBtn1_4_1_1:
+                subSection142.setVisibility(View.GONE);
+                radioGroup1421.setIsGone();
+                break;
+            default:
+                subSection142.setVisibility(View.VISIBLE);
+                radioGroup1421.setNotGone();
+                break;
+        }
     }
 
     @OnClick({R.id.RadioBtn1_4_2_1, R.id.RadioBtn1_4_2_2, R.id.RadioBtn1_4_2_3})
@@ -447,20 +495,58 @@ public class MainActivity extends AppCompatActivity {
     @OnClick({R.id.RadioBtn1_5_1_1, R.id.RadioBtn1_5_1_2, R.id.RadioBtn1_5_1_3})
     public void setDiffEvents8(RadioButton button) {
         radioGroup1511.didSelectRadio(button);
+        switch (button.getId()) {
+            case R.id.RadioBtn1_5_1_1:
+                subSection152.setVisibility(View.GONE);
+                subSection1513.setVisibility(View.GONE);
+                subSection1514.setVisibility(View.GONE);
+                radioGroup1521.setIsGone();
+                radioGroup1531.setIsGone();
+                radioGroup1541.setIsGone();
+                break;
+            default:
+                subSection152.setVisibility(View.VISIBLE);
+                subSection1513.setVisibility(View.VISIBLE);
+                subSection1514.setVisibility(View.VISIBLE);
+                radioGroup1521.setNotGone();
+                radioGroup1531.setNotGone();
+                radioGroup1541.setNotGone();
+                break;
+        }
     }
 
     @OnClick({R.id.RadioBtn1_5_2_1, R.id.RadioBtn1_5_2_2, R.id.RadioBtn1_5_2_3, R.id.RadioBtn1_5_2_4})
     public void setDiffEvents9(RadioButton button) {
         radioGroup1521.didSelectRadio(button);
+        switch (button.getId()) {
+            case R.id.RadioBtn1_5_2_1:
+            case R.id.RadioBtn1_5_2_2:
+                subSection1513.setVisibility(View.GONE);
+                subSection1514.setVisibility(View.GONE);
+                radioGroup1531.setIsGone();
+                radioGroup1541.setIsGone();
+                break;
+            case R.id.RadioBtn1_5_2_3:
+                subSection1513.setVisibility(View.VISIBLE);
+                subSection1514.setVisibility(View.GONE);
+                radioGroup1531.setIsGone();
+                radioGroup1541.setNotGone();
+                break;
+            case R.id.RadioBtn1_5_2_4:
+                subSection1513.setVisibility(View.GONE);
+                subSection1514.setVisibility(View.VISIBLE);
+                radioGroup1531.setNotGone();
+                radioGroup1541.setIsGone();
+                break;
+
+        }
     }
 
-    @OnClick({R.id.RadioBtn1_5_3_1, R.id.RadioBtn1_5_3_2, R.id.RadioBtn1_5_3_3,  R.id
+    @OnClick({R.id.RadioBtn1_5_3_1, R.id.RadioBtn1_5_3_2, R.id.RadioBtn1_5_3_3, R.id
             .RadioBtn1_5_3_4})
-    public void setDiffEvents10(RadioButton button) {
-        radioGroup1531.didSelectRadio(button);
-    }
+    public void setDiffEvents10(RadioButton button) { radioGroup1531.didSelectRadio(button); }
 
-    @OnClick({R.id.RadioBtn1_5_4_1, R.id.RadioBtn1_5_4_2, R.id.RadioBtn1_5_4_3,  R.id
+    @OnClick({R.id.RadioBtn1_5_4_1, R.id.RadioBtn1_5_4_2, R.id.RadioBtn1_5_4_3, R.id
             .RadioBtn1_5_4_4})
     public void setDiffEvents11(RadioButton button) {
         radioGroup1541.didSelectRadio(button);
@@ -469,6 +555,17 @@ public class MainActivity extends AppCompatActivity {
     @OnClick({R.id.RadioBtn2_1_1_1, R.id.RadioBtn2_1_1_2, R.id.RadioBtn2_1_1_3})
     public void setDiffEvents12(RadioButton button) {
         radioGroup2111.didSelectRadio(button);
+        // TODO: 還有一個評估日期的DatePicker和兩個EditText未完成Gone功能
+        switch (button.getId()) {
+            case R.id.RadioBtn2_1_1_1:
+                subSection2112.setVisibility(View.GONE);
+                radioGroup2111.setIsGone();
+                break;
+            default:
+                subSection2112.setVisibility(View.VISIBLE);
+                radioGroup2111.setNotGone();
+                break;
+        }
     }
 
     @OnClick({R.id.RadioBtn2_1_1_2_4_1, R.id.RadioBtn2_1_1_2_4_2, R.id.RadioBtn2_1_1_2_4_3, R.id
@@ -481,11 +578,35 @@ public class MainActivity extends AppCompatActivity {
     @OnClick({R.id.RadioBtn2_2_1_1_1, R.id.RadioBtn2_2_1_1_2, R.id.RadioBtn2_2_1_1_3})
     public void setDiffEvents14(RadioButton button) {
         radioGroup22111.didSelectRadio(button);
+        switch (button.getId()) {
+            case R.id.RadioBtn2_2_1_1_1:
+                subSection2221.setVisibility(View.GONE);
+                checkBoxGroup22211.setIsGone();
+                break;
+            default:
+                subSection2221.setVisibility(View.VISIBLE);
+                checkBoxGroup22211.setNotGone();
+                break;
+        }
     }
 
     @OnClick({R.id.RadioBtn2_3_1_1_1, R.id.RadioBtn2_3_1_1_2, R.id.RadioBtn2_3_1_1_3})
     public void setDiffEvents15(RadioButton button) {
         radioGroup23111.didSelectRadio(button);
+        switch (button.getId()) {
+            case R.id.RadioBtn2_3_1_1_1:
+                subSection23211.setVisibility(View.GONE);
+                subSection2331.setVisibility(View.GONE);
+                checkBoxGroup23211.setIsGone();
+                radioGroup23311.setIsGone();
+                break;
+            default:
+                subSection23211.setVisibility(View.VISIBLE);
+                subSection2331.setVisibility(View.VISIBLE);
+                checkBoxGroup23211.setNotGone();
+                radioGroup23311.setNotGone();
+                break;
+        }
     }
 
     @OnClick({R.id.RadioBtn2_3_3_1_1, R.id.RadioBtn2_3_3_1_2, R.id.RadioBtn2_3_3_1_3,
@@ -493,13 +614,6 @@ public class MainActivity extends AppCompatActivity {
     public void setDiffEvents16(RadioButton button) {
         radioGroup23311.didSelectRadio(button);
     }
-
-
-
-
-
-
-
 
 
     @OnClick(R.id.maleRadioBtn)
@@ -628,7 +742,7 @@ public class MainActivity extends AppCompatActivity {
                 RadioBtn1153);
         radioGroup1181 = new JeRadioGroup(getString(R.string.je_textView118), RadioBtn1181, RadioBtn1182,
                 RadioBtn1183);
-        radioGroup1211 = new JeRadioGroup(getString(R.string.je_textView121), RadioBtn1211, RadioBtn1212,
+        radioGroup1211 = new JeRadioGroup(getString(R.string.je_textView121), RadioBtn1212,
                 RadioBtn1213);
         radioGroup1311 = new JeRadioGroup(getString(R.string.je_textView1311), RadioBtn1311,
                 RadioBtn1312);
@@ -656,6 +770,7 @@ public class MainActivity extends AppCompatActivity {
         radioGroup23311 = new JeRadioGroup(getString(R.string.je_textView2331), RadioBtn23311,
                 RadioBtn23312, RadioBtn23313, RadioBtn23314);
     }
+
     private void setupCheckBoxGroups() {
         checkBoxGroup1121 = new JeCheckBoxGroup(getString(R.string.je_textView121), checkBox1121,
                 checkBox1122, checkBox1123, checkBox1124, checkBox1125, checkBox1126);
@@ -758,25 +873,23 @@ public class MainActivity extends AppCompatActivity {
         }
         return file;
     }
-    public  void writeToFile(String fileName, String body, Context context)
-    {
+
+    public void writeToFile(String fileName, String body, Context context) {
         FileOutputStream fos = null;
 
         try {
 //            final File dir = new File(Environment.getExternalStorageDirectory().getAbsolutePath() + "/folderName/" );
             final File dir = new File(context.getExternalFilesDir(Environment.DIRECTORY_PICTURES),
-                    fileName );
-            if (!dir.exists())
-            {
-                if(!dir.mkdirs()){
-                    Log.e("ALERT","could not create the directories");
+                    fileName);
+            if (!dir.exists()) {
+                if (!dir.mkdirs()) {
+                    Log.e("ALERT", "could not create the directories");
                 }
             }
 
             final File myFile = new File(dir, fileName + ".txt");
 
-            if (!myFile.exists())
-            {
+            if (!myFile.exists()) {
                 myFile.createNewFile();
             }
 
