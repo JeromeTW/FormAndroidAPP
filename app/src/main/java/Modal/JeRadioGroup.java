@@ -1,11 +1,13 @@
 package Modal;
 
+import android.util.Log;
 import android.widget.RadioButton;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import static Modal.Section.THRIBLE_BREAK_LINE;
+import static Modal.TextPrinter.TAG;
 
 /**
  * Created by JEROME on 2016/12/3.
@@ -13,7 +15,7 @@ import static Modal.Section.THRIBLE_BREAK_LINE;
 
 public class JeRadioGroup extends DataItem {
     public List<RadioButton> btnArray;
-    
+
     public JeRadioGroup(String key, RadioButton... buttons) {
         super(key, "");
         List<RadioButton> buttonArray = new ArrayList<RadioButton>();

@@ -396,6 +396,7 @@ public class MainActivity extends AppCompatActivity {
     private JeCheckBoxGroup checkBoxGroup1121;
     private JeCheckBoxGroup checkBoxGroup1131;
     private JeCheckBoxGroup checkBoxGroup1141;
+    private JeCheckBoxGroup checkBoxGroup1161;
     private JeCheckBoxGroup checkBoxGroup1171;
     private JeCheckBoxGroup checkBoxGroup1221;
     private JeCheckBoxGroup checkBoxGroup1231;
@@ -427,6 +428,7 @@ public class MainActivity extends AppCompatActivity {
 
     @OnClick(R.id.submitBtn)
     void submit() {
+        // 個人基本資料 section
         String nameString = nameEditText.getText().toString();
 //        Log.v(TAG, NAME + ": " + nameString);
         // 月份從0開始算，所以要加一
@@ -451,6 +453,51 @@ public class MainActivity extends AppCompatActivity {
 
         Section nameSection = new Section(itemArray, getString(R.string.je_geanjibenziliao));
         textPrinter.sectionArray.add(nameSection);
+
+        // 1 section
+        List<DataItem> itemArray2 = new ArrayList<DataItem>();
+        itemArray2.add(new DataItem(getString(R.string.je_kouqianggouzaoyuwendingdu), editText.getText()
+                .toString()));
+        itemArray2.add(checkBoxGroup1121);
+        itemArray2.add(checkBoxGroup1131);
+        itemArray2.add(checkBoxGroup1141);
+        itemArray2.add(radioGroup1151);
+        itemArray2.add(checkBoxGroup1161);
+        itemArray2.add(checkBoxGroup1171);
+        itemArray2.add(radioGroup1181);
+        itemArray2.add(radioGroup1211);
+        itemArray2.add(checkBoxGroup1221);
+        itemArray2.add(checkBoxGroup1231);
+        itemArray2.add(radioGroup1311);
+        itemArray2.add(radioGroup1411);
+        itemArray2.add(radioGroup1421);
+        itemArray2.add(radioGroup1511);
+        itemArray2.add(radioGroup1521);
+        itemArray2.add(radioGroup1531);
+        itemArray2.add(radioGroup1541);
+
+        Section kouqiangdongzuoSection = new Section(itemArray, getString(R.string
+                .je_geanjibenziliao));
+        textPrinter.sectionArray.add(kouqiangdongzuoSection);
+
+        // 2 section
+        List<DataItem> itemArray3 = new ArrayList<DataItem>();
+        itemArray3.add(radioGroup2111);
+        itemArray3.add(new DataItem(getString(R.string.je_textView21121), getDateString
+                (DatePicker21122)));
+        itemArray3.add(new DataItem(getString(R.string.je_textView21122), EditText21122.getText()
+                .toString()));
+        itemArray3.add(new DataItem(getString(R.string.je_textView21123), EditText21123.getText().toString()));
+        itemArray3.add(radioGroup211241);
+        itemArray3.add(radioGroup22111);
+        itemArray3.add(checkBoxGroup22211);
+        itemArray3.add(radioGroup23111);
+        itemArray3.add(checkBoxGroup23211);
+        itemArray3.add(radioGroup23311);
+
+        Section kouyulijieSection = new Section(itemArray, getString(R.string
+                .je_geanjibenziliao));
+        textPrinter.sectionArray.add(kouyulijieSection);
 
         Time now = new Time();
         now.setToNow();
@@ -542,6 +589,8 @@ public class MainActivity extends AppCompatActivity {
                 checkBox1137);
         checkBoxGroup1141 = new JeCheckBoxGroup(getString(R.string.je_textView114), checkBox1141,
                 checkBox1142);
+        checkBoxGroup1161 = new JeCheckBoxGroup(getString(R.string.je_textView116), checkBox1161,
+                checkBox1162, checkBox1163, checkBox1164, checkBox1165, checkBox1166);
         checkBoxGroup1171 = new JeCheckBoxGroup(getString(R.string.je_textView117), checkBox1171,
                 checkBox1172, checkBox1173, checkBox1174, checkBox1175, checkBox1176,
                 checkBox1177, checkBox1178, checkBox1179);
