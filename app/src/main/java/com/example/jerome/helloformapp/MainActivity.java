@@ -83,31 +83,11 @@ public class MainActivity extends AppCompatActivity {
 
     //region Events
     /**
-     * @param view 多個控件 不同點擊事件
+     * @param button 多個控件 不同點擊事件
      */
     @OnClick({R.id.goodRadioBtn, R.id.normalRadioBtn, R.id.badRadioBtn})
-    public void setDiffEvents(View view) {
-        performanceGroup.didSelectRadio((RadioButton) view);
-//        switch (view.getId()) {
-//            case R.id.goodRadioBtn:
-//                goodRadioBtn.setChecked(true);
-//                normalRadioBtn.setChecked(false);
-//                badRadioBtn.setChecked(false);
-//                break;
-//
-//            case R.id.normalRadioBtn:
-//                goodRadioBtn.setChecked(false);
-//                normalRadioBtn.setChecked(true);
-//                badRadioBtn.setChecked(false);
-//                break;
-//
-//            case R.id.badRadioBtn:
-//                goodRadioBtn.setChecked(false);
-//                normalRadioBtn.setChecked(false);
-//                badRadioBtn.setChecked(true);
-//                break;
-//        }
-
+    public void setDiffEvents(RadioButton button) {
+        performanceGroup.didSelectRadio(button);
     }
     @OnClick(R.id.maleRadioBtn) void maleBtnClicked() {
         maleRadioBtn.setChecked(true);
@@ -160,10 +140,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
+        ButterKnife.setDebug(true);
         setupRadioGroups();
         List<Section> sectionArray = new ArrayList<Section>();
         textPrinter = new TextPrinter(sectionArray);
     }
+
     // region Create String
     private String getDateString(DatePicker datePicker) {
         return datePicker.getYear() + "/" + (datePicker.getMonth() + 1) + "/" + datePicker
@@ -184,16 +166,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setupRadioGroups() {
-        performanceGroup = new JeRadioGroup(NAME);
-        performanceGroup.btnArray.add(goodRadioBtn);
-        performanceGroup.btnArray.add(normalRadioBtn);
-        performanceGroup.btnArray.add(badRadioBtn);
-//        List<DataItem> itemArray = new ArrayList<DataItem>();
-//        itemArray.add(new DataItem(NAME, nameEditText.getText().toString()));
-//        itemArray.add(new DataItem(GENDER, genderString));
-//        itemArray.add(new DataItem(BIRTHDAY, birthdayString));
-//        itemArray.add(new DataItem(ACCEPTION_DAY, acceptString));
-//        itemArray.add(new DataItem(DESCRIPTION, description1thString));
+        List<RadioButton> buttonArray = new ArrayList<RadioButton>();
+        performanceGroup = new JeRadioGroup(NAME, buttonArray);
+        buttonArray.add(goodRadioBtn);
+        buttonArray.add(normalRadioBtn);
+        buttonArray.add(badRadioBtn);
     }
     // endregion
 

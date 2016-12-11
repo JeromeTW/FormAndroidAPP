@@ -17,12 +17,12 @@ public class JeRadioGroup extends DataItem {
         super(key, value);
     }
 
-    public JeRadioGroup(String key) {
+    public JeRadioGroup(String key, List<RadioButton> list) {
         super(key, "");
+        btnArray = list;
     }
 
     public String print() {
-        String radioValue = "";
         String result = key + ":" + BREAK_LINE + BREAK_LINE + getRadioValue() + BREAK_LINE;
         return result;
     }
@@ -42,9 +42,9 @@ public class JeRadioGroup extends DataItem {
     public void didSelectRadio(RadioButton button) {
         for (RadioButton innerButton : btnArray) {
             if (button.getText().toString() == innerButton.getText().toString()) {
-                button.setChecked(true);
+                innerButton.setChecked(true);
             } else {
-                button.setChecked(false);
+                innerButton.setChecked(false);
             }
         }
     }
