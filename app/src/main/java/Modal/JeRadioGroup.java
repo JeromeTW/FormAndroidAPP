@@ -6,7 +6,7 @@ import android.widget.RadioButton;
 import java.util.ArrayList;
 import java.util.List;
 
-import static Modal.Section.THRIBLE_BREAK_LINE;
+import static Modal.Section.DOUBLE_BREAK_LINE;
 import static Modal.TextPrinter.TAG;
 
 /**
@@ -28,7 +28,7 @@ public class JeRadioGroup extends DataItem {
     public String print() {
         String result = "";
         if (this.isGone == false) {
-            result = key + ":" + BREAK_LINE + BREAK_LINE + getRadioValue() + BREAK_LINE;
+            result = key + ":" + BREAK_LINE + JETAB + getRadioValue() + BREAK_LINE;
         }
         return result;
     }
@@ -38,7 +38,7 @@ public class JeRadioGroup extends DataItem {
 
         for (RadioButton button : btnArray) {
             if (button.isChecked() == true) {
-                result = result + button.getText().toString() + THRIBLE_BREAK_LINE;
+                result = result + button.getText().toString() + DOUBLE_BREAK_LINE;
                 break;
             }
         }

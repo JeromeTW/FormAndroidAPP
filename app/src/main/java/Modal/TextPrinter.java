@@ -11,7 +11,8 @@ import java.util.ListIterator;
 
 public class TextPrinter {
     public List<Section> sectionArray;
-    public static final String SECTION_BREAK_LINE = "----------------------------------------\n";
+    public static final String SECTION_BREAK_LINE =
+            "----------------------------------------\n\n\n";
     public static final String TAG = "TextPrinter";
 
     public TextPrinter(List<Section> sectionArray) {
@@ -20,7 +21,6 @@ public class TextPrinter {
 
     public String print() {
         String result = "";
-        ListIterator iter = sectionArray.listIterator();
 
         for (Section item : sectionArray) {
             result = result + item.print() + SECTION_BREAK_LINE;

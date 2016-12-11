@@ -564,8 +564,8 @@ public class MainActivity extends AppCompatActivity {
         itemArray2.add(radioGroup1531);
         itemArray2.add(radioGroup1541);
 
-        Section kouqiangdongzuoSection = new Section(itemArray, getString(R.string
-                .je_geanjibenziliao));
+        Section kouqiangdongzuoSection = new Section(itemArray2, getString(R.string
+                .je_1_1koukangdongzuo));
         textPrinter.sectionArray.add(kouqiangdongzuoSection);
 
         // 2 section
@@ -583,14 +583,16 @@ public class MainActivity extends AppCompatActivity {
         itemArray3.add(checkBoxGroup23211);
         itemArray3.add(radioGroup23311);
 
-        Section kouyulijieSection = new Section(itemArray, getString(R.string
-                .je_geanjibenziliao));
+        Section kouyulijieSection = new Section(itemArray3, getString(R.string
+                .je_textView211));
         textPrinter.sectionArray.add(kouyulijieSection);
 
         Time now = new Time();
         now.setToNow();
         String dateString = now.format("%Y%m%d_%H%M%S") + "_" + nameString;
-        writeToFile(dateString, textPrinter.print(), this);
+        String result = textPrinter.print();
+        Log.v(TAG, result);
+        writeToFile(dateString, result, this);
 //        readFromFile(this);
     }
 
@@ -618,21 +620,6 @@ public class MainActivity extends AppCompatActivity {
         return datePicker.getYear() + "/" + (datePicker.getMonth() + 1) + "/" + datePicker
                 .getDayOfMonth();
     }
-
-    /*
-    private String getPerformanceString() {
-        String result = "";
-        if (goodRadioBtn.isChecked() == true) {
-//            result = "佳，不須增強即可全程安坐配合評估。";
-            result = goodRadioBtn.getText().toString();
-        } else if (normalRadioBtn.isChecked() == true) {
-            result = "尚可，需玩具／口語增強方可配合評估。";
-        } else if (badRadioBtn.isChecked() == true) {
-            result = "待加強，需頻繁予以增強方可短暫配合評估活動。";
-        }
-        Log.v(TAG, result);
-        return result;
-    }*/
 
     private void setupRadioGroups() {
         performanceGroup = new JeRadioGroup(getString(R.string.je_peihedu), goodRadioBtn, normalRadioBtn,

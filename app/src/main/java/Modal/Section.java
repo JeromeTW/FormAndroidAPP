@@ -14,7 +14,7 @@ import static Modal.DataItem.BREAK_LINE;
 public class Section {
     public String name = "";
     public List<DataItem> itemArray;
-    public static final String THRIBLE_BREAK_LINE = "\n\n\n";
+    public static final String DOUBLE_BREAK_LINE = "\n\n";
     public static final String TAG = "Section";
 
     public Section(List<DataItem> itemArray, String name) {
@@ -27,10 +27,10 @@ public class Section {
         ListIterator iter = itemArray.listIterator();
 
         for (DataItem item : itemArray) {
-            result = result + item.print() + THRIBLE_BREAK_LINE;
+            result = result + item.print() + DOUBLE_BREAK_LINE;
         }
         // 最後再remove掉三個換行即可
-        int length = THRIBLE_BREAK_LINE.length();
+        int length = DOUBLE_BREAK_LINE.length();
         result = result.substring(0, result.length() - length);
         Log.v(TAG, "section result:" + result);
         return result;
