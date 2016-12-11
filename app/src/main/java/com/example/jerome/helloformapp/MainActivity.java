@@ -410,9 +410,97 @@ public class MainActivity extends AppCompatActivity {
      * @param button 多個控件 不同點擊事件
      */
     @OnClick({R.id.goodRadioBtn, R.id.normalRadioBtn, R.id.badRadioBtn})
-    public void setDiffEvents(RadioButton button) {
+    public void setDiffEvents1(RadioButton button) {
         performanceGroup.didSelectRadio(button);
     }
+
+    @OnClick({R.id.RadioBtn1_1_5_1, R.id.RadioBtn1_1_5_2, R.id.RadioBtn1_1_5_3})
+    public void setDiffEvents2(RadioButton button) {
+        radioGroup1151.didSelectRadio(button);
+    }
+
+    @OnClick({R.id.RadioBtn1_1_8_1, R.id.RadioBtn1_1_8_2, R.id.RadioBtn1_1_8_3})
+    public void setDiffEvents3(RadioButton button) {
+        radioGroup1181.didSelectRadio(button);
+    }
+
+    @OnClick({R.id.RadioBtn1_2_1_1, R.id.RadioBtn1_2_1_2, R.id.RadioBtn1_2_1_3})
+    public void setDiffEvents4(RadioButton button) {
+        radioGroup1211.didSelectRadio(button);
+    }
+
+    @OnClick({R.id.RadioBtn1_3_1_1, R.id.RadioBtn1_3_1_2})
+    public void setDiffEvents5(RadioButton button) {
+        radioGroup1311.didSelectRadio(button);
+    }
+
+    @OnClick({R.id.RadioBtn1_4_1_1, R.id.RadioBtn1_4_1_2, R.id.RadioBtn1_4_1_3})
+    public void setDiffEvents6(RadioButton button) {
+        radioGroup1411.didSelectRadio(button);
+    }
+
+    @OnClick({R.id.RadioBtn1_4_2_1, R.id.RadioBtn1_4_2_2, R.id.RadioBtn1_4_2_3})
+    public void setDiffEvents7(RadioButton button) {
+        radioGroup1421.didSelectRadio(button);
+    }
+
+    @OnClick({R.id.RadioBtn1_5_1_1, R.id.RadioBtn1_5_1_2, R.id.RadioBtn1_5_1_3})
+    public void setDiffEvents8(RadioButton button) {
+        radioGroup1511.didSelectRadio(button);
+    }
+
+    @OnClick({R.id.RadioBtn1_5_2_1, R.id.RadioBtn1_5_2_2, R.id.RadioBtn1_5_2_3, R.id.RadioBtn1_5_2_4})
+    public void setDiffEvents9(RadioButton button) {
+        radioGroup1521.didSelectRadio(button);
+    }
+
+    @OnClick({R.id.RadioBtn1_5_3_1, R.id.RadioBtn1_5_3_2, R.id.RadioBtn1_5_3_3,  R.id
+            .RadioBtn1_5_3_4})
+    public void setDiffEvents10(RadioButton button) {
+        radioGroup1531.didSelectRadio(button);
+    }
+
+    @OnClick({R.id.RadioBtn1_5_4_1, R.id.RadioBtn1_5_4_2, R.id.RadioBtn1_5_4_3,  R.id
+            .RadioBtn1_5_4_4})
+    public void setDiffEvents11(RadioButton button) {
+        radioGroup1541.didSelectRadio(button);
+    }
+
+    @OnClick({R.id.RadioBtn2_1_1_1, R.id.RadioBtn2_1_1_2, R.id.RadioBtn2_1_1_3})
+    public void setDiffEvents12(RadioButton button) {
+        radioGroup2111.didSelectRadio(button);
+    }
+
+    @OnClick({R.id.RadioBtn2_1_1_2_4_1, R.id.RadioBtn2_1_1_2_4_2, R.id.RadioBtn2_1_1_2_4_3, R.id
+            .RadioBtn2_1_1_2_4_4, R.id.RadioBtn2_1_1_2_4_5, R.id.RadioBtn2_1_1_2_4_6, R.id
+            .RadioBtn2_1_1_2_4_7, R.id.RadioBtn2_1_1_2_4_8, R.id.RadioBtn2_1_1_2_4_9})
+    public void setDiffEvents13(RadioButton button) {
+        radioGroup211241.didSelectRadio(button);
+    }
+
+    @OnClick({R.id.RadioBtn2_2_1_1_1, R.id.RadioBtn2_2_1_1_2, R.id.RadioBtn2_2_1_1_3})
+    public void setDiffEvents14(RadioButton button) {
+        radioGroup22111.didSelectRadio(button);
+    }
+
+    @OnClick({R.id.RadioBtn2_3_1_1_1, R.id.RadioBtn2_3_1_1_2, R.id.RadioBtn2_3_1_1_3})
+    public void setDiffEvents15(RadioButton button) {
+        radioGroup23111.didSelectRadio(button);
+    }
+
+    @OnClick({R.id.RadioBtn2_3_3_1_1, R.id.RadioBtn2_3_3_1_2, R.id.RadioBtn2_3_3_1_3,
+            R.id.RadioBtn2_3_3_1_4})
+    public void setDiffEvents16(RadioButton button) {
+        radioGroup23311.didSelectRadio(button);
+    }
+
+
+
+
+
+
+
+
 
     @OnClick(R.id.maleRadioBtn)
     void maleBtnClicked() {
