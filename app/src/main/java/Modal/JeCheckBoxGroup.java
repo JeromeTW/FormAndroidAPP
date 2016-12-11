@@ -25,7 +25,10 @@ public class JeCheckBoxGroup extends DataItem {
     }
 
     public String print() {
-        String result = key + ":" + BREAK_LINE + BREAK_LINE + getGroupValue() + BREAK_LINE;
+        String result = "";
+        if (this.isGone == false) {
+            result = key + ":" + BREAK_LINE + BREAK_LINE + getGroupValue() + BREAK_LINE;
+        }
         return result;
     }
 
