@@ -26,6 +26,7 @@ import java.util.List;
 
 
 import Modal.DataItem;
+import Modal.JeRadioGroup;
 import Modal.Section;
 import Modal.TextPrinter;
 import butterknife.BindView;
@@ -77,6 +78,7 @@ public class MainActivity extends AppCompatActivity {
 
     public static final String SECTION_NAME_1TH = "個案基本資料";
     private TextPrinter textPrinter;
+    private JeRadioGroup performanceGroup;
 
 
     //region Events
@@ -85,25 +87,26 @@ public class MainActivity extends AppCompatActivity {
      */
     @OnClick({R.id.goodRadioBtn, R.id.normalRadioBtn, R.id.badRadioBtn})
     public void setDiffEvents(View view) {
-        switch (view.getId()) {
-            case R.id.goodRadioBtn:
-                goodRadioBtn.setChecked(true);
-                normalRadioBtn.setChecked(false);
-                badRadioBtn.setChecked(false);
-                break;
-
-            case R.id.normalRadioBtn:
-                goodRadioBtn.setChecked(false);
-                normalRadioBtn.setChecked(true);
-                badRadioBtn.setChecked(false);
-                break;
-
-            case R.id.badRadioBtn:
-                goodRadioBtn.setChecked(false);
-                normalRadioBtn.setChecked(false);
-                badRadioBtn.setChecked(true);
-                break;
-        }
+        performanceGroup.didSelectRadio((RadioButton) view);
+//        switch (view.getId()) {
+//            case R.id.goodRadioBtn:
+//                goodRadioBtn.setChecked(true);
+//                normalRadioBtn.setChecked(false);
+//                badRadioBtn.setChecked(false);
+//                break;
+//
+//            case R.id.normalRadioBtn:
+//                goodRadioBtn.setChecked(false);
+//                normalRadioBtn.setChecked(true);
+//                badRadioBtn.setChecked(false);
+//                break;
+//
+//            case R.id.badRadioBtn:
+//                goodRadioBtn.setChecked(false);
+//                normalRadioBtn.setChecked(false);
+//                badRadioBtn.setChecked(true);
+//                break;
+//        }
 
     }
     @OnClick(R.id.maleRadioBtn) void maleBtnClicked() {
@@ -157,10 +160,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
+        setupRadioGroups();
         List<Section> sectionArray = new ArrayList<Section>();
         textPrinter = new TextPrinter(sectionArray);
-
-
     }
     // region Create String
     private String getDateString(DatePicker datePicker) {
@@ -170,13 +172,28 @@ public class MainActivity extends AppCompatActivity {
     private String getPerformanceString() {
         String result = "";
         if (goodRadioBtn.isChecked() == true) {
-            result = "佳，不須增強即可全程安坐配合評估。";
+//            result = "佳，不須增強即可全程安坐配合評估。";
+            result = goodRadioBtn.getText().toString();
         } else if (normalRadioBtn.isChecked() == true) {
             result = "尚可，需玩具／口語增強方可配合評估。";
         } else if (badRadioBtn.isChecked() == true) {
             result = "待加強，需頻繁予以增強方可短暫配合評估活動。";
         }
+        Log.v(TAG, result);
         return result;
+    }
+
+    private void setupRadioGroups() {
+        performanceGroup = new JeRadioGroup(NAME);
+        performanceGroup.btnArray.add(goodRadioBtn);
+        performanceGroup.btnArray.add(normalRadioBtn);
+        performanceGroup.btnArray.add(badRadioBtn);
+//        List<DataItem> itemArray = new ArrayList<DataItem>();
+//        itemArray.add(new DataItem(NAME, nameEditText.getText().toString()));
+//        itemArray.add(new DataItem(GENDER, genderString));
+//        itemArray.add(new DataItem(BIRTHDAY, birthdayString));
+//        itemArray.add(new DataItem(ACCEPTION_DAY, acceptString));
+//        itemArray.add(new DataItem(DESCRIPTION, description1thString));
     }
     // endregion
 
