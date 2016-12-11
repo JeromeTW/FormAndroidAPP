@@ -28,7 +28,7 @@
         android:divider="@drawable/empty_question_tall_divider"
         >
             <TextView
-                android:text="個案基本資料"
+                android:text="@string/je_geanjibenziliao"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView"
@@ -40,7 +40,7 @@
                 android:layout_height="match_parent">
 
                 <TextView
-                    android:text="姓名"
+                    android:text="@string/je_xingming"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/textView2"
@@ -55,7 +55,7 @@
                     android:ems="10"
                     android:id="@+id/nameEditText"
                     android:layout_weight="1"
-                    android:hint="請輸入個案姓名"
+                    android:hint="@string/je_qingshurugeanxingming"
                     android:textAppearance="@style/textPlainText"/>
 
             </LinearLayout>
@@ -67,7 +67,7 @@
                 >
 
                 <RadioButton
-                    android:text="男"
+                    android:text="@string/je_nan"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/maleRadioBtn"
@@ -76,7 +76,7 @@
                     android:textAppearance="@style/radioButtonText"/>
 
                 <RadioButton
-                    android:text="女"
+                    android:text="@string/je_nv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/femaleRadioBtn"
@@ -91,7 +91,7 @@
                 android:orientation="vertical"
                 >
                 <TextView
-                    android:text="出生日期"
+                    android:text="@string/je_chushengriqi"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/textView3"
@@ -109,7 +109,7 @@
                 android:orientation="vertical"
                 >
                 <TextView
-                    android:text="收案日期"
+                    android:text="@string/je_shouanriqi"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/textView4"
@@ -127,7 +127,7 @@
                 android:orientation="vertical"
                 >
                 <TextView
-                    android:text="配合度"
+                    android:text="@string/je_peihedu"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/textView5"
@@ -140,21 +140,21 @@
                     android:divider="@drawable/empty_radio_buttun_tall_divider"
                     >
                     <RadioButton
-                        android:text="佳，不須增強即可全程安坐配合評估。"
+                        android:text="@string/je_peihedujia"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/goodRadioBtn"
                         android:textAppearance="@style/radioButtonText"/>
 
                     <RadioButton
-                        android:text="尚可，需玩具／口語增強方可配合評估。"
+                        android:text="@string/je_peihedushangke"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/normalRadioBtn"
                         android:textAppearance="@style/radioButtonText"/>
 
                     <RadioButton
-                        android:text="待加強，需頻繁予以增強方可短暫配合評估活動。"
+                        android:text="@string/je_peiheducha"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/badRadioBtn"
@@ -171,7 +171,7 @@
                 android:scrollbars="vertical"
                 android:ems="10"
                 android:id="@+id/descriptionEditText"
-                android:hint="注記"
+                android:hint="@string/je_zhuji"
                 android:background="@drawable/edit_text_style"
                 android:padding="8dp"
                 android:textAppearance="@style/textPlainText"/>
@@ -185,7 +185,7 @@
         android:divider="@drawable/empty_question_tall_divider"
         >
             <TextView
-                android:text="1-1 口腔動作"
+                android:text="@string/je_1_1koukangdongzuo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView6"
@@ -198,7 +198,7 @@
                 android:orientation="vertical"
                 >
                 <TextView
-                    android:text="口腔構造與穩定度、靜止雙唇閉合"
+                    android:text="@string/je_kouqianggouzaoyuwendingdu"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/textView7"
@@ -211,7 +211,7 @@
                     android:inputType="textPersonName"
                     android:ems="10"
                     android:id="@+id/editText"
-                    android:hint="請輸入觀察結果" />
+                    android:hint="@string/je_qingshuruguanchajieguo" />
             </LinearLayout>
             <!--1-1-2-->
             <LinearLayout
@@ -220,7 +220,7 @@
                 android:orientation="vertical"
                 >
                 <TextView
-                    android:text="口腔動作：唇"
+                    android:text="@string/je_textView112"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/textView1_1_2"
@@ -233,42 +233,42 @@
                     android:divider="@drawable/empty_check_box_tall_divider"
                     >
                     <CheckBox
-                        android:text="拉開嘴巴說/ㄧ/"
+                        android:text="@string/je_checkBox1121"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/checkBox1_1_2_1"
                         android:textAppearance="@style/checkBoxText"/>
 
                     <CheckBox
-                        android:text="噘起嘴唇做吹口哨的形狀說/ㄨ/"
+                        android:text="@string/je_checkBox1122"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/checkBox1_1_2_2"
                         android:textAppearance="@style/checkBoxText"/>
 
                     <CheckBox
-                        android:text="不停交換說∕ㄧㄨ、一ㄨ、一ㄨ∕"
+                        android:text="@string/je_checkBox1123"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/checkBox1_1_2_3"
                         android:textAppearance="@style/checkBoxText"/>
 
                     <CheckBox
-                        android:text="上下唇內縮後發「吧」"
+                        android:text="@string/je_checkBox1124"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/checkBox1_1_2_4"
                         android:textAppearance="@style/checkBoxText"/>
 
                     <CheckBox
-                        android:text="鼓脹兩頰"
+                        android:text="@string/je_checkBox1125"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/checkBox1_1_2_5"
                         android:textAppearance="@style/checkBoxText"/>
 
                     <CheckBox
-                        android:text="鼓起兩頰做漱口狀"
+                        android:text="@string/je_checkBox1126"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/checkBox1_1_2_6"
@@ -282,7 +282,7 @@
                 android:orientation="vertical"
                 >
                 <TextView
-                    android:text="口腔動作：唇"
+                    android:text="@string/je_textView113"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/textView1_1_3"
@@ -295,48 +295,48 @@
                     android:divider="@drawable/empty_check_box_tall_divider"
                     >
                     <CheckBox
-                        android:text="舌頭伸出伸入"
+                        android:text="@string/je_checkBox1131"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/checkBox1_1_3_1"
                         android:textAppearance="@style/checkBoxText"/>
 
                     <CheckBox
-                        android:text="舌頭往左右嘴角移動"
+                        android:text="@string/je_checkBox1132"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/checkBox1_1_3_2"
                         android:textAppearance="@style/checkBoxText"/>
 
                     <CheckBox
-                        android:text="舌頭在口內輪流推頂兩頰內側"
+                        android:text="@string/je_checkBox1133"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/checkBox1_1_3_3"
                         android:textAppearance="@style/checkBoxText"/>
 
                     <CheckBox
-                        android:text="用舌尖舔上下唇"
+                        android:text="@string/je_checkBox1134"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/checkBox1_1_3_4"
                         android:textAppearance="@style/checkBoxText"/>
 
                     <CheckBox
-                        android:text="舌頭在牙齒外側轉動，做清潔牙齒狀"
+                        android:text="@string/je_checkBox1135"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/checkBox1_1_3_5"
                         android:textAppearance="@style/checkBoxText"/>
 
                     <CheckBox
-                        android:text="舌頭捲起，由齒槽後掃至軟腭再掃回來"
+                        android:text="@string/je_checkBox1136"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/checkBox1_1_3_6"
                         android:textAppearance="@style/checkBoxText"/>
                     <CheckBox
-                        android:text="捲舌學馬蹄聲"
+                        android:text="@string/je_checkBox1137"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/checkBox1_1_3_7"
@@ -350,7 +350,7 @@
                 android:orientation="vertical"
                 >
                 <TextView
-                    android:text="口腔動作：顎"
+                    android:text="@string/je_textView114"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/textView1_1_4"
@@ -363,14 +363,14 @@
                     android:divider="@drawable/empty_check_box_tall_divider"
                     >
                     <CheckBox
-                        android:text="張大嘴巴輪流說/ㄚ ㄧ ㄨ/"
+                        android:text="@string/je_checkBox1141"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/checkBox1_1_4_1"
                         android:textAppearance="@style/checkBoxText"/>
 
                     <CheckBox
-                        android:text="上下牙齒互相碰出聲"
+                        android:text="@string/je_checkBox1142"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/checkBox1_1_4_2"
@@ -384,7 +384,7 @@
                 android:orientation="vertical"
                 >
                 <TextView
-                    android:text="刷牙"
+                    android:text="@string/je_textView115"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/textView1_1_5"
@@ -397,21 +397,21 @@
                     android:divider="@drawable/empty_radio_buttun_tall_divider"
                     >
                     <RadioButton
-                        android:text="可以自己刷牙"
+                        android:text="@string/je_radioBtn1151"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/RadioBtn1_1_5_1"
                         android:textAppearance="@style/radioButtonText"/>
 
                     <RadioButton
-                        android:text="由照顧者刷牙，不排斥口腔被碰觸。"
+                        android:text="@string/je_radioBtn1152"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/RadioBtn1_1_5_2"
                         android:textAppearance="@style/radioButtonText"/>
 
                     <RadioButton
-                        android:text="由照顧者刷牙，排斥口腔被碰觸。"
+                        android:text="@string/je_radioBtn1153"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/RadioBtn1_1_5_3"
@@ -425,7 +425,7 @@
                 android:orientation="vertical"
                 >
                 <TextView
-                    android:text="口腔感覺"
+                    android:text="@string/je_textView116"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/textView1_1_6"
@@ -438,40 +438,40 @@
                     android:divider="@drawable/empty_check_box_tall_divider"
                     >
                     <CheckBox
-                        android:text="不排斥他人碰觸，口腔感覺無明顯異常。"
+                        android:text="@string/je_checkBox1161"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/checkBox1_1_6_1"
                         android:textAppearance="@style/checkBoxText"/>
 
                     <CheckBox
-                        android:text="排斥他人碰觸，口腔感覺較為敏感。"
+                        android:text="@string/je_checkBox1162"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/checkBox1_1_6_2"
                         android:textAppearance="@style/checkBoxText"/>
                     <CheckBox
-                        android:text="口腔感覺過度鈍感。"
+                        android:text="@string/je_checkBox1163"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/checkBox1_1_6_3"
                         android:textAppearance="@style/checkBoxText"/>
 
                     <CheckBox
-                        android:text="張力過高"
+                        android:text="@string/je_checkBox1164"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/checkBox1_1_6_4"
                         android:textAppearance="@style/checkBoxText"/>
                     <CheckBox
-                        android:text="張力過低"
+                        android:text="@string/je_checkBox1165"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/checkBox1_1_6_5"
                         android:textAppearance="@style/checkBoxText"/>
 
                     <CheckBox
-                        android:text="流口水"
+                        android:text="@string/je_checkBox1166"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/checkBox1_1_6_6"
@@ -485,7 +485,7 @@
                 android:orientation="vertical"
                 >
                 <TextView
-                    android:text="餵食技巧評估"
+                    android:text="@string/je_textView117"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/textView1_1_7"
@@ -498,57 +498,57 @@
                     android:divider="@drawable/empty_check_box_tall_divider"
                     >
                     <CheckBox
-                        android:text="奶瓶吸吮"
+                        android:text="@string/je_checkBox1171"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/checkBox1_1_7_1"
                         android:textAppearance="@style/checkBoxText"/>
 
                     <CheckBox
-                        android:text="湯匙進食(7-9m)"
+                        android:text="@string/je_checkBox1172"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/checkBox1_1_7_2"
                         android:textAppearance="@style/checkBoxText"/>
                     <CheckBox
-                        android:text="有咀嚼動作，可咀嚼軟質食物(10-12m)"
+                        android:text="@string/je_checkBox1173"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/checkBox1_1_7_3"
                         android:textAppearance="@style/checkBoxText"/>
 
                     <CheckBox
-                        android:text="舌頭有旋轉動作，食物放一邊時，舌頭會超越中線拿取食物(10-12m)"
+                        android:text="@string/je_checkBox1174"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/checkBox1_1_7_4"
                         android:textAppearance="@style/checkBoxText"/>
                     <CheckBox
-                        android:text="鴨嘴杯喝水(13-15m)"
+                        android:text="@string/je_checkBox1175"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/checkBox1_1_7_5"
                         android:textAppearance="@style/checkBoxText"/>
                     <CheckBox
-                        android:text="可咬斷和咀嚼較硬的餅乾(13-15m)"
+                        android:text="@string/je_checkBox1176"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/checkBox1_1_7_6"
                         android:textAppearance="@style/checkBoxText"/>
                     <CheckBox
-                        android:text="開放性杯子喝水(16-18m)"
+                        android:text="@string/je_checkBox1177"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/checkBox1_1_7_7"
                         android:textAppearance="@style/checkBoxText"/>
                     <CheckBox
-                        android:text="嘴唇含著吸管喝水(19-24m)"
+                        android:text="@string/je_checkBox1178"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/checkBox1_1_7_8"
                         android:textAppearance="@style/checkBoxText"/>
                     <CheckBox
-                        android:text="可開始咀嚼和吞嚥肉類食物(19-24m)"
+                        android:text="@string/je_checkBox1179"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/checkBox1_1_7_9"
@@ -562,7 +562,7 @@
                 android:orientation="vertical"
                 >
                 <TextView
-                    android:text="口腔動作"
+                    android:text="@string/je_textView118"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/textView1_1_8"
@@ -575,21 +575,21 @@
                     android:divider="@drawable/empty_radio_buttun_tall_divider"
                     >
                     <RadioButton
-                        android:text="無異常"
+                        android:text="@string/je_radioBtn1181"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/RadioBtn1_1_8_1"
                         android:textAppearance="@style/radioButtonText"/>
 
                     <RadioButton
-                        android:text="臨界"
+                        android:text="@string/je_radioBtn1182"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/RadioBtn1_1_8_2"
                         android:textAppearance="@style/radioButtonText"/>
 
                     <RadioButton
-                        android:text="異常"
+                        android:text="@string/je_radioBtn1183"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/RadioBtn1_1_8_3"
@@ -612,7 +612,7 @@
                 android:orientation="vertical"
                 >
                 <TextView
-                    android:text="口腔功能訓練"
+                    android:text="@string/je_textView121"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/textView1_2_1"
@@ -625,19 +625,19 @@
                     android:divider="@drawable/empty_radio_buttun_tall_divider"
                     >
                     <RadioButton
-                        android:text="不需要"
+                        android:text="@string/je_radioBtn1211"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/RadioBtn1_2_1_1"
                         android:textAppearance="@style/radioButtonText"/>
                     <RadioButton
-                        android:text="需要追蹤及咨詢"
+                        android:text="@string/je_radioBtn1212"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/RadioBtn1_2_1_2"
                         android:textAppearance="@style/radioButtonText"/>
                     <RadioButton
-                        android:text="需要訓練"
+                        android:text="@string/je_radioBtn1213"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/RadioBtn1_2_1_3"
@@ -651,7 +651,7 @@
                 android:orientation="vertical"
                 >
                 <TextView
-                    android:text="訓練方向"
+                    android:text="@string/je_textView122"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/textView1_2_2"
@@ -664,19 +664,19 @@
                     android:divider="@drawable/empty_check_box_tall_divider"
                     >
                     <CheckBox
-                        android:text="增加敏感訓練．可搭配輕柔的音樂直接從臉部開始作拍、刷的刺激，來增加臉部及口腔周圍的敏感度。當孩子的口腔周圍感覺正常後，則進行口內按摩。"
+                        android:text="@string/je_checkBox1221"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/checkBox1_2_2_1"
                         android:textAppearance="@style/checkBoxText"/>
                     <CheckBox
-                        android:text="減少敏感訓練，可搭配輕柔的音樂，依照手-手臂-軀幹-臉部-口腔的順序給予穩定的下壓，口腔內的訓練可以先以手指按摩牙齦，待接受後再以紗布沾水按摩。"
+                        android:text="@string/je_checkBox1222"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/checkBox1_2_2_2"
                         android:textAppearance="@style/checkBoxText"/>
                     <CheckBox
-                        android:text="口腔動作訓練"
+                        android:text="@string/je_checkBox1223"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/checkBox1_2_2_3"
@@ -690,7 +690,7 @@
                 android:orientation="vertical"
                 >
                 <TextView
-                    android:text="口腔動作訓練"
+                    android:text="@string/je_textView123"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/textView1_2_3"
@@ -703,25 +703,25 @@
                     android:divider="@drawable/empty_check_box_tall_divider"
                     >
                     <CheckBox
-                        android:text="雙唇動作訓練，可以請個案以雙唇含住餅乾或海苔等食物，再握住食物的另一端進行「拔河」，以增加雙脣閉合的力量。"
+                        android:text="@string/je_checkBox1231"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/checkBox1_2_3_1"
                         android:textAppearance="@style/checkBoxText"/>
                     <CheckBox
-                        android:text="下頷動作訓練"
+                        android:text="@string/je_checkBox1232"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/checkBox1_2_3_2"
                         android:textAppearance="@style/checkBoxText"/>
                     <CheckBox
-                        android:text="舌頭動作訓練"
+                        android:text="@string/je_checkBox1233"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/checkBox1_2_3_3"
                         android:textAppearance="@style/checkBoxText"/>
                     <CheckBox
-                        android:text="咀嚼動作訓練"
+                        android:text="@string/je_checkBox1234"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/checkBox1_2_3_4"
@@ -738,7 +738,7 @@
             android:divider="@drawable/empty_question_tall_divider"
             >
             <TextView
-                android:text="1-3 吞嚥反射"
+                android:text="@string/je_textView131"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView1_3_1"
@@ -750,7 +750,7 @@
                 android:orientation="vertical"
                 >
                 <TextView
-                    android:text="吞嚥反射"
+                    android:text="@string/je_textView1311"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/textView1_3_1_1"
@@ -763,13 +763,13 @@
                     android:divider="@drawable/empty_radio_buttun_tall_divider"
                     >
                     <RadioButton
-                        android:text="無異常"
+                        android:text="@string/je_radioBtn1311"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/RadioBtn1_3_1_1"
                         android:textAppearance="@style/radioButtonText"/>
                     <RadioButton
-                        android:text="有異常"
+                        android:text="@string/je_radioBtn1312"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/RadioBtn1_3_1_2"
@@ -787,7 +787,7 @@
             android:divider="@drawable/empty_question_tall_divider"
             >
             <TextView
-                android:text="1-4 吞嚥功能"
+                android:text="@string/je_textView141"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView1_4_1"
@@ -799,7 +799,7 @@
                 android:orientation="vertical"
                 >
                 <TextView
-                    android:text="吞嚥功能"
+                    android:text="@string/je_textView1411"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/textView1_4_1_1"
@@ -812,19 +812,19 @@
                     android:divider="@drawable/empty_radio_buttun_tall_divider"
                     >
                     <RadioButton
-                        android:text="無異常"
+                        android:text="@string/je_radioBtn1411"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/RadioBtn1_4_1_1"
                         android:textAppearance="@style/radioButtonText"/>
                     <RadioButton
-                        android:text="臨界"
+                        android:text="@string/je_radioBtn1412"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/RadioBtn1_4_1_2"
                         android:textAppearance="@style/radioButtonText"/>
                     <RadioButton
-                        android:text="有異常"
+                        android:text="@string/je_radioBtn1413"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/RadioBtn1_4_1_3"
@@ -838,7 +838,7 @@
                 android:orientation="vertical"
                 >
                 <TextView
-                    android:text="1-4-1 會嗆食"
+                    android:text="@string/je_textView1421"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/textView1_4_2_1"
@@ -851,19 +851,19 @@
                     android:divider="@drawable/empty_radio_buttun_tall_divider"
                     >
                     <RadioButton
-                        android:text="液體"
+                        android:text="@string/je_radioBtn1421"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/RadioBtn1_4_2_1"
                         android:textAppearance="@style/radioButtonText"/>
                     <RadioButton
-                        android:text="半固體"
+                        android:text="@string/je_radioBtn1422"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/RadioBtn1_4_2_2"
                         android:textAppearance="@style/radioButtonText"/>
                     <RadioButton
-                        android:text="固體"
+                        android:text="@string/je_radioBtn1423"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/RadioBtn1_4_2_3"
@@ -880,7 +880,7 @@
             android:divider="@drawable/empty_question_tall_divider"
             >
             <TextView
-                android:text="1-5 吞嚥訓練"
+                android:text="@string/je_textView151"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView1_5_1"
@@ -892,7 +892,7 @@
                 android:orientation="vertical"
                 >
                 <TextView
-                    android:text="吞嚥訓練"
+                    android:text="@string/je_textView1512"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/textView1_5_1_2"
@@ -905,19 +905,19 @@
                     android:divider="@drawable/empty_radio_buttun_tall_divider"
                     >
                     <RadioButton
-                        android:text="不需要"
+                        android:text="@string/je_radioBtn1511"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/RadioBtn1_5_1_1"
                         android:textAppearance="@style/radioButtonText"/>
                     <RadioButton
-                        android:text="需要追蹤及咨詢"
+                        android:text="@string/je_radioBtn1512"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/RadioBtn1_5_1_2"
                         android:textAppearance="@style/radioButtonText"/>
                     <RadioButton
-                        android:text="需要訓練"
+                        android:text="@string/je_radioBtn1513"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/RadioBtn1_5_1_3"
@@ -931,7 +931,7 @@
                 android:orientation="vertical"
                 >
                 <TextView
-                    android:text="1-5-1 訓練方向"
+                    android:text="@string/je_textView152"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/textView1_5_2"
@@ -944,25 +944,25 @@
                     android:divider="@drawable/empty_radio_buttun_tall_divider"
                     >
                     <RadioButton
-                        android:text="改變姿勢"
+                        android:text="@string/je_radioBtn1521"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/RadioBtn1_5_2_1"
                         android:textAppearance="@style/radioButtonText"/>
                     <RadioButton
-                        android:text="控制量"
+                        android:text="@string/je_radioBtn1522"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/RadioBtn1_5_2_2"
                         android:textAppearance="@style/radioButtonText"/>
                     <RadioButton
-                        android:text="食物材質的選擇"
+                        android:text="@string/je_radioBtn1523"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/RadioBtn1_5_2_3"
                         android:textAppearance="@style/radioButtonText"/>
                     <RadioButton
-                        android:text="食器的選擇"
+                        android:text="@string/je_radioBtn1524"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/RadioBtn1_5_2_4"
@@ -976,7 +976,7 @@
                 android:orientation="vertical"
                 >
                 <TextView
-                    android:text="1-5-1-3 食物材質的選擇"
+                    android:text="@string/je_textView153"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/textView1_5_3"
@@ -989,25 +989,25 @@
                     android:divider="@drawable/empty_radio_buttun_tall_divider"
                     >
                     <RadioButton
-                        android:text="流質"
+                        android:text="@string/je_radioBtn1531"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/RadioBtn1_5_3_1"
                         android:textAppearance="@style/radioButtonText"/>
                     <RadioButton
-                        android:text="糊狀"
+                        android:text="@string/je_radioBtn1532"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/RadioBtn1_5_3_2"
                         android:textAppearance="@style/radioButtonText"/>
                     <RadioButton
-                        android:text="軟質"
+                        android:text="@string/je_radioBtn1533"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/RadioBtn1_5_3_3"
                         android:textAppearance="@style/radioButtonText"/>
                     <RadioButton
-                        android:text="固體"
+                        android:text="@string/je_radioBtn1534"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/RadioBtn1_5_3_4"
@@ -1021,7 +1021,7 @@
                 android:orientation="vertical"
                 >
                 <TextView
-                    android:text="1-5-1-4 食器的選擇"
+                    android:text="@string/je_textView154"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/textView1_5_4"
@@ -1034,25 +1034,25 @@
                     android:divider="@drawable/empty_radio_buttun_tall_divider"
                     >
                     <RadioButton
-                        android:text="奶瓶"
+                        android:text="@string/je_radioBtn1541"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/RadioBtn1_5_4_1"
                         android:textAppearance="@style/radioButtonText"/>
                     <RadioButton
-                        android:text="杯子"
+                        android:text="@string/je_radioBtn1542"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/RadioBtn1_5_4_2"
                         android:textAppearance="@style/radioButtonText"/>
                     <RadioButton
-                        android:text="湯匙"
+                        android:text="@string/je_radioBtn1543"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/RadioBtn1_5_4_3"
                         android:textAppearance="@style/radioButtonText"/>
                     <RadioButton
-                        android:text="筷子"
+                        android:text="@string/je_radioBtn1544"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/RadioBtn1_5_4_4"
@@ -1070,7 +1070,7 @@
             android:divider="@drawable/empty_question_tall_divider"
             >
             <TextView
-                android:text="2-1 口語理解"
+                android:text="@string/je_textView211"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView2_1_1"
@@ -1083,7 +1083,7 @@
                 >
                 <!--2-1-1-1-->
                 <TextView
-                    android:text="口語理解"
+                    android:text="@string/je_textView2111"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/textView2_1_1_1"
@@ -1096,19 +1096,19 @@
                     android:divider="@drawable/empty_radio_buttun_tall_divider"
                     >
                     <RadioButton
-                        android:text="無異常"
+                        android:text="@string/je_radioBtn2111"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/RadioBtn2_1_1_1"
                         android:textAppearance="@style/radioButtonText"/>
                     <RadioButton
-                        android:text="臨界/疑似發展遲緩"
+                        android:text="@string/je_radioBtn2112"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/RadioBtn2_1_1_2"
                         android:textAppearance="@style/radioButtonText"/>
                     <RadioButton
-                        android:text="發展遲緩"
+                        android:text="@string/je_radioBtn2113"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/RadioBtn2_1_1_3"
@@ -1127,7 +1127,7 @@
                         android:orientation="vertical"
                         >
                         <TextView
-                            android:text="評估日期"
+                            android:text="@string/je_textView21121"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:id="@+id/textView2_1_1_2_1"
@@ -1145,7 +1145,7 @@
                         android:layout_height="match_parent">
 
                         <TextView
-                            android:text="目前能力約幾歲"
+                            android:text="@string/je_textView21122"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:id="@+id/textView2_1_1_2_2"
@@ -1160,7 +1160,7 @@
                             android:ems="10"
                             android:id="@+id/EditText2_1_1_2_2"
                             android:layout_weight="1"
-                            android:hint="請輸入"
+                            android:hint="@string/je_editText21122"
                             android:textAppearance="@style/textPlainText"/>
 
                     </LinearLayout>
@@ -1171,7 +1171,7 @@
                         android:layout_height="match_parent">
 
                         <TextView
-                            android:text="幾個月？"
+                            android:text="@string/je_textView21123"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:id="@+id/textView2_1_1_2_3"
@@ -1186,7 +1186,7 @@
                             android:ems="10"
                             android:id="@+id/EditText2_1_1_2_3"
                             android:layout_weight="1"
-                            android:hint="請輸入"
+                            android:hint="@string/je_editText21123"
                             android:textAppearance="@style/textPlainText"/>
 
                     </LinearLayout>
@@ -1197,7 +1197,7 @@
                         android:orientation="vertical"
                         >
                         <TextView
-                            android:text="評估工具"
+                            android:text="@string/je_textView21124"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:id="@+id/textView2_1_1_2_4"
@@ -1210,55 +1210,55 @@
                             android:divider="@drawable/empty_radio_buttun_tall_divider"
                             >
                             <RadioButton
-                                android:text="臨床觀察"
+                                android:text="@string/je_radioBtn211241"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:id="@+id/RadioBtn2_1_1_2_4_1"
                                 android:textAppearance="@style/radioButtonText"/>
                             <RadioButton
-                                android:text="臨床晤談"
+                                android:text="@string/je_radioBtn211242"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:id="@+id/RadioBtn2_1_1_2_4_2"
                                 android:textAppearance="@style/radioButtonText"/>
                             <RadioButton
-                                android:text="修訂畢保德圖畫詞彙測驗 (PPVT-R)"
+                                android:text="@string/je_radioBtn211243"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:id="@+id/RadioBtn2_1_1_2_4_3"
                                 android:textAppearance="@style/radioButtonText"/>
                             <RadioButton
-                                android:text="修訂學前兒童語言障礙評量表"
+                                android:text="@string/je_radioBtn211244"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:id="@+id/RadioBtn2_1_1_2_4_4"
                                 android:textAppearance="@style/radioButtonText"/>
                             <RadioButton
-                                android:text="修訂學齡兒童語言障礙評量表"
+                                android:text="@string/je_radioBtn211245"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:id="@+id/RadioBtn2_1_1_2_4_5"
                                 android:textAppearance="@style/radioButtonText"/>
                             <RadioButton
-                                android:text="嬰幼兒綜合發展測驗 (CDIIT)"
+                                android:text="@string/je_radioBtn211246"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:id="@+id/RadioBtn2_1_1_2_4_6"
                                 android:textAppearance="@style/radioButtonText"/>
                             <RadioButton
-                                android:text="零至三歲華語嬰幼兒溝通及語言診斷測驗 (0-3CLST)"
+                                android:text="@string/je_radioBtn211247"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:id="@+id/RadioBtn2_1_1_2_4_7"
                                 android:textAppearance="@style/radioButtonText"/>
                             <RadioButton
-                                android:text="華語兒童理解與表達詞彙測驗 (REVT)"
+                                android:text="@string/je_radioBtn211248"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:id="@+id/RadioBtn2_1_1_2_4_8"
                                 android:textAppearance="@style/radioButtonText"/>
                             <RadioButton
-                                android:text="學前幼兒與國小低年級兒童口語語法診斷測驗"
+                                android:text="@string/je_radioBtn211249"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:id="@+id/RadioBtn2_1_1_2_4_9"
@@ -1280,7 +1280,7 @@
         android:divider="@drawable/empty_question_tall_divider"
         >
             <TextView
-                android:text="2-2 理解訓練"
+                android:text="@string/je_textView221"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView2_2_1"
@@ -1292,7 +1292,7 @@
                 android:orientation="vertical"
                 >
                 <TextView
-                    android:text="理解訓練"
+                    android:text="@string/je_textView2211"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/textView2_2_1_1"
@@ -1305,19 +1305,19 @@
                     android:divider="@drawable/empty_radio_buttun_tall_divider"
                     >
                     <RadioButton
-                        android:text="不需要"
+                        android:text="@string/je_radioBtn22111"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/RadioBtn2_2_1_1_1"
                         android:textAppearance="@style/radioButtonText"/>
                     <RadioButton
-                        android:text="需要追蹤及咨詢"
+                        android:text="@string/je_radioBtn22112"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/RadioBtn2_2_1_1_2"
                         android:textAppearance="@style/radioButtonText"/>
                     <RadioButton
-                        android:text="需要訓練"
+                        android:text="@string/je_radioBtn22113"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/RadioBtn2_2_1_1_3"
@@ -1331,7 +1331,7 @@
                 android:orientation="vertical"
                 >
                 <TextView
-                    android:text="訓練方向"
+                    android:text="@string/je_textView2221"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/textView2_2_2_1"
@@ -1344,61 +1344,61 @@
                     android:divider="@drawable/empty_check_box_tall_divider"
                     >
                     <CheckBox
-                        android:text="聽能訓練"
+                        android:text="@string/je_checkBox22211"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/checkBox2_2_2_1_1"
                         android:textAppearance="@style/checkBoxText"/>
                     <CheckBox
-                        android:text="鼓勵兒童對話時能注視說話者"
+                        android:text="@string/je_checkBox22212"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/checkBox2_2_2_1_2"
                         android:textAppearance="@style/checkBoxText"/>
                     <CheckBox
-                        android:text="理解手勢及肢體動作的意思（如：搖頭／搖手表示”不可以”）"
+                        android:text="@string/je_checkBox22213"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/checkBox2_2_2_1_3"
                         android:textAppearance="@style/checkBoxText"/>
                     <CheckBox
-                        android:text="聽懂無手勢動作提示的單一口語指令（如：拿積木給我）"
+                        android:text="@string/je_checkBox22214"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/checkBox2_2_2_1_4"
                         android:textAppearance="@style/checkBoxText"/>
                     <CheckBox
-                        android:text="能指認一般日常生活等熟悉物品或圖片(如：杯子／蘋果)"
+                        android:text="@string/je_checkBox22215"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/checkBox2_2_2_1_5"
                         android:textAppearance="@style/checkBoxText"/>
                     <CheckBox
-                        android:text="理解形容詞、感覺、表情等抽象詞彙"
+                        android:text="@string/je_checkBox22216"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/checkBox2_2_2_1_6"
                         android:textAppearance="@style/checkBoxText"/>
                     <CheckBox
-                        android:text="理解兩個或以上連續動作指令"
+                        android:text="@string/je_checkBox22217"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/checkBox2_2_2_1_7"
                         android:textAppearance="@style/checkBoxText"/>
                     <CheckBox
-                        android:text="理解複雜句型"
+                        android:text="@string/je_checkBox22218"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/checkBox2_2_2_1_8"
                         android:textAppearance="@style/checkBoxText"/>
                     <CheckBox
-                        android:text="理解經歷過的事件內容"
+                        android:text="@string/je_checkBox22219"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/checkBox2_2_2_1_9"
                         android:textAppearance="@style/checkBoxText"/>
                     <CheckBox
-                        android:text="理解故事內容"
+                        android:text="@string/je_checkBox222110"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/checkBox2_2_2_1_10"
@@ -1415,7 +1415,7 @@
             android:divider="@drawable/empty_question_tall_divider"
             >
             <TextView
-                android:text="2-3 表達訓練"
+                android:text="@string/je_textView231"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView2_3_1"
@@ -1427,7 +1427,7 @@
                 android:orientation="vertical"
                 >
                 <TextView
-                    android:text="表達訓練"
+                    android:text="@string/je_textView2311"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/textView2_3_1_1"
@@ -1440,19 +1440,19 @@
                     android:divider="@drawable/empty_radio_buttun_tall_divider"
                     >
                     <RadioButton
-                        android:text="不需要"
+                        android:text="@string/je_radioBtn23111"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/RadioBtn2_3_1_1_1"
                         android:textAppearance="@style/radioButtonText"/>
                     <RadioButton
-                        android:text="需要追蹤及咨詢"
+                        android:text="@string/je_radioBtn23112"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/RadioBtn2_3_1_1_2"
                         android:textAppearance="@style/radioButtonText"/>
                     <RadioButton
-                        android:text="需要訓練"
+                        android:text="@string/je_radioBtn23113"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/RadioBtn2_3_1_1_3"
@@ -1466,7 +1466,7 @@
                 android:orientation="vertical"
                 >
                 <TextView
-                    android:text="口語訓練方向"
+                    android:text="@string/je_textView2321"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/textView2_3_2_1"
@@ -1479,73 +1479,73 @@
                     android:divider="@drawable/empty_check_box_tall_divider"
                     >
                     <CheckBox
-                        android:text="使用溝通輔具／手勢／手語輔助溝通"
+                        android:text="@string/je_checkBox23211"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/checkBox2_3_2_1_1"
                         android:textAppearance="@style/checkBoxText"/>
                     <CheckBox
-                        android:text="提升語用溝通技巧"
+                        android:text="@string/je_checkBox23212"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/checkBox2_3_2_1_2"
                         android:textAppearance="@style/checkBoxText"/>
                     <CheckBox
-                        android:text="增加主動表達的意願和機會"
+                        android:text="@string/je_checkBox23213"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/checkBox2_3_2_1_3"
                         android:textAppearance="@style/checkBoxText"/>
                     <CheckBox
-                        android:text="模仿發聲或模仿語音（發聲遊戲）"
+                        android:text="@string/je_checkBox23214"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/checkBox2_3_2_1_4"
                         android:textAppearance="@style/checkBoxText"/>
                     <CheckBox
-                        android:text="以單字加上手勢動作表達，如：我要"
+                        android:text="@string/je_checkBox23215"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/checkBox2_3_2_1_5"
                         android:textAppearance="@style/checkBoxText"/>
                     <CheckBox
-                        android:text="加強詞彙使用，如：常見物品名稱、功能性詞彙"
+                        android:text="@string/je_checkBox23216"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/checkBox2_3_2_1_6"
                         android:textAppearance="@style/checkBoxText"/>
                     <CheckBox
-                        android:text="加強完整句的表達，如：我要喝水"
+                        android:text="@string/je_checkBox23217"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/checkBox2_3_2_1_7"
                         android:textAppearance="@style/checkBoxText"/>
                     <CheckBox
-                        android:text="加強抽象詞彙的表達，如：好大的車子"
+                        android:text="@string/je_checkBox23218"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/checkBox2_3_2_1_8"
                         android:textAppearance="@style/checkBoxText"/>
                     <CheckBox
-                        android:text="增長語句長度"
+                        android:text="@string/je_checkBox23219"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/checkBox2_3_2_1_9"
                         android:textAppearance="@style/checkBoxText"/>
                     <CheckBox
-                        android:text="練習使用複雜句表達（如：因為…就…）"
+                        android:text="@string/je_checkBox232110"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/checkBox2_3_2_1_10"
                         android:textAppearance="@style/checkBoxText"/>
                     <CheckBox
-                        android:text="練習描述經歷過的事件或說故事"
+                        android:text="@string/je_checkBox232111"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/checkBox2_3_2_1_11"
                         android:textAppearance="@style/checkBoxText"/>
                     <CheckBox
-                        android:text="建立良好的發聲模式及嗓音保健"
+                        android:text="@string/je_checkBox232112"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/checkBox2_3_2_1_12"
@@ -1559,7 +1559,7 @@
                 android:orientation="vertical"
                 >
                 <TextView
-                    android:text="說話訓練方向"
+                    android:text="@string/je_textView2331"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/textView2_3_3_1"
@@ -1572,25 +1572,25 @@
                     android:divider="@drawable/empty_radio_buttun_tall_divider"
                     >
                     <RadioButton
-                        android:text="構音矯正"
+                        android:text="@string/je_radioBtn23311"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/RadioBtn2_3_3_1_1"
                         android:textAppearance="@style/radioButtonText"/>
                     <RadioButton
-                        android:text="語暢訓練"
+                        android:text="@string/je_radioBtn23312"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/RadioBtn2_3_3_1_2"
                         android:textAppearance="@style/radioButtonText"/>
                     <RadioButton
-                        android:text="嗓音復健"
+                        android:text="@string/je_radioBtn23313"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/RadioBtn2_3_3_1_3"
                         android:textAppearance="@style/radioButtonText"/>
                     <RadioButton
-                        android:text="嗓音保健"
+                        android:text="@string/je_radioBtn23314"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/RadioBtn2_3_3_1_4"
@@ -1600,7 +1600,7 @@
         </LinearLayout>
 
         <Button
-            android:text="提交"
+            android:text="@string/je_tijiao"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/submitBtn"
