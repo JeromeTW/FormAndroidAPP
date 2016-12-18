@@ -167,5 +167,6 @@
     <string name="je_radioBtn23313">嗓音復健</string>
     <string name="je_radioBtn23314">嗓音保健</string>
     <string name="je_tijiao">提交</string>
+    <string name="submitSuccessfullyToast">提交成功。</string>
 
 </resources>

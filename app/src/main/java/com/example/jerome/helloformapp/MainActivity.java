@@ -15,6 +15,7 @@ import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.ScrollView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -707,7 +708,8 @@ public class MainActivity extends AppCompatActivity {
         String result = textPrinter.print();
         Log.v(TAG, result);
         writeToFile(dateString, result, this);
-//        readFromFile(this);
+
+        Toast.makeText(this, R.string.submitSuccessfullyToast, Toast.LENGTH_SHORT).show();
     }
 
     /*
