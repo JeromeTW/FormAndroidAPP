@@ -1,6 +1,7 @@
 package com.example.jerome.helloformapp;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
@@ -72,6 +73,7 @@ public class MainActivity extends AppCompatActivity {
     Button submitBtn;
 
     public static final String TAG = "MyActivity";
+    public  final  static String EXTRA_TEXT = "com.example.jerome.helloformapp.TEXT";
 
     @BindView(R.id.textView6)
     TextView textView6;
@@ -707,9 +709,20 @@ public class MainActivity extends AppCompatActivity {
         String dateString = now.format("%Y%m%d_%H%M%S") + "_" + nameString;
         String result = textPrinter.print();
         Log.v(TAG, result);
-        writeToFile(dateString, result, this);
 
-        Toast.makeText(this, R.string.submitSuccessfullyToast, Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(this, DisplayTextActivity.class);
+        intent.putExtra(EXTRA_TEXT, result);
+        startActivity(intent);
+
+//        Intent intent = new Intent(this, DisplayMessageActivity.class);
+//        EditText editText = (EditText) findViewById(R.id.edit_message);
+//        String message = editText.getText().toString();
+//        intent.putExtra(EXTRA_MESSAGE, message);
+//        startActivity(intent);
+
+
+//        writeToFile(dateString, result, this);
+//        Toast.makeText(this, R.string.submitSuccessfullyToast, Toast.LENGTH_SHORT).show();
     }
 
     /*
