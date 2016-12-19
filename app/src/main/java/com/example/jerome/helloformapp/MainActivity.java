@@ -78,6 +78,7 @@ public class MainActivity extends AppCompatActivity {
 
     public static final String TAG = "MyActivity";
     public final static String EXTRA_TEXT = "com.example.jerome.helloformapp.TEXT";
+    public final static String EXTRA_CASE_NAME = "com.example.jerome.helloformapp.CASE_NAME";
 
     @BindView(R.id.textView6)
     TextView textView6;
@@ -649,21 +650,14 @@ public class MainActivity extends AppCompatActivity {
 
         // 個人基本資料 section
         String nameString = nameEditText.getText().toString();
-//        Log.v(TAG, NAME + ": " + nameString);
         // 月份從0開始算，所以要加一
-//        String birthdayString = birthDatePicker.getYear() + "/" + (birthDatePicker.getMonth() + 1) + "/" + birthDatePicker.getDayOfMonth();
         String birthdayString = getDateString(birthDatePicker);
-//        Log.v(TAG, BIRTHDAY + ": " + birthdayString);
         String genderString = maleRadioBtn.isChecked() ? "male" : "female";
-//        Log.v(TAG, GENDER + ": " + genderString);
-//        String acceptString = startDatePicker.getYear() + "/" + (startDatePicker.getMonth() + 1) +
-//                "/" +
-//                startDatePicker.getDayOfMonth();
         String acceptString = getDateString(startDatePicker);
         String description1thString = descriptionEditText.getText().toString();
 
         List<DataItem> itemArray = new ArrayList<DataItem>();
-        itemArray.add(new DataItem(getString(R.string.je_xingming), nameEditText.getText().toString()));
+        itemArray.add(new DataItem(getString(R.string.je_xingming), nameString));
         itemArray.add(new DataItem(getString(R.string.je_xingbie), genderString));
         itemArray.add(new DataItem(getString(R.string.je_chushengriqi), birthdayString));
         itemArray.add(new DataItem(getString(R.string.je_shouanriqi), acceptString));
@@ -720,25 +714,13 @@ public class MainActivity extends AppCompatActivity {
                 .je_textView211));
         textPrinter.sectionArray.add(kouyulijieSection);
 
-        Time now = new Time();
-        now.setToNow();
-        String dateString = now.format("%Y%m%d_%H%M%S") + "_" + nameString;
         String result = textPrinter.print();
         Log.v(TAG, result);
 
         Intent intent = new Intent(this, DisplayTextActivity.class);
         intent.putExtra(EXTRA_TEXT, result);
+        intent.putExtra(EXTRA_CASE_NAME, nameString);
         startActivity(intent);
-
-//        Intent intent = new Intent(this, DisplayMessageActivity.class);
-//        EditText editText = (EditText) findViewById(R.id.edit_message);
-//        String message = editText.getText().toString();
-//        intent.putExtra(EXTRA_MESSAGE, message);
-//        startActivity(intent);
-
-
-//        writeToFile(dateString, result, this);
-//        Toast.makeText(this, R.string.submitSuccessfullyToast, Toast.LENGTH_SHORT).show();
     }
 
     /*
@@ -844,112 +826,6 @@ public class MainActivity extends AppCompatActivity {
                 checkBox23212, checkBox23213, checkBox23214, checkBox23215, checkBox23216,
                 checkBox23217, checkBox23218, checkBox23219, checkBox232110, checkBox232111,
                 checkBox232112);
-    }
-    // endregion
-
-    // region Write/ Read File
-    String readFromFile(Context context) {
-        String ret = "";
-        try {
-            InputStream inputStream = context.openFileInput("JeromeTestSaveFile.txt");
-            if (inputStream != null) {
-                InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
-                BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
-                String receiveString = "";
-                StringBuilder stringBuilder = new StringBuilder();
-
-                while ((receiveString = bufferedReader.readLine()) != null) {
-                    stringBuilder.append(receiveString);
-                }
-                inputStream.close();
-                ret = stringBuilder.toString();
-            }
-        } catch (FileNotFoundException e) {
-            Log.e(TAG, "File not found: " + e.toString());
-        } catch (IOException e) {
-            Log.e(TAG, "Can not read file: " + e.toString());
-        }
-        return ret;
-    }
-
-    /* Checks if external storage is available for read and write */
-    public boolean isExternalStorageWritable() {
-        String state = Environment.getExternalStorageState();
-        if (Environment.MEDIA_MOUNTED.equals(state)) {
-            return true;
-        }
-        return false;
-    }
-
-    /* Checks if external storage is available to at least read */
-    public boolean isExternalStorageReadable() {
-        String state = Environment.getExternalStorageState();
-        if (Environment.MEDIA_MOUNTED.equals(state) || Environment.MEDIA_MOUNTED_READ_ONLY.equals
-                (state)) {
-            return true;
-        }
-        return false;
-    }
-
-    // 取得外部私有儲存空間(指定檔案為相簿類型)
-    public File getAlubemStorageDir(Context context, String albumName) {
-        // Get the directory for the app's private pictures directory.
-        File file = new File(context.getExternalFilesDir(Environment.DIRECTORY_PICTURES),
-                albumName);
-        if (!file.mkdirs()) {
-            Log.e(TAG, "Directory not created");
-        }
-        return file;
-    }
-
-    // 取得外部公共儲存空間(指定檔案為相簿類型)
-    public File getAlnumStorageDir(String albumName) {
-        // Get the directory for the user's public pictures directory.
-        File file = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES),
-                albumName);
-        if (!file.mkdirs()) {
-            Log.e(TAG, "Directory not created");
-        }
-        return file;
-    }
-
-    // 取得外部公共儲存空間(指定檔案為檔案類型)
-    public File getFileStorageDir(String albumName) {
-        File file = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES),
-                albumName);
-        if (!file.mkdirs()) {
-            Log.e(TAG, "Directory not created");
-        }
-        return file;
-    }
-
-    public void writeToFile(String fileName, String body, Context context) {
-        FileOutputStream fos = null;
-
-        try {
-//            final File dir = new File(Environment.getExternalStorageDirectory().getAbsolutePath() + "/folderName/" );
-            final File dir = new File(context.getExternalFilesDir(Environment.DIRECTORY_PICTURES),
-                    fileName);
-            if (!dir.exists()) {
-                if (!dir.mkdirs()) {
-                    Log.e("ALERT", "could not create the directories");
-                }
-            }
-
-            final File myFile = new File(dir, fileName + ".txt");
-
-            if (!myFile.exists()) {
-                myFile.createNewFile();
-            }
-
-            fos = new FileOutputStream(myFile);
-
-            fos.write(body.getBytes());
-            fos.close();
-        } catch (IOException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
     }
     // endregion
 }

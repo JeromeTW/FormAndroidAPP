@@ -169,4 +169,7 @@
     <string name="je_tijiao">提交并查看</string>
     <string name="submitSuccessfullyToast">提交成功。</string>
 
+    <string name="saveMenuBtnTitle">保存至本機</string>
+    <string name="clearFormMenuBtnTitle">重新填寫</string>
+
 </resources>
