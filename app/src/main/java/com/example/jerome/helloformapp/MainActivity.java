@@ -16,7 +16,6 @@ import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.ScrollView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -28,6 +27,7 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
+import Modal.CanScrollMouthDatePicker;
 import Modal.DataItem;
 import Modal.JeCheckBoxGroup;
 import Modal.JeRadioGroup;
@@ -51,12 +51,13 @@ public class MainActivity extends AppCompatActivity {
     RadioButton femaleRadioBtn;
     @BindView(R.id.textView3)
     TextView textView3;
-    @BindView(R.id.birthDatePicker)
-    DatePicker birthDatePicker;
+
+    //    @BindView(R.id.birthDatePicker)
+//    CanScrollMouthDatePicker birthDatePicker;
     @BindView(R.id.textView4)
     TextView textView4;
-    @BindView(R.id.startDatePicker)
-    DatePicker startDatePicker;
+    //    @BindView(R.id.startDatePicker)
+//    CanScrollMouthDatePicker startDatePicker;
     @BindView(R.id.textView5)
     TextView textView5;
     @BindView(R.id.goodRadioBtn)
@@ -73,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
     Button submitBtn;
 
     public static final String TAG = "MyActivity";
-    public  final  static String EXTRA_TEXT = "com.example.jerome.helloformapp.TEXT";
+    public final static String EXTRA_TEXT = "com.example.jerome.helloformapp.TEXT";
 
     @BindView(R.id.textView6)
     TextView textView6;
@@ -169,7 +170,7 @@ public class MainActivity extends AppCompatActivity {
     RadioButton RadioBtn1183;
     @BindView(R.id.textView1_2_1)
     TextView textView121;
-//    @BindView(R.id.RadioBtn1_2_1_1)
+    //    @BindView(R.id.RadioBtn1_2_1_1)
 //    RadioButton RadioBtn1211;   // 沒用到
     @BindView(R.id.RadioBtn1_2_1_2)
     RadioButton RadioBtn1212;
@@ -271,8 +272,8 @@ public class MainActivity extends AppCompatActivity {
     RadioButton RadioBtn2113;
     @BindView(R.id.textView2_1_1_2_1)
     TextView textView21121;
-    @BindView(R.id.DatePicker2_1_1_2_2)
-    DatePicker DatePicker21122;
+    //    @BindView(R.id.DatePicker2_1_1_2_2)
+//    CanScrollMouthDatePicker DatePicker21122;
     @BindView(R.id.textView2_1_1_2_2)
     TextView textView21122;
     @BindView(R.id.EditText2_1_1_2_2)
@@ -399,6 +400,12 @@ public class MainActivity extends AppCompatActivity {
     LinearLayout subSection23211;
     @BindView(R.id.subSection2_3_3_1)
     LinearLayout subSection2331;
+    @BindView(R.id.birthDatePicker)
+    CanScrollMouthDatePicker birthDatePicker;
+    @BindView(R.id.startDatePicker)
+    CanScrollMouthDatePicker startDatePicker;
+    @BindView(R.id.DatePicker2_1_1_2_2)
+    CanScrollMouthDatePicker DatePicker21122;
     private TextPrinter textPrinter;
     private JeRadioGroup performanceGroup;
     private JeRadioGroup genderGroup;   // 暫時不用
@@ -465,7 +472,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    @OnClick({ R.id.RadioBtn1_2_1_2, R.id.RadioBtn1_2_1_3})
+    @OnClick({R.id.RadioBtn1_2_1_2, R.id.RadioBtn1_2_1_3})
     public void setDiffEvents4(RadioButton button) {
         radioGroup1211.didSelectRadio(button);
     }
@@ -547,7 +554,9 @@ public class MainActivity extends AppCompatActivity {
 
     @OnClick({R.id.RadioBtn1_5_3_1, R.id.RadioBtn1_5_3_2, R.id.RadioBtn1_5_3_3, R.id
             .RadioBtn1_5_3_4})
-    public void setDiffEvents10(RadioButton button) { radioGroup1531.didSelectRadio(button); }
+    public void setDiffEvents10(RadioButton button) {
+        radioGroup1531.didSelectRadio(button);
+    }
 
     @OnClick({R.id.RadioBtn1_5_4_1, R.id.RadioBtn1_5_4_2, R.id.RadioBtn1_5_4_3, R.id
             .RadioBtn1_5_4_4})

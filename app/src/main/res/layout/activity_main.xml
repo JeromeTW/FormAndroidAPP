@@ -97,7 +97,7 @@
                     android:id="@+id/textView3"
                     android:textAppearance="@style/questionTitleText" />
 
-                <DatePicker
+                <Modal.CanScrollMouthDatePicker
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/birthDatePicker" />
@@ -115,7 +115,7 @@
                     android:id="@+id/textView4"
                     android:textAppearance="@style/questionTitleText" />
 
-                <DatePicker
+                <Modal.CanScrollMouthDatePicker
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/startDatePicker" />
@@ -1141,7 +1141,7 @@
                             android:id="@+id/textView2_1_1_2_1"
                             android:textAppearance="@style/questionTitleText" />
 
-                        <DatePicker
+                        <Modal.CanScrollMouthDatePicker
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:id="@+id/DatePicker2_1_1_2_2" />
