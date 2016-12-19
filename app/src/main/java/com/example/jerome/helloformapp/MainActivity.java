@@ -752,8 +752,10 @@ public class MainActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
         switch (requestCode) {
             case INTENT_TO_DISPLAY_ACTIVITY:
-                if (data.getExtras().getBoolean(EXTRA_SHOULD_CLEAN_FORM) == true) {
-                    cleanForm();
+                if (data != null) { // 如果不是從重新填寫資料按鈕回來的話，data為null
+                    if (data.getExtras().getBoolean(EXTRA_SHOULD_CLEAN_FORM) == true) {
+                        cleanForm();
+                    }
                 }
         }
     }
