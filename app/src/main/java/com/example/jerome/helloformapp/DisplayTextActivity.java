@@ -25,6 +25,8 @@ import java.io.InputStreamReader;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
+import static com.example.jerome.helloformapp.MainActivity.EXTRA_SHOULD_CLEAN_FORM;
+
 public class DisplayTextActivity extends AppCompatActivity {
 
     @BindView(R.id.resultEditText)
@@ -63,6 +65,11 @@ public class DisplayTextActivity extends AppCompatActivity {
                 Toast.makeText(this, R.string.submitSuccessfullyToast, Toast.LENGTH_SHORT).show();
                 return true;
             case R.id.clearFormMenuBtn:
+                Intent intent = new Intent();
+                Bundle bundle = new Bundle();
+                bundle.putBoolean(EXTRA_SHOULD_CLEAN_FORM, true);
+                intent.putExtras(bundle);
+                setResult(RESULT_OK, intent);
                 this.finish();
                 return true;
             default:

@@ -16,6 +16,7 @@ import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.ScrollView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -69,6 +70,8 @@ public class MainActivity extends AppCompatActivity {
     public static final String TAG = "MyActivity";
     public final static String EXTRA_TEXT = "com.example.jerome.helloformapp.TEXT";
     public final static String EXTRA_CASE_NAME = "com.example.jerome.helloformapp.CASE_NAME";
+    public final static String EXTRA_SHOULD_CLEAN_FORM = "shouldCleanForm";
+    private static final int INTENT_TO_DISPLAY_ACTIVITY = 0;
 
     @BindView(R.id.textView6)
     TextView textView6;
@@ -710,16 +713,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, DisplayTextActivity.class);
         intent.putExtra(EXTRA_TEXT, result);
         intent.putExtra(EXTRA_CASE_NAME, nameString);
-        startActivity(intent);
-    }
-
-    /*
-    @OnClick(R.id.descriptionEditText)
-    void descriptionTextClicked() {
-        activityMain.scrollTo(0, activityMain.getBottom());
+        startActivityForResult(intent, INTENT_TO_DISPLAY_ACTIVITY);
     }
     // endregion
-*/
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -747,6 +743,18 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
+        }
+    }
+
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        switch (requestCode) {
+            case INTENT_TO_DISPLAY_ACTIVITY:
+                if (data.getExtras().getBoolean(EXTRA_SHOULD_CLEAN_FORM) == true) {
+                    cleanForm();
+                }
         }
     }
 
