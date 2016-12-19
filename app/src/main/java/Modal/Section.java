@@ -1,11 +1,9 @@
-package Modal;
+package modal;
 
 import android.util.Log;
 
 import java.util.List;
 import java.util.ListIterator;
-
-import static Modal.DataItem.BREAK_LINE;
 
 /**
  * Created by JEROME on 2016/12/2.

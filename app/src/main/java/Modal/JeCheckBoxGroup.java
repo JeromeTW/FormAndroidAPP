@@ -1,7 +1,6 @@
-package Modal;
+package modal;
 
 import android.widget.CheckBox;
-import android.widget.RadioButton;
 
 import java.util.ArrayList;
 import java.util.List;

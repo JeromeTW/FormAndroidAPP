@@ -1,13 +1,11 @@
-package Modal;
+package modal;
 
-import android.util.Log;
 import android.widget.RadioButton;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static Modal.Section.DOUBLE_BREAK_LINE;
-import static Modal.TextPrinter.TAG;
+import static modal.Section.DOUBLE_BREAK_LINE;
 
 /**
  * Created by JEROME on 2016/12/3.

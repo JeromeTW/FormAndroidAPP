@@ -1,4 +1,4 @@
-package Modal;
+package modal;
 
 /**
  * Created by JEROME on 2016/12/2.

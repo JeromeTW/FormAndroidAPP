@@ -1,4 +1,4 @@
-package Modal;
+package modal;
 
 import android.annotation.TargetApi;
 import android.content.Context;
