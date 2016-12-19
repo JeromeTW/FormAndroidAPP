@@ -1,9 +1,11 @@
 package com.example.jerome.helloformapp;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Environment;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.text.format.Time;
 import android.util.Log;
@@ -35,6 +37,7 @@ public class DisplayTextActivity extends AppCompatActivity {
     ScrollView activityDisplayText;
 
     public static final String TAG = "DisplayTextActivity";
+    Boolean didSaveText = false;
     String caseName;
 
     @Override
@@ -63,20 +66,48 @@ public class DisplayTextActivity extends AppCompatActivity {
                 String dateString = now.format("%Y%m%d_%H%M%S") + "_" + caseName;
                 writeToFile(dateString, resultEditText.getText().toString(), this);
                 Toast.makeText(this, R.string.submitSuccessfullyToast, Toast.LENGTH_SHORT).show();
+                didSaveText = true;
                 return true;
             case R.id.clearFormMenuBtn:
-                Intent intent = new Intent();
-                Bundle bundle = new Bundle();
-                bundle.putBoolean(EXTRA_SHOULD_CLEAN_FORM, true);
-                intent.putExtras(bundle);
-                setResult(RESULT_OK, intent);
-                this.finish();
+                if (didSaveText == true) {  // 如果已經保存了就不跳出提示
+                    backToPreviousActivityAndClearForm();
+                } else {
+                    showClearFormDialog();
+                }
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
     }
 
+    private void showClearFormDialog() {
+        AlertDialog.Builder dialog = new AlertDialog.Builder(DisplayTextActivity.this);
+        dialog.setTitle(R.string.clearFormDialogTitle);
+        dialog.setMessage(R.string.clearFormDialogMessage);
+        // 為了讓按鈕位置符合用戶習慣，於是將setPositiveButton設置為取消；setNegativeButton設置為確認
+        dialog.setPositiveButton(R.string.clearFormDialogCancelButton, new DialogInterface.OnClickListener
+                () {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+
+            }
+        });
+        dialog.setNegativeButton(R.string.clearFormDialogComfireButton, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                backToPreviousActivityAndClearForm();
+            }
+        });
+        dialog.show();
+    }
+    private void backToPreviousActivityAndClearForm() {
+        Intent intent = new Intent();
+        Bundle bundle = new Bundle();
+        bundle.putBoolean(EXTRA_SHOULD_CLEAN_FORM, true);
+        intent.putExtras(bundle);
+        setResult(RESULT_OK, intent);
+        this.finish();
+    }
     // region Write/ Read File
     String readFromFile(Context context) {
         String ret = "";
