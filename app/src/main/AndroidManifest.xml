@@ -18,7 +18,9 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".DisplayTextActivity">
+
+        <activity android:name=".DisplayTextActivity"
+                  android:windowSoftInputMode="stateHidden">
         </activity>
     </application>
 
