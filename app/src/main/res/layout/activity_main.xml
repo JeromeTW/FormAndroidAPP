@@ -1164,12 +1164,12 @@
                         <EditText
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:inputType="textPersonName"
                             android:ems="10"
                             android:id="@+id/EditText2_1_1_2_2"
                             android:layout_weight="1"
                             android:hint="@string/je_editText21122"
-                            android:textAppearance="@style/textPlainText"/>
+                            android:textAppearance="@style/textPlainText"
+                            android:inputType="number"/>
 
                     </LinearLayout>
                     <!--2-1-1-2-3-->
@@ -1190,12 +1190,12 @@
                         <EditText
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:inputType="textPersonName"
                             android:ems="10"
                             android:id="@+id/EditText2_1_1_2_3"
                             android:layout_weight="1"
                             android:hint="@string/je_editText21123"
-                            android:textAppearance="@style/textPlainText"/>
+                            android:textAppearance="@style/textPlainText"
+                            android:inputType="number"/>
 
                     </LinearLayout>
                     <!--2-1-1-2-4-->

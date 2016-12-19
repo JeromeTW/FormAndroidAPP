@@ -558,7 +558,6 @@ public class MainActivity extends AppCompatActivity {
     @OnClick({R.id.RadioBtn2_1_1_1, R.id.RadioBtn2_1_1_2, R.id.RadioBtn2_1_1_3})
     public void setDiffEvents12(RadioButton button) {
         radioGroup2111.didSelectRadio(button);
-        // TODO: 還有一個評估日期的DatePicker和兩個EditText未完成Gone功能
         switch (button.getId()) {
             case R.id.RadioBtn2_1_1_1:
                 subSection2112.setVisibility(View.GONE);
@@ -633,6 +632,9 @@ public class MainActivity extends AppCompatActivity {
 
     @OnClick(R.id.submitBtn)
     void submit() {
+        // 清空
+        textPrinter.cleanUp();
+
         // 個人基本資料 section
         String nameString = nameEditText.getText().toString();
 //        Log.v(TAG, NAME + ": " + nameString);
@@ -688,11 +690,13 @@ public class MainActivity extends AppCompatActivity {
         // 2 section
         List<DataItem> itemArray3 = new ArrayList<DataItem>();
         itemArray3.add(radioGroup2111);
-        itemArray3.add(new DataItem(getString(R.string.je_textView21121), getDateString
-                (DatePicker21122)));
-        itemArray3.add(new DataItem(getString(R.string.je_textView21122), EditText21122.getText()
-                .toString()));
-        itemArray3.add(new DataItem(getString(R.string.je_textView21123), EditText21123.getText().toString()));
+        if (subSection2112.getVisibility() == View.VISIBLE) {
+            itemArray3.add(new DataItem(getString(R.string.je_textView21121), getDateString
+                    (DatePicker21122)));
+            itemArray3.add(new DataItem(getString(R.string.je_textView21122), EditText21122.getText()
+                    .toString()));
+            itemArray3.add(new DataItem(getString(R.string.je_textView21123), EditText21123.getText().toString()));
+        }
         itemArray3.add(radioGroup211241);
         itemArray3.add(radioGroup22111);
         itemArray3.add(checkBoxGroup22211);

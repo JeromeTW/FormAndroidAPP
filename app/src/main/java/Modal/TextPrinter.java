@@ -31,5 +31,8 @@ public class TextPrinter {
         Log.v(TAG, "section result:" + result);
         return result;
     }
+    public void cleanUp() {
+        sectionArray.clear();
+    }
 }
 
