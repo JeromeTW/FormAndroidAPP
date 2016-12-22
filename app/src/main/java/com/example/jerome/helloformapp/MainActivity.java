@@ -3,12 +3,14 @@ package com.example.jerome.helloformapp;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.format.Time;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CalendarView;
 import android.widget.CheckBox;
 import android.widget.DatePicker;
 import android.widget.EditText;
@@ -16,20 +18,19 @@ import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.ScrollView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 import modal.CanScrollMouthDatePicker;
 import modal.DataItem;
 import modal.JeCheckBoxGroup;
 import modal.JeRadioGroup;
 import modal.Section;
 import modal.TextPrinter;
-import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.OnClick;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -402,7 +403,9 @@ public class MainActivity extends AppCompatActivity {
     CanScrollMouthDatePicker birthDatePicker;
     @BindView(R.id.startDatePicker)
     CanScrollMouthDatePicker startDatePicker;
-//    @BindView(R.id.DatePicker2_1_1_2_2)
+    @BindView(R.id.ageTextView)
+    TextView ageTextView;
+    //    @BindView(R.id.DatePicker2_1_1_2_2)
 //    CanScrollMouthDatePicker DatePicker21122;
     private TextPrinter textPrinter;
     private JeRadioGroup performanceGroup;
@@ -414,7 +417,7 @@ public class MainActivity extends AppCompatActivity {
     private JeRadioGroup radioGroup1411;
     private JeRadioGroup radioGroup1421;
     private JeRadioGroup radioGroup1511;
-//    private JeRadioGroup radioGroup1521;
+    //    private JeRadioGroup radioGroup1521;
     private JeRadioGroup radioGroup1531;
     private JeRadioGroup radioGroup1541;
     private JeRadioGroup radioGroup2111;
@@ -720,6 +723,7 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra(EXTRA_CASE_NAME, nameString);
         startActivityForResult(intent, INTENT_TO_DISPLAY_ACTIVITY);
     }
+
     // endregion
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -731,6 +735,22 @@ public class MainActivity extends AppCompatActivity {
         setupCheckBoxGroups();
         List<Section> sectionArray = new ArrayList<Section>();
         textPrinter = new TextPrinter(sectionArray);
+        birthDatePicker.getCalendarView().setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
+            @Override
+            public void onSelectedDayChange(CalendarView view, int year, int month, int dayOfMonth) {
+                Log.d("tag", "finally found the listener, the date is: year " + year + ", month " + month + ", dayOfMonth " + dayOfMonth);
+                int birthMonths = year * 12 + month;    // 從西元年開始到出生月，計算總共月數
+                Time now = new Time();
+                now.setToNow();
+                int nowMonths = now.year * 12 + now.month;  // 從西元年開始到今日月，計算總共月數
+                int ageMonths = nowMonths - birthMonths;    // 個案年齡月數
+                if (ageMonths >= 0) {
+                    ageTextView.setText("年齡： " + ageMonths / 12 + "歲" + ageMonths % 12 + "個月" );
+                } else {
+                    ageTextView.setText("還未出生吧^-^");
+                }
+            }
+        });
     }
 
     @Override
@@ -835,6 +855,7 @@ public class MainActivity extends AppCompatActivity {
                 checkBox23217, checkBox23218, checkBox23219, checkBox232110, checkBox232111,
                 checkBox232112);
     }
+
     // endregion
     private void cleanForm() {  // 用sublime的正則表達式完成的
         nameEditText.getText().clear();

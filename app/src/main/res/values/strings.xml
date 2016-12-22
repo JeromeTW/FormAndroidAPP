@@ -168,6 +168,7 @@
     <string name="je_radioBtn23314">嗓音保健</string>
     <string name="je_tijiao">提交并查看</string>
     <string name="submitSuccessfullyToast">提交成功。</string>
+    <string name="ageTitle">目前年齡為</string>
 
     <!--DisplayTextActivity-->
     <string name="saveMenuBtnTitle">保存至本機</string>

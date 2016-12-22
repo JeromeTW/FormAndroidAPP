@@ -98,9 +98,17 @@
                     android:textAppearance="@style/questionTitleText" />
 
                 <modal.CanScrollMouthDatePicker
+                    android:datePickerMode="spinner"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/birthDatePicker" />
+                <TextView
+                    android:text="@string/ageTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ageTextView"
+                    android:textAppearance="@style/questionTitleText"
+                    android:gravity="center_horizontal"/>
             </LinearLayout>
 
             <LinearLayout
