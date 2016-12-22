@@ -261,7 +261,6 @@ public class MainActivity extends AppCompatActivity {
     RadioButton RadioBtn2112;
     @BindView(R.id.RadioBtn2_1_1_3)
     RadioButton RadioBtn2113;
-    EditText EditText21123;
     @BindView(R.id.textView2_1_1_2_4)
     TextView textView21124;
     @BindView(R.id.RadioBtn2_1_1_2_4_1)
@@ -876,7 +875,6 @@ public class MainActivity extends AppCompatActivity {
         RadioBtn2111.setChecked(false);
         RadioBtn2112.setChecked(false);
         RadioBtn2113.setChecked(false);
-        EditText21123.getText().clear();
         RadioBtn211241.setChecked(false);
         RadioBtn211242.setChecked(false);
         RadioBtn211243.setChecked(false);
