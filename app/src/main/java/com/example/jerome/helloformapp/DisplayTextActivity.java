@@ -66,11 +66,12 @@ public class DisplayTextActivity extends AppCompatActivity {
         now.setToNow();
         String fileString = now.format("%Y%m%d_%H%M%S") + "_" + caseName;
         switch (item.getItemId()) {
+            /*
             case R.id.saveMenuBtn:
                 writeToFile(fileString, resultEditText.getText().toString(), this);
                 Toast.makeText(this, R.string.submitSuccessfullyToast, Toast.LENGTH_SHORT).show();
                 didSaveText = true;
-                return true;
+                return true;*/
             case R.id.clearFormMenuBtn:
                 if (didSaveText == true) {  // 如果已經保存了就不跳出提示
                     backToPreviousActivityAndClearForm();

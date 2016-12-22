@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@+id/saveMenuBtn"
-          android:title="@string/saveMenuBtnTitle"/>
+    <!--<item android:id="@+id/saveMenuBtn"-->
+          <!--android:title="@string/saveMenuBtnTitle"/>-->
     <item android:id="@+id/saveToGoogleDriveMenuBtn"
           android:title="@string/saveToGoogleDriveMenuBtnTitle"/>
     <item android:id="@+id/clearFormMenuBtn"
