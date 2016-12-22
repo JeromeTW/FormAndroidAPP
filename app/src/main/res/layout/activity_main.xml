@@ -948,30 +948,30 @@
                     android:divider="@drawable/empty_radio_buttun_tall_divider"
                     android:id="@+id/subSection1_5_2_1"
                     >
-                    <RadioButton
-                        android:text="@string/je_radioBtn1521"
+                    <CheckBox
+                        android:text="@string/je_checkBox1521"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/RadioBtn1_5_2_1"
-                        android:textAppearance="@style/radioButtonText"/>
-                    <RadioButton
-                        android:text="@string/je_radioBtn1522"
+                        android:id="@+id/checkBox1_5_2_1"
+                        android:textAppearance="@style/checkBoxText"/>
+                    <CheckBox
+                        android:text="@string/je_checkBox1522"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/RadioBtn1_5_2_2"
-                        android:textAppearance="@style/radioButtonText"/>
-                    <RadioButton
-                        android:text="@string/je_radioBtn1523"
+                        android:id="@+id/checkBox1_5_2_2"
+                        android:textAppearance="@style/checkBoxText"/>
+                    <CheckBox
+                        android:text="@string/je_checkBox1523"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/RadioBtn1_5_2_3"
-                        android:textAppearance="@style/radioButtonText"/>
-                    <RadioButton
-                        android:text="@string/je_radioBtn1524"
+                        android:id="@+id/checkBox1_5_2_3"
+                        android:textAppearance="@style/checkBoxText"/>
+                    <CheckBox
+                        android:text="@string/je_checkBox1524"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/RadioBtn1_5_2_4"
-                        android:textAppearance="@style/radioButtonText"/>
+                        android:id="@+id/checkBox1_5_2_4"
+                        android:textAppearance="@style/checkBoxText"/>
                 </LinearLayout>
             </LinearLayout>
             <!--1-5-3-->

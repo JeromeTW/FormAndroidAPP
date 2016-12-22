@@ -229,14 +229,14 @@ public class MainActivity extends AppCompatActivity {
     RadioButton RadioBtn1513;
     @BindView(R.id.textView1_5_2)
     TextView textView152;
-    @BindView(R.id.RadioBtn1_5_2_1)
-    RadioButton RadioBtn1521;
-    @BindView(R.id.RadioBtn1_5_2_2)
-    RadioButton RadioBtn1522;
-    @BindView(R.id.RadioBtn1_5_2_3)
-    RadioButton RadioBtn1523;
-    @BindView(R.id.RadioBtn1_5_2_4)
-    RadioButton RadioBtn1524;
+    @BindView(R.id.checkBox1_5_2_1)
+    CheckBox checkBox1521;
+    @BindView(R.id.checkBox1_5_2_2)
+    CheckBox checkBox1522;
+    @BindView(R.id.checkBox1_5_2_3)
+    CheckBox checkBox1523;
+    @BindView(R.id.checkBox1_5_2_4)
+    CheckBox checkBox1524;
     @BindView(R.id.textView1_5_3)
     TextView textView153;
     @BindView(R.id.RadioBtn1_5_3_1)
@@ -414,7 +414,7 @@ public class MainActivity extends AppCompatActivity {
     private JeRadioGroup radioGroup1411;
     private JeRadioGroup radioGroup1421;
     private JeRadioGroup radioGroup1511;
-    private JeRadioGroup radioGroup1521;
+//    private JeRadioGroup radioGroup1521;
     private JeRadioGroup radioGroup1531;
     private JeRadioGroup radioGroup1541;
     private JeRadioGroup radioGroup2111;
@@ -426,6 +426,7 @@ public class MainActivity extends AppCompatActivity {
     private JeCheckBoxGroup checkBoxGroup1121;
     private JeCheckBoxGroup checkBoxGroup1131;
     private JeCheckBoxGroup checkBoxGroup1141;
+    private JeCheckBoxGroup checkBoxGroup1521;
     private JeCheckBoxGroup checkBoxGroup1161;
     private JeCheckBoxGroup checkBoxGroup1171;
     private JeCheckBoxGroup checkBoxGroup1221;
@@ -508,7 +509,7 @@ public class MainActivity extends AppCompatActivity {
                 subSection152.setVisibility(View.GONE);
                 subSection1513.setVisibility(View.GONE);
                 subSection1514.setVisibility(View.GONE);
-                radioGroup1521.setIsGone();
+                checkBoxGroup1521.setIsGone();
                 radioGroup1531.setIsGone();
                 radioGroup1541.setIsGone();
                 break;
@@ -516,13 +517,14 @@ public class MainActivity extends AppCompatActivity {
                 subSection152.setVisibility(View.VISIBLE);
                 subSection1513.setVisibility(View.VISIBLE);
                 subSection1514.setVisibility(View.VISIBLE);
-                radioGroup1521.setNotGone();
+                checkBoxGroup1521.setNotGone();
                 radioGroup1531.setNotGone();
                 radioGroup1541.setNotGone();
                 break;
         }
     }
-
+// radioGroup1521 改為CHECKBOX
+   /*
     @OnClick({R.id.RadioBtn1_5_2_1, R.id.RadioBtn1_5_2_2, R.id.RadioBtn1_5_2_3, R.id.RadioBtn1_5_2_4})
     public void setDiffEvents9(RadioButton button) {
         radioGroup1521.didSelectRadio(button);
@@ -548,7 +550,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
 
         }
-    }
+    }*/
 
     @OnClick({R.id.RadioBtn1_5_3_1, R.id.RadioBtn1_5_3_2, R.id.RadioBtn1_5_3_3, R.id
             .RadioBtn1_5_3_4})
@@ -679,7 +681,7 @@ public class MainActivity extends AppCompatActivity {
         itemArray2.add(radioGroup1411);
         itemArray2.add(radioGroup1421);
         itemArray2.add(radioGroup1511);
-        itemArray2.add(radioGroup1521);
+        itemArray2.add(checkBoxGroup1521);
         itemArray2.add(radioGroup1531);
         itemArray2.add(radioGroup1541);
 
@@ -786,8 +788,9 @@ public class MainActivity extends AppCompatActivity {
                 RadioBtn1423);
         radioGroup1511 = new JeRadioGroup(getString(R.string.je_textView151), RadioBtn1511, RadioBtn1512,
                 RadioBtn1513);
-        radioGroup1521 = new JeRadioGroup(getString(R.string.je_textView152), RadioBtn1521, RadioBtn1522,
-                RadioBtn1523, RadioBtn1524);
+        // 改為checkbox
+//        radioGroup1521 = new JeRadioGroup(getString(R.string.je_textView152), RadioBtn1521, RadioBtn1522,
+//                RadioBtn1523, RadioBtn1524);
         radioGroup1531 = new JeRadioGroup(getString(R.string.je_textView153), RadioBtn1531, RadioBtn1532,
                 RadioBtn1533, RadioBtn1534);
         radioGroup1541 = new JeRadioGroup(getString(R.string.je_textView154), RadioBtn1541, RadioBtn1542,
@@ -813,6 +816,8 @@ public class MainActivity extends AppCompatActivity {
                 checkBox1137);
         checkBoxGroup1141 = new JeCheckBoxGroup(getString(R.string.je_textView114), checkBox1141,
                 checkBox1142);
+        checkBoxGroup1521 = new JeCheckBoxGroup(getString(R.string.je_textView152), checkBox1521,
+                checkBox1522, checkBox1523, checkBox1524);
         checkBoxGroup1161 = new JeCheckBoxGroup(getString(R.string.je_textView116), checkBox1161,
                 checkBox1162, checkBox1163, checkBox1164, checkBox1165, checkBox1166);
         checkBoxGroup1171 = new JeCheckBoxGroup(getString(R.string.je_textView117), checkBox1171,
@@ -896,10 +901,10 @@ public class MainActivity extends AppCompatActivity {
         RadioBtn1511.setChecked(false);
         RadioBtn1512.setChecked(false);
         RadioBtn1513.setChecked(false);
-        RadioBtn1521.setChecked(false);
-        RadioBtn1522.setChecked(false);
-        RadioBtn1523.setChecked(false);
-        RadioBtn1524.setChecked(false);
+        checkBox1521.setChecked(false);
+        checkBox1522.setChecked(false);
+        checkBox1523.setChecked(false);
+        checkBox1524.setChecked(false);
         RadioBtn1531.setChecked(false);
         RadioBtn1532.setChecked(false);
         RadioBtn1533.setChecked(false);

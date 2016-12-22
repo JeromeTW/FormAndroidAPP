@@ -93,10 +93,10 @@
     <string name="je_radioBtn1512">需要追蹤及咨詢</string>
     <string name="je_radioBtn1513">需要訓練</string>
     <string name="je_textView152">1-5-1 訓練方向</string>
-    <string name="je_radioBtn1521">改變姿勢</string>
-    <string name="je_radioBtn1522">控制量</string>
-    <string name="je_radioBtn1523">食物材質的選擇</string>
-    <string name="je_radioBtn1524">食器的選擇</string>
+    <string name="je_checkBox1521">改變姿勢</string>
+    <string name="je_checkBox1522">控制量</string>
+    <string name="je_checkBox1523">食物材質的選擇</string>
+    <string name="je_checkBox1524">食器的選擇</string>
     <string name="je_textView153">1-5-1-3 食物材質的選擇</string>
     <string name="je_radioBtn1531">流質</string>
     <string name="je_radioBtn1532">糊狀</string>
