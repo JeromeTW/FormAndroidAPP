@@ -1226,60 +1226,60 @@
                             android:showDividers="middle"
                             android:divider="@drawable/empty_radio_buttun_tall_divider"
                             >
-                            <RadioButton
-                                android:text="@string/je_radioBtn211241"
+                            <CheckBox
+                                android:text="@string/je_checkBox211241"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:id="@+id/RadioBtn2_1_1_2_4_1"
-                                android:textAppearance="@style/radioButtonText"/>
-                            <RadioButton
-                                android:text="@string/je_radioBtn211242"
+                                android:id="@+id/checkBox2_1_1_2_4_1"
+                                android:textAppearance="@style/checkBoxText"/>
+                            <CheckBox
+                                android:text="@string/je_checkBox211242"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:id="@+id/RadioBtn2_1_1_2_4_2"
-                                android:textAppearance="@style/radioButtonText"/>
-                            <RadioButton
-                                android:text="@string/je_radioBtn211243"
+                                android:id="@+id/checkBox2_1_1_2_4_2"
+                                android:textAppearance="@style/checkBoxText"/>
+                            <CheckBox
+                                android:text="@string/je_checkBox211243"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:id="@+id/RadioBtn2_1_1_2_4_3"
-                                android:textAppearance="@style/radioButtonText"/>
-                            <RadioButton
-                                android:text="@string/je_radioBtn211244"
+                                android:id="@+id/checkBox2_1_1_2_4_3"
+                                android:textAppearance="@style/checkBoxText"/>
+                            <CheckBox
+                                android:text="@string/je_checkBox211244"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:id="@+id/RadioBtn2_1_1_2_4_4"
-                                android:textAppearance="@style/radioButtonText"/>
-                            <RadioButton
-                                android:text="@string/je_radioBtn211245"
+                                android:id="@+id/checkBox2_1_1_2_4_4"
+                                android:textAppearance="@style/checkBoxText"/>
+                            <CheckBox
+                                android:text="@string/je_checkBox211245"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:id="@+id/RadioBtn2_1_1_2_4_5"
-                                android:textAppearance="@style/radioButtonText"/>
-                            <RadioButton
-                                android:text="@string/je_radioBtn211246"
+                                android:id="@+id/checkBox2_1_1_2_4_5"
+                                android:textAppearance="@style/checkBoxText"/>
+                            <CheckBox
+                                android:text="@string/je_checkBox211246"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:id="@+id/RadioBtn2_1_1_2_4_6"
-                                android:textAppearance="@style/radioButtonText"/>
-                            <RadioButton
-                                android:text="@string/je_radioBtn211247"
+                                android:id="@+id/checkBox2_1_1_2_4_6"
+                                android:textAppearance="@style/checkBoxText"/>
+                            <CheckBox
+                                android:text="@string/je_checkBox211247"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:id="@+id/RadioBtn2_1_1_2_4_7"
-                                android:textAppearance="@style/radioButtonText"/>
-                            <RadioButton
-                                android:text="@string/je_radioBtn211248"
+                                android:id="@+id/checkBox2_1_1_2_4_7"
+                                android:textAppearance="@style/checkBoxText"/>
+                            <CheckBox
+                                android:text="@string/je_checkBox211248"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:id="@+id/RadioBtn2_1_1_2_4_8"
-                                android:textAppearance="@style/radioButtonText"/>
-                            <RadioButton
-                                android:text="@string/je_radioBtn211249"
+                                android:id="@+id/checkBox2_1_1_2_4_8"
+                                android:textAppearance="@style/checkBoxText"/>
+                            <CheckBox
+                                android:text="@string/je_checkBox211249"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:id="@+id/RadioBtn2_1_1_2_4_9"
-                                android:textAppearance="@style/radioButtonText"/>
+                                android:id="@+id/checkBox2_1_1_2_4_9"
+                                android:textAppearance="@style/checkBoxText"/>
                         </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>

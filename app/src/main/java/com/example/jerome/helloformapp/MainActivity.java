@@ -263,24 +263,24 @@ public class MainActivity extends AppCompatActivity {
     RadioButton RadioBtn2113;
     @BindView(R.id.textView2_1_1_2_4)
     TextView textView21124;
-    @BindView(R.id.RadioBtn2_1_1_2_4_1)
-    RadioButton RadioBtn211241;
-    @BindView(R.id.RadioBtn2_1_1_2_4_2)
-    RadioButton RadioBtn211242;
-    @BindView(R.id.RadioBtn2_1_1_2_4_3)
-    RadioButton RadioBtn211243;
-    @BindView(R.id.RadioBtn2_1_1_2_4_4)
-    RadioButton RadioBtn211244;
-    @BindView(R.id.RadioBtn2_1_1_2_4_5)
-    RadioButton RadioBtn211245;
-    @BindView(R.id.RadioBtn2_1_1_2_4_6)
-    RadioButton RadioBtn211246;
-    @BindView(R.id.RadioBtn2_1_1_2_4_7)
-    RadioButton RadioBtn211247;
-    @BindView(R.id.RadioBtn2_1_1_2_4_8)
-    RadioButton RadioBtn211248;
-    @BindView(R.id.RadioBtn2_1_1_2_4_9)
-    RadioButton RadioBtn211249;
+    @BindView(R.id.checkBox2_1_1_2_4_1)
+    CheckBox checkBox211241;
+    @BindView(R.id.checkBox2_1_1_2_4_2)
+    CheckBox checkBox211242;
+    @BindView(R.id.checkBox2_1_1_2_4_3)
+    CheckBox checkBox211243;
+    @BindView(R.id.checkBox2_1_1_2_4_4)
+    CheckBox checkBox211244;
+    @BindView(R.id.checkBox2_1_1_2_4_5)
+    CheckBox checkBox211245;
+    @BindView(R.id.checkBox2_1_1_2_4_6)
+    CheckBox checkBox211246;
+    @BindView(R.id.checkBox2_1_1_2_4_7)
+    CheckBox checkBox211247;
+    @BindView(R.id.checkBox2_1_1_2_4_8)
+    CheckBox checkBox211248;
+    @BindView(R.id.checkBox2_1_1_2_4_9)
+    CheckBox checkBox211249;
     @BindView(R.id.textView2_2_1)
     TextView textView221;
     @BindView(R.id.textView2_2_1_1)
@@ -399,7 +399,6 @@ public class MainActivity extends AppCompatActivity {
     private JeRadioGroup radioGroup1531;
     private JeRadioGroup radioGroup1541;
     private JeRadioGroup radioGroup2111;
-    private JeRadioGroup radioGroup211241;
     private JeRadioGroup radioGroup22111;
     private JeRadioGroup radioGroup23111;
     private JeRadioGroup radioGroup23311;
@@ -412,6 +411,7 @@ public class MainActivity extends AppCompatActivity {
     private JeCheckBoxGroup checkBoxGroup1171;
     private JeCheckBoxGroup checkBoxGroup1221;
     private JeCheckBoxGroup checkBoxGroup1231;
+    private JeCheckBoxGroup checkBoxGroup211241;
     private JeCheckBoxGroup checkBoxGroup22211;
     private JeCheckBoxGroup checkBoxGroup23211;
 
@@ -552,13 +552,6 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    @OnClick({R.id.RadioBtn2_1_1_2_4_1, R.id.RadioBtn2_1_1_2_4_2, R.id.RadioBtn2_1_1_2_4_3, R.id
-            .RadioBtn2_1_1_2_4_4, R.id.RadioBtn2_1_1_2_4_5, R.id.RadioBtn2_1_1_2_4_6, R.id
-            .RadioBtn2_1_1_2_4_7, R.id.RadioBtn2_1_1_2_4_8, R.id.RadioBtn2_1_1_2_4_9})
-    public void setDiffEvents13(RadioButton button) {
-        radioGroup211241.didSelectRadio(button);
-    }
-
     @OnClick({R.id.RadioBtn2_2_1_1_1, R.id.RadioBtn2_2_1_1_2, R.id.RadioBtn2_2_1_1_3})
     public void setDiffEvents14(RadioButton button) {
         radioGroup22111.didSelectRadio(button);
@@ -665,7 +658,7 @@ public class MainActivity extends AppCompatActivity {
         // 2 section
         List<DataItem> itemArray3 = new ArrayList<DataItem>();
         itemArray3.add(radioGroup2111);
-        itemArray3.add(radioGroup211241);
+        itemArray3.add(checkBoxGroup211241);
         itemArray3.add(radioGroup22111);
         itemArray3.add(checkBoxGroup22211);
         itemArray3.add(radioGroup23111);
@@ -775,9 +768,6 @@ public class MainActivity extends AppCompatActivity {
                 RadioBtn1543, RadioBtn1544);
         radioGroup2111 = new JeRadioGroup(getString(R.string.je_textView2111), RadioBtn2111, RadioBtn2112,
                 RadioBtn2113);
-        radioGroup211241 = new JeRadioGroup(getString(R.string.je_textView21124), RadioBtn211241, RadioBtn211242,
-                RadioBtn211243, RadioBtn211244, RadioBtn211245, RadioBtn211246, RadioBtn211247,
-                RadioBtn211248, RadioBtn211249);
         radioGroup22111 = new JeRadioGroup(getString(R.string.je_textView2211), RadioBtn22111,
                 RadioBtn22112, RadioBtn22113);
         radioGroup23111 = new JeRadioGroup(getString(R.string.je_textView2311), RadioBtn23111,
@@ -811,6 +801,9 @@ public class MainActivity extends AppCompatActivity {
                 checkBox1222, checkBox1223);
         checkBoxGroup1231 = new JeCheckBoxGroup(getString(R.string.je_textView123), checkBox1231,
                 checkBox1232, checkBox1233, checkBox1234);
+        checkBoxGroup211241 = new JeCheckBoxGroup(getString(R.string.je_textView21124), checkBox211241, checkBox211242,
+                checkBox211243, checkBox211244, checkBox211245, checkBox211246, checkBox211247,
+                checkBox211248, checkBox211249);
         checkBoxGroup22211 = new JeCheckBoxGroup(getString(R.string.je_textView2221), checkBox22211,
                 checkBox22212, checkBox22213, checkBox22214, checkBox22215, checkBox22216,
                 checkBox22217, checkBox22218, checkBox22219, checkBox222110);
@@ -901,15 +894,15 @@ public class MainActivity extends AppCompatActivity {
         RadioBtn2111.setChecked(false);
         RadioBtn2112.setChecked(false);
         RadioBtn2113.setChecked(false);
-        RadioBtn211241.setChecked(false);
-        RadioBtn211242.setChecked(false);
-        RadioBtn211243.setChecked(false);
-        RadioBtn211244.setChecked(false);
-        RadioBtn211245.setChecked(false);
-        RadioBtn211246.setChecked(false);
-        RadioBtn211247.setChecked(false);
-        RadioBtn211248.setChecked(false);
-        RadioBtn211249.setChecked(false);
+        checkBox211241.setChecked(false);
+        checkBox211242.setChecked(false);
+        checkBox211243.setChecked(false);
+        checkBox211244.setChecked(false);
+        checkBox211245.setChecked(false);
+        checkBox211246.setChecked(false);
+        checkBox211247.setChecked(false);
+        checkBox211248.setChecked(false);
+        checkBox211249.setChecked(false);
         RadioBtn22111.setChecked(false);
         RadioBtn22112.setChecked(false);
         RadioBtn22113.setChecked(false);
