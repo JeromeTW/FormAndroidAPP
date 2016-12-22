@@ -74,12 +74,8 @@ public class GoogleDriveActivity extends Activity implements ConnectionCallbacks
                         Log.i(TAG, "New contents created.");
                         // Get an output stream for the contents.
                         OutputStream outputStream = result.getDriveContents().getOutputStream();
-//                        // Write the bitmap data from it.
-//                        ByteArrayOutputStream bitmapStream = new ByteArrayOutputStream();
-
                         try {
                             outputStream.write(content.getBytes(Charset.forName("UTF-8")));
-//                            outputStream.write(bitmapStream.toByteArray());
                         } catch (IOException e1) {
                             Log.i(TAG, "Unable to write file contents.");
                         }

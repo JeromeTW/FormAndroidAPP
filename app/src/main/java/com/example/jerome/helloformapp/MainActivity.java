@@ -46,13 +46,8 @@ public class MainActivity extends AppCompatActivity {
     RadioButton femaleRadioBtn;
     @BindView(R.id.textView3)
     TextView textView3;
-
-    //    @BindView(R.id.birthDatePicker)
-//    CanScrollMouthDatePicker birthDatePicker;
     @BindView(R.id.textView4)
     TextView textView4;
-    //    @BindView(R.id.startDatePicker)
-//    CanScrollMouthDatePicker startDatePicker;
     @BindView(R.id.textView5)
     TextView textView5;
     @BindView(R.id.goodRadioBtn)
@@ -168,8 +163,6 @@ public class MainActivity extends AppCompatActivity {
     RadioButton RadioBtn1183;
     @BindView(R.id.textView1_2_1)
     TextView textView121;
-    //    @BindView(R.id.RadioBtn1_2_1_1)
-//    RadioButton RadioBtn1211;   // 沒用到
     @BindView(R.id.RadioBtn1_2_1_2)
     RadioButton RadioBtn1212;
     @BindView(R.id.RadioBtn1_2_1_3)
@@ -268,18 +261,6 @@ public class MainActivity extends AppCompatActivity {
     RadioButton RadioBtn2112;
     @BindView(R.id.RadioBtn2_1_1_3)
     RadioButton RadioBtn2113;
-    // 關閉評估日期，目前能力約幾歲幾個月的欄位
-//    @BindView(R.id.textView2_1_1_2_1)
-//    TextView textView21121;
-    //    @BindView(R.id.DatePicker2_1_1_2_2)
-//    CanScrollMouthDatePicker DatePicker21122;
-//    @BindView(R.id.textView2_1_1_2_2)
-//    TextView textView21122;
-//    @BindView(R.id.EditText2_1_1_2_2)
-//    EditText EditText21122;
-//    @BindView(R.id.textView2_1_1_2_3)
-//    TextView textView21123;
-//    @BindView(R.id.EditText2_1_1_2_3)
     EditText EditText21123;
     @BindView(R.id.textView2_1_1_2_4)
     TextView textView21124;
@@ -405,8 +386,7 @@ public class MainActivity extends AppCompatActivity {
     CanScrollMouthDatePicker startDatePicker;
     @BindView(R.id.ageTextView)
     TextView ageTextView;
-    //    @BindView(R.id.DatePicker2_1_1_2_2)
-//    CanScrollMouthDatePicker DatePicker21122;
+
     private TextPrinter textPrinter;
     private JeRadioGroup performanceGroup;
     private JeRadioGroup genderGroup;   // 暫時不用
@@ -417,7 +397,6 @@ public class MainActivity extends AppCompatActivity {
     private JeRadioGroup radioGroup1411;
     private JeRadioGroup radioGroup1421;
     private JeRadioGroup radioGroup1511;
-    //    private JeRadioGroup radioGroup1521;
     private JeRadioGroup radioGroup1531;
     private JeRadioGroup radioGroup1541;
     private JeRadioGroup radioGroup2111;
@@ -526,34 +505,6 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
     }
-// radioGroup1521 改為CHECKBOX
-   /*
-    @OnClick({R.id.RadioBtn1_5_2_1, R.id.RadioBtn1_5_2_2, R.id.RadioBtn1_5_2_3, R.id.RadioBtn1_5_2_4})
-    public void setDiffEvents9(RadioButton button) {
-        radioGroup1521.didSelectRadio(button);
-        switch (button.getId()) {
-            case R.id.RadioBtn1_5_2_1:
-            case R.id.RadioBtn1_5_2_2:
-                subSection1513.setVisibility(View.GONE);
-                subSection1514.setVisibility(View.GONE);
-                radioGroup1531.setIsGone();
-                radioGroup1541.setIsGone();
-                break;
-            case R.id.RadioBtn1_5_2_3:
-                subSection1513.setVisibility(View.VISIBLE);
-                subSection1514.setVisibility(View.GONE);
-                radioGroup1531.setIsGone();
-                radioGroup1541.setNotGone();
-                break;
-            case R.id.RadioBtn1_5_2_4:
-                subSection1513.setVisibility(View.GONE);
-                subSection1514.setVisibility(View.VISIBLE);
-                radioGroup1531.setNotGone();
-                radioGroup1541.setIsGone();
-                break;
-
-        }
-    }*/
 
     @OnClick({R.id.RadioBtn1_5_3_1, R.id.RadioBtn1_5_3_2, R.id.RadioBtn1_5_3_3, R.id
             .RadioBtn1_5_3_4})
@@ -695,15 +646,6 @@ public class MainActivity extends AppCompatActivity {
         // 2 section
         List<DataItem> itemArray3 = new ArrayList<DataItem>();
         itemArray3.add(radioGroup2111);
-//        關閉評估日期，目前能力約幾歲幾個月的欄位
-        /*
-        if (subSection2112.getVisibility() == View.VISIBLE) {
-            itemArray3.add(new DataItem(getString(R.string.je_textView21121), getDateString
-                    (DatePicker21122)));
-            itemArray3.add(new DataItem(getString(R.string.je_textView21122), EditText21122.getText()
-                    .toString()));
-            itemArray3.add(new DataItem(getString(R.string.je_textView21123), EditText21123.getText().toString()));
-        }*/
         itemArray3.add(radioGroup211241);
         itemArray3.add(radioGroup22111);
         itemArray3.add(checkBoxGroup22211);
@@ -808,9 +750,6 @@ public class MainActivity extends AppCompatActivity {
                 RadioBtn1423);
         radioGroup1511 = new JeRadioGroup(getString(R.string.je_textView151), RadioBtn1511, RadioBtn1512,
                 RadioBtn1513);
-        // 改為checkbox
-//        radioGroup1521 = new JeRadioGroup(getString(R.string.je_textView152), RadioBtn1521, RadioBtn1522,
-//                RadioBtn1523, RadioBtn1524);
         radioGroup1531 = new JeRadioGroup(getString(R.string.je_textView153), RadioBtn1531, RadioBtn1532,
                 RadioBtn1533, RadioBtn1534);
         radioGroup1541 = new JeRadioGroup(getString(R.string.je_textView154), RadioBtn1541, RadioBtn1542,
@@ -937,8 +876,6 @@ public class MainActivity extends AppCompatActivity {
         RadioBtn2111.setChecked(false);
         RadioBtn2112.setChecked(false);
         RadioBtn2113.setChecked(false);
-        //        關閉評估日期，目前能力約幾歲幾個月的欄位
-//        EditText21122.getText().clear();
         EditText21123.getText().clear();
         RadioBtn211241.setChecked(false);
         RadioBtn211242.setChecked(false);
