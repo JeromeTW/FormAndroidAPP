@@ -25,6 +25,11 @@
         <activity android:name=".DisplayTextActivity"
                   android:windowSoftInputMode="stateHidden">
         </activity>
+
+        <activity android:name=".GoogleDriveActivity"
+                  android:windowSoftInputMode="stateHidden">
+        </activity>
+
     </application>
 
 </manifest>

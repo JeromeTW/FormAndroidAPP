@@ -179,5 +179,9 @@
     <string name="clearFormDialogComfireButton">確定</string>
     <string name="clearFormDialogCancelButton">取消</string>
 
+    <!--GoogleDriveActivity-->
+    <string name="saveToDriveSuccessfullyToast">成功保存文件至Google Drive</string>
+    <string name="saveToDriveFailedToast">保存文件至Google Drive失敗</string>
+
 
 </resources>

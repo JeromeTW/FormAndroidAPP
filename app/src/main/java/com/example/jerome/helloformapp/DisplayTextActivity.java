@@ -27,7 +27,9 @@ import java.io.InputStreamReader;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
+import static com.example.jerome.helloformapp.MainActivity.EXTRA_CASE_NAME;
 import static com.example.jerome.helloformapp.MainActivity.EXTRA_SHOULD_CLEAN_FORM;
+import static com.example.jerome.helloformapp.MainActivity.EXTRA_TEXT;
 
 public class DisplayTextActivity extends AppCompatActivity {
 
@@ -47,8 +49,8 @@ public class DisplayTextActivity extends AppCompatActivity {
         setContentView(R.layout.activity_display_text);
         ButterKnife.bind(this);
         Intent intent = getIntent();
-        String text = intent.getStringExtra(MainActivity.EXTRA_TEXT);
-        caseName =  intent.getStringExtra(MainActivity.EXTRA_CASE_NAME);
+        String text = intent.getStringExtra(EXTRA_TEXT);
+        caseName =  intent.getStringExtra(EXTRA_CASE_NAME);
         resultEditText.setText(text);
     }
     @Override
@@ -60,12 +62,12 @@ public class DisplayTextActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+        Time now = new Time();
+        now.setToNow();
+        String fileString = now.format("%Y%m%d_%H%M%S") + "_" + caseName;
         switch (item.getItemId()) {
             case R.id.saveMenuBtn:
-                Time now = new Time();
-                now.setToNow();
-                String dateString = now.format("%Y%m%d_%H%M%S") + "_" + caseName;
-                writeToFile(dateString, resultEditText.getText().toString(), this);
+                writeToFile(fileString, resultEditText.getText().toString(), this);
                 Toast.makeText(this, R.string.submitSuccessfullyToast, Toast.LENGTH_SHORT).show();
                 didSaveText = true;
                 return true;
@@ -78,8 +80,8 @@ public class DisplayTextActivity extends AppCompatActivity {
                 return true;
             case R.id.saveToGoogleDriveMenuBtn:
                 Intent intent = new Intent(this, GoogleDriveActivity.class);
-//                intent.putExtra(EXTRA_TEXT, result);
-//                intent.putExtra(EXTRA_CASE_NAME, nameString);
+                intent.putExtra(EXTRA_TEXT, resultEditText.getText().toString());
+                intent.putExtra(EXTRA_CASE_NAME, fileString);
                 startActivityForResult(intent, INTENT_TO_GOOGLE_DRIVE_ACTIVITY);
                 return true;
             default:
