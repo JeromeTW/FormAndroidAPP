@@ -918,5 +918,6 @@ public class MainActivity extends AppCompatActivity {
         RadioBtn23312.setChecked(false);
         RadioBtn23313.setChecked(false);
         RadioBtn23314.setChecked(false);
+        ageTextView.setText(R.string.ageTitle);
     }
 }
