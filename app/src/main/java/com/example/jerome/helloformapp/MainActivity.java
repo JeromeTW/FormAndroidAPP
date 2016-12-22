@@ -504,6 +504,26 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
     }
+    @OnClick({R.id.checkBox1_5_2_3})
+    public void setDiffEvents9(CheckBox button) {
+        if (button.isChecked() == true) {
+            subSection1513.setVisibility(View.VISIBLE);
+            radioGroup1531.setNotGone();
+        } else {
+            subSection1513.setVisibility(View.GONE);
+            radioGroup1531.setIsGone();
+        }
+    }
+    @OnClick({R.id.checkBox1_5_2_4})
+    public void setDiffEvents91(CheckBox button) {
+        if (button.isChecked() == true) {
+            subSection1514.setVisibility(View.VISIBLE);
+            radioGroup1541.setNotGone();
+        } else {
+            subSection1514.setVisibility(View.GONE);
+            radioGroup1541.setIsGone();
+        }
+    }
 
     @OnClick({R.id.RadioBtn1_5_3_1, R.id.RadioBtn1_5_3_2, R.id.RadioBtn1_5_3_3, R.id
             .RadioBtn1_5_3_4})
@@ -764,6 +784,12 @@ public class MainActivity extends AppCompatActivity {
                 RadioBtn23112, RadioBtn23113);
         radioGroup23311 = new JeRadioGroup(getString(R.string.je_textView2331), RadioBtn23311,
                 RadioBtn23312, RadioBtn23313, RadioBtn23314);
+
+        // 已啟動後1-5-1-3 、 1-5-1-4是看不見的
+        subSection1513.setVisibility(View.GONE);
+        subSection1514.setVisibility(View.GONE);
+        radioGroup1531.setIsGone();
+        radioGroup1541.setIsGone();
     }
 
     private void setupCheckBoxGroups() {
