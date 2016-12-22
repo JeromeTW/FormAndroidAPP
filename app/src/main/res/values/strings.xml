@@ -172,6 +172,7 @@
 
     <!--DisplayTextActivity-->
     <string name="saveMenuBtnTitle">保存至本機</string>
+    <string name="saveToGoogleDriveMenuBtnTitle">保存至Google Drive</string>
     <string name="clearFormMenuBtnTitle">重新填寫</string>
     <string name="clearFormDialogTitle">確定要重新填寫？</string>
     <string name="clearFormDialogMessage">確定重新填寫，您將失去之前輸入的所有資料。若希望保存資料請在右上角的選單中點擊「保存至本機」</string>

@@ -37,6 +37,7 @@ public class DisplayTextActivity extends AppCompatActivity {
     ScrollView activityDisplayText;
 
     public static final String TAG = "DisplayTextActivity";
+    private static final int INTENT_TO_GOOGLE_DRIVE_ACTIVITY = 0;
     Boolean didSaveText = false;
     String caseName;
 
@@ -74,6 +75,12 @@ public class DisplayTextActivity extends AppCompatActivity {
                 } else {
                     showClearFormDialog();
                 }
+                return true;
+            case R.id.saveToGoogleDriveMenuBtn:
+                Intent intent = new Intent(this, GoogleDriveActivity.class);
+//                intent.putExtra(EXTRA_TEXT, result);
+//                intent.putExtra(EXTRA_CASE_NAME, nameString);
+                startActivityForResult(intent, INTENT_TO_GOOGLE_DRIVE_ACTIVITY);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
