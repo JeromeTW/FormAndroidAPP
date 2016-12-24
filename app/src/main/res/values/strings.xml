@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">語言治療評估報告</string>
+    <string name="app_name">語言評估小幫手</string>
     <string name="je_xingming">姓名</string>
     <string name="je_chushengriqi">出生日期</string>
     <string name="je_xingbie">性別</string>
