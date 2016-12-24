@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Hello Form App</string>
+    <string name="app_name">語言治療評估報告</string>
     <string name="je_xingming">姓名</string>
     <string name="je_chushengriqi">出生日期</string>
     <string name="je_xingbie">性別</string>
@@ -174,6 +174,7 @@
     <string name="saveMenuBtnTitle">保存至本機</string>
     <string name="saveToGoogleDriveMenuBtnTitle">保存至Google Drive</string>
     <string name="clearFormMenuBtnTitle">重新填寫</string>
+    <string name="helpMenuBtnTitle">關於</string>
     <string name="clearFormDialogTitle">確定要重新填寫？</string>
     <string name="clearFormDialogMessage">確定重新填寫，您將失去之前輸入的所有資料。若希望保存資料請在右上角的選單中點擊「保存至本機」</string>
     <string name="clearFormDialogComfireButton">確定</string>
@@ -183,5 +184,18 @@
     <string name="saveToDriveSuccessfullyToast">成功保存文件至Google Drive</string>
     <string name="saveToDriveFailedToast">保存文件至Google Drive失敗</string>
 
+    <!--HelpActiviry-->
+    <string name="helpText">語言治療評估報告小幫手希望能簡化台灣語言治療師評估統計的工作，並上傳至Google
+        Drive，方便您管理。<br/>獻給我美麗善良的另一半────Celeste.
+
+程式源碼在: https://github.com/JeromeTW/FormAndroidAPP
+
+聯絡Email: jerome.developer.tw@gmail.com
+
+
+<div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+
+
+</string>
 
 </resources>

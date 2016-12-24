@@ -6,4 +6,6 @@
           android:title="@string/saveToGoogleDriveMenuBtnTitle"/>
     <item android:id="@+id/clearFormMenuBtn"
           android:title="@string/clearFormMenuBtnTitle"/>
+    <item android:id="@+id/helpMenuBtn"
+          android:title="@string/helpMenuBtnTitle"/>
 </menu>

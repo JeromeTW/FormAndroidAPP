@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.example.jerome.helloformapp">
-<!--用不到讀寫磁碟的功能，檔案現在直接存在Google雲端-->
-    <!--<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>-->
-    <!--<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>-->
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+
+    <!-- 用不到讀寫磁碟的功能，檔案現在直接存在Google雲端 -->
+    <!-- <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/> -->
+    <!-- <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/> -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
 
     <application
         android:allowBackup="true"
@@ -21,15 +22,16 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-
-        <activity android:name=".DisplayTextActivity"
-                  android:windowSoftInputMode="stateHidden">
+        <activity
+            android:name=".DisplayTextActivity"
+            android:windowSoftInputMode="stateHidden">
         </activity>
-
-        <activity android:name=".GoogleDriveActivity"
-                  android:windowSoftInputMode="stateHidden">
+        <activity
+            android:name=".GoogleDriveActivity"
+            android:windowSoftInputMode="stateHidden">
         </activity>
-
+        <activity android:name=".HelpActivity">
+        </activity>
     </application>
 
 </manifest>

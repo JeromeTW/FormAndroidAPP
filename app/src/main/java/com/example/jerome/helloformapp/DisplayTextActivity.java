@@ -85,6 +85,10 @@ public class DisplayTextActivity extends AppCompatActivity {
                 intent.putExtra(EXTRA_CASE_NAME, fileString);
                 startActivityForResult(intent, INTENT_TO_GOOGLE_DRIVE_ACTIVITY);
                 return true;
+            case R.id.helpMenuBtn:
+                Intent helpIntent = new Intent(this, HelpActivity.class);
+                startActivity(helpIntent);
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
