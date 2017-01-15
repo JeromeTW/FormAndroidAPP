@@ -1,4 +1,4 @@
-package com.zhaiyiqi.jerome.helloformapp;
+package com.zhaiyiqi.jerome.helloformapp2;
 
 import org.junit.Test;
 

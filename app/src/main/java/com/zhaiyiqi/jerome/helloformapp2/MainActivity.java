@@ -1,6 +1,9 @@
-package com.zhaiyiqi.jerome.helloformapp;
+package com.zhaiyiqi.jerome.helloformapp2;
 
 import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+import android.content.pm.Signature;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.format.Time;
@@ -19,6 +22,14 @@ import android.widget.RadioButton;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
+import java.io.ByteArrayInputStream;
+import java.io.InputStream;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+import java.security.cert.CertificateEncodingException;
+import java.security.cert.CertificateException;
+import java.security.cert.CertificateFactory;
+import java.security.cert.X509Certificate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -670,7 +681,7 @@ public class MainActivity extends AppCompatActivity {
         textPrinter.sectionArray.add(kouyulijieSection);
 
         String result = textPrinter.print();
-        Log.v(TAG, result);
+        // Log.v(TAG, result);
 
         Intent intent = new Intent(this, DisplayTextActivity.class);
         intent.putExtra(EXTRA_TEXT, result);
@@ -692,7 +703,7 @@ public class MainActivity extends AppCompatActivity {
         birthDatePicker.getCalendarView().setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
             @Override
             public void onSelectedDayChange(CalendarView view, int year, int month, int dayOfMonth) {
-                Log.d("tag", "finally found the listener, the date is: year " + year + ", month " + month + ", dayOfMonth " + dayOfMonth);
+                // Log.d("tag", "finally found the listener, the date is: year " + year + ", month " + month + ", dayOfMonth " + dayOfMonth);
                 int birthMonths = year * 12 + month;    // 從西元年開始到出生月，計算總共月數
                 Time now = new Time();
                 now.setToNow();
@@ -705,6 +716,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+//        Log.v(TAG, getCertificateSHA1Fingerprint());
     }
 
     @Override
@@ -936,5 +948,56 @@ public class MainActivity extends AppCompatActivity {
         RadioBtn23313.setChecked(false);
         RadioBtn23314.setChecked(false);
         ageTextView.setText(R.string.ageTitle);
+    }
+
+    private String getCertificateSHA1Fingerprint() {
+        PackageManager pm = this.getPackageManager();
+        String packageName = this.getPackageName();
+        int flags = PackageManager.GET_SIGNATURES;
+        PackageInfo packageInfo = null;
+        try {
+            packageInfo = pm.getPackageInfo(packageName, flags);
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        }
+        Signature[] signatures = packageInfo.signatures;
+        byte[] cert = signatures[0].toByteArray();
+        InputStream input = new ByteArrayInputStream(cert);
+        CertificateFactory cf = null;
+        try {
+            cf = CertificateFactory.getInstance("X509");
+        } catch (CertificateException e) {
+            e.printStackTrace();
+        }
+        X509Certificate c = null;
+        try {
+            c = (X509Certificate) cf.generateCertificate(input);
+        } catch (CertificateException e) {
+            e.printStackTrace();
+        }
+        String hexString = null;
+        try {
+            MessageDigest md = MessageDigest.getInstance("SHA1");
+            byte[] publicKey = md.digest(c.getEncoded());
+            hexString = byte2HexFormatted(publicKey);
+        } catch (NoSuchAlgorithmException e1) {
+            e1.printStackTrace();
+        } catch (CertificateEncodingException e) {
+            e.printStackTrace();
+        }
+        return hexString;
+    }
+
+    public static String byte2HexFormatted(byte[] arr) {
+        StringBuilder str = new StringBuilder(arr.length * 2);
+        for (int i = 0; i < arr.length; i++) {
+            String h = Integer.toHexString(arr[i]);
+            int l = h.length();
+            if (l == 1) h = "0" + h;
+            if (l > 2) h = h.substring(l - 2, l);
+            str.append(h.toUpperCase());
+            if (i < (arr.length - 1)) str.append(':');
+        }
+        return str.toString();
     }
 }

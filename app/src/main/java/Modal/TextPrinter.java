@@ -27,7 +27,7 @@ public class TextPrinter {
         // 最後再remove掉三個換行即可
         int length = SECTION_BREAK_LINE.length();
         result.substring(0, result.length() - length);
-        Log.v(TAG, "section result:" + result);
+        // Log.v(TAG, "section result:" + result);
         return result;
     }
     public void cleanUp() {

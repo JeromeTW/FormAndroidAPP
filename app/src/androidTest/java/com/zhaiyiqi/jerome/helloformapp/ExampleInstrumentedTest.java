@@ -1,4 +1,4 @@
-package com.zhaiyiqi.jerome.helloformapp;
+package com.zhaiyiqi.jerome.helloformapp2;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

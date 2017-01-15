@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.zhaiyiqi.jerome.helloformapp">
+          package="com.zhaiyiqi.jerome.helloformapp2">
 
     <!-- 用不到讀寫磁碟的功能，檔案現在直接存在Google雲端 -->
     <!-- <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/> -->
@@ -15,7 +15,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.zhaiyiqi.jerome.helloformapp.MainActivity">
+        <activity android:name="com.zhaiyiqi.jerome.helloformapp2.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -23,14 +23,14 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.zhaiyiqi.jerome.helloformapp.DisplayTextActivity"
+            android:name="com.zhaiyiqi.jerome.helloformapp2.DisplayTextActivity"
             android:windowSoftInputMode="stateHidden">
         </activity>
         <activity
-            android:name="com.zhaiyiqi.jerome.helloformapp.GoogleDriveActivity"
+            android:name="com.zhaiyiqi.jerome.helloformapp2.GoogleDriveActivity"
             android:windowSoftInputMode="stateHidden">
         </activity>
-        <activity android:name="com.zhaiyiqi.jerome.helloformapp.HelpActivity">
+        <activity android:name="com.zhaiyiqi.jerome.helloformapp2.HelpActivity">
         </activity>
     </application>
 

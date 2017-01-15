@@ -1,4 +1,4 @@
-package com.zhaiyiqi.jerome.helloformapp;
+package com.zhaiyiqi.jerome.helloformapp2;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -15,9 +15,9 @@ import android.widget.ScrollView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-import static com.zhaiyiqi.jerome.helloformapp.MainActivity.EXTRA_CASE_NAME;
-import static com.zhaiyiqi.jerome.helloformapp.MainActivity.EXTRA_SHOULD_CLEAN_FORM;
-import static com.zhaiyiqi.jerome.helloformapp.MainActivity.EXTRA_TEXT;
+import static com.zhaiyiqi.jerome.helloformapp2.MainActivity.EXTRA_CASE_NAME;
+import static com.zhaiyiqi.jerome.helloformapp2.MainActivity.EXTRA_SHOULD_CLEAN_FORM;
+import static com.zhaiyiqi.jerome.helloformapp2.MainActivity.EXTRA_TEXT;
 
 public class DisplayTextActivity extends AppCompatActivity {
 

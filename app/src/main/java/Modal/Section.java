@@ -30,7 +30,7 @@ public class Section {
         // 最後再remove掉三個換行即可
         int length = DOUBLE_BREAK_LINE.length();
         result = result.substring(0, result.length() - length);
-        Log.v(TAG, "section result:" + result);
+        // Log.v(TAG, "section result:" + result);
         return result;
     }
 }
